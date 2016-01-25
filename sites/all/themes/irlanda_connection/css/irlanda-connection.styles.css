@@ -2,5 +2,11 @@ img, media {
   max-width: 100%;
 
 }
+.l-branding{
+	width: 250px;
+	height: 152.47px;
+	padding-top: 22px;
+	padding-left: 90px;
 
+}
 /* No files to import found in partials/components/**\/* */
