@@ -1,0 +1,37 @@
+img, media {
+  max-width: 100%;
+
+}
+.l-branding{
+    width: 36.70886%;
+    float: left;
+    margin-right: 1.26582%;
+    max-width: 250px;
+    max-height: 150px;
+    
+}
+#block-system-navigation{
+    background: #fff;
+    overflow: hidden;
+    min-height: 1.5em;
+
+    a{
+        color: $text;
+        display: block;
+        margin: 0.333333em 0.833333em;
+        padding: 1em 0;
+        text-decoration: none;  
+
+    }
+    ul{
+        li{
+            float: left;
+            list-style-image: none;
+            list-style-type: none;
+            margin: 0;
+            padding: 0; 
+            
+        }
+    }
+}
+
