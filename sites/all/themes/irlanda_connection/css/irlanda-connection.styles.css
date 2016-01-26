@@ -3,10 +3,33 @@ img, media {
 
 }
 .l-branding{
-	width: 250px;
-	height: 152.47px;
-	padding-top: 22px;
-	padding-left: 90px;
+    width: 36.70886%;
+    float: left;
+    margin-right: 1.26582%;
+    max-width: 250px;
+    max-height: 150px;
+    
+}
+#block-system-navigation{
+    background: #fff;
+    overflow: hidden;
+    min-height: 1.5em;
+
+}
+#block-system-navigation ul li{
+    float: left;
+    list-style-image: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+#block-system-navigation a{
+    color: #565A5C;
+    display: block;
+    margin: 0.333333em 0.833333em;
+    padding: 1em 0;
+    text-decoration: none;
 
 }
 /* No files to import found in partials/components/**\/* */
