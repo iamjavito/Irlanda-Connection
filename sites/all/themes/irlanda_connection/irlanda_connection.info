@@ -10,6 +10,7 @@ core = 7.x
 ; ========================================
 stylesheets[all][] = css/irlanda-connection.reset.css
 stylesheets[all][] = css/irlanda-connection.styles.css
+;stylesheets[home][stylesheets][all][] = css/irlanda-connection.styles.css -> define styles for specific Layout 
 
 ; ========================================
 ; Scripts

@@ -1,4 +1,3 @@
-
 <div class="page">
   <header class="section-header" role="banner">
     <div class="section-branding">

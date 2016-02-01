@@ -2,7 +2,7 @@ img, media {
   max-width: 100%;
 
 }
-.l-branding{
+.section-branding{
     width: 36.70886%;
     float: left;
     margin-right: 1.26582%;
@@ -10,52 +10,10 @@ img, media {
     max-height: 150px;
     
 }
-.l-header{
+.section-header{
     width: 100%;
     height: 197px;
     background-color: $mainbg;
 }
-#block-system-navigation{
-    background: $mainbg;
-    overflow: hidden;
-    min-height: 197px;
 
-    a{
-        color: $text;
-        display: block;
-        margin: 0.333333em 0.833333em;
-        padding: 0;
-        text-decoration: none;  
-
-    }
-    ul{
-        li{
-            float: left;
-            list-style-image: none;
-            list-style-type: none;
-            margin: 0;
-            padding: 0; 
-            
-        }
-    }
-    .menu{
-        border: none;
-        list-style: none;
-        text-align: left;
-        padding: 148px 37px 0px 49px;
-
-    }
-    .first{
-        margin: 0 !important;
-
-    }
-    .last{
-        margin: $navmargin;
-
-    }
-    .leaf{
-        margin: $navmargin;
-    
-    }
-}
 
