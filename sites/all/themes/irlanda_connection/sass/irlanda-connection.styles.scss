@@ -5,15 +5,19 @@
 // Uncomment the next lines and adjust them to your needs.
 
 //Variables
-@import "variables/*";
+@import "variables/_colors.scss";
+@import "variables/_spacing.scss";
+@import "variables/_typography.scss";
 
 //Base
-@import "base/*";
+@import "base/_blocks.scss";
+@import "base/_forms.scss";
+@import "base/_headers.scss";
 
 //Components
-@import "components/*";
+@import "components/_navigation.scss";
 
 //abstratctions
-@import "abstractions/*";
+@import "abstractions/_typography.scss";
 
 

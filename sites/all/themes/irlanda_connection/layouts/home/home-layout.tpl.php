@@ -18,11 +18,10 @@
       <?php endif; ?>
     </div>
     <?php print render($page['navigation']); ?>
-    <div id="zone-graphic-header" style="background-image: url(sites/default/files/home-top-img.png);">
+    <div id="zone-graphic-header" style="background-image: url(sites/default/files/images/home-top-img.png);">
       <?php print render($page['header']); ?>
       <?php if ($title): ?>
         <h1>CURSOS DE INGLÉS EN EL EXTRANJERO</h1>
-        <!-- <h1><?php print $title; ?></h1> -->
       <?php endif; ?>
     </div>
   </header>
@@ -37,7 +36,15 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?> 
-      <?php print render($page['content']); ?>
+      <div id="zone-graphic-first" style="background-image: url(sites/default/files/images/porqueingles-img.png);">
+        <?php print render($page['wrapper-first']); ?>
+      </div>
+      <div id="zone-graphic-destinos" style="background-image: url(sites/default/files/images/destinos-img.png);">
+        <?php print render($page['wrapper-second']); ?>        
+      </div>
+      <div id="zone-graphic-third" style="background-image: url(sites/default/files/images/porquenosotros-img.png);">
+        <?php print render($page['wrapper-third']); ?>
+      </div>
       <?php print $feed_icons; ?>
     </div>
   </div>

@@ -16,16 +16,60 @@ img, media {
     max-height: 150px;
     
 }
+.block__content{
+  color: $white;
+  font-size: 29px;
+
+}
 .section-header{
     width: 100%;
-    height: 197px;
     background-color: $mainbg;
 }
 #zone-graphic-header{
-  min-height: 700px;
+  height: 700px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  h1{
+    color: $white;
+    font-size: 100px;
+    text-decoration: bold;
+
+  }
+
+}
+#zone-graphic-first {
+  height: $wrapper;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100%;
 
 }
+#zone-graphic-destinos {
+  height: $wrapper;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 
+  h2{
+    text-align: center;
+    width: 100%;
+    background-color: $maingreen_opacity; 
+    
+  }
+
+}
+#zone-graphic-third {
+  height: $wrapper;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+}
+.section-footer{
+  height: $footer;
+  background-color: $footerbg;
+  border-top: solid 9px $maingreen;  
+
+}

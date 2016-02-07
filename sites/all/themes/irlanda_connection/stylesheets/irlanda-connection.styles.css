@@ -1,0 +1,72 @@
+/*
+Error: File to import not found or unreadable: variables/*.
+       Load paths:
+         Compass::SpriteImporter
+         /Users/javiertorrado/MEGA/Irlanda Connection/Irlanda Connection - Dev/web/sites/all/themes/irlanda_connection/sass
+         /Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets
+         /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/susy-2.1.3/sass
+         /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/compass-normalize-1.5/stylesheets
+         /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/compass-h5bp-0.1.2/stylesheets
+         /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/compass-960-plugin-0.10.4/stylesheets
+         /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/html5-boilerplate-2.1.0/stylesheets
+         /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/bootstrap-sass-3.2.0.1/assets/stylesheets
+         /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/sassy-maps-0.4.0/sass
+         /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/breakpoint-2.5.0/stylesheets
+         /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-5.3.0/stylesheets
+         /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/bootstrap-sass-3.2.0.1/assets/stylesheets
+        on line 8 of /Users/javiertorrado/MEGA/Irlanda Connection/Irlanda Connection - Dev/web/sites/all/themes/irlanda_connection/sass/irlanda-connection.styles.scss
+
+3: 
+4: // Import variables, abstractions, base styles and components.
+5: // Uncomment the next lines and adjust them to your needs.
+6: 
+7: //Variables
+8: @import "variables/*";
+9: 
+10: //Base
+11: @import "base/*";
+12: 
+13: //Components
+
+Backtrace:
+/Users/javiertorrado/MEGA/Irlanda Connection/Irlanda Connection - Dev/web/sites/all/themes/irlanda_connection/sass/irlanda-connection.styles.scss:8
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/import_node.rb:66:in `import'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+org/jruby/RubyArray.java:2412:in `map'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `visit_children'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/root_node.rb:20:in `render'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/engine.rb:268:in `render'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+org/jruby/RubyMethod.java:128:in `call'
+file:/Applications/compass.app/Contents/Java/compass-app.jar!/hook/compass_patch.rb:108:in `update_stylesheet'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `update_stylesheets'
+org/jruby/RubyArray.java:1613:in `each'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:293:in `watch'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-1.0.3/lib/compass/sass_compiler.rb:46:in `watch!'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-1.0.3/lib/compass/commands/watch_project.rb:41:in `perform'
+file:/Applications/compass.app/Contents/Java/compass-app.jar!/app_watcher.rb:12:in `watch!'
+file:/Applications/compass.app/Contents/Java/compass-app.jar!/ui/tray.rb:447:in `watch'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: variables/*.\A        Load paths:\A          Compass::SpriteImporter\A          /Users/javiertorrado/MEGA/Irlanda Connection/Irlanda Connection - Dev/web/sites/all/themes/irlanda_connection/sass\A          /Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets\A          /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/susy-2.1.3/sass\A          /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/compass-normalize-1.5/stylesheets\A          /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/compass-h5bp-0.1.2/stylesheets\A          /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/compass-960-plugin-0.10.4/stylesheets\A          /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/html5-boilerplate-2.1.0/stylesheets\A          /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/bootstrap-sass-3.2.0.1/assets/stylesheets\A          /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/sassy-maps-0.4.0/sass\A          /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/breakpoint-2.5.0/stylesheets\A          /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-5.3.0/stylesheets\A          /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/bootstrap-sass-3.2.0.1/assets/stylesheets\A         on line 8 of /Users/javiertorrado/MEGA/Irlanda Connection/Irlanda Connection - Dev/web/sites/all/themes/irlanda_connection/sass/irlanda-connection.styles.scss\A \A 3: \A 4: // Import variables, abstractions, base styles and components.\A 5: // Uncomment the next lines and adjust them to your needs.\A 6: \A 7: //Variables\A 8: @import \"variables/*\";\A 9: \A 10: //Base\A 11: @import \"base/*\";\A 12: \A 13: //Components"; }
