@@ -1,0 +1,374 @@
+<?php
+
+//parse a specification into a valid tag array.
+//
+//spec - an html tag with any desired attributes but no < or >,
+//       such as: div id=custom class="odd special" data-foo=bar
+//
+//no_explode - a list of attributes to not explode
+//
+//merge_attributes - if false existing attributes (except class) will be ignored
+//
+//merge_classes - if false, existing classes are ignored
+//
+//keep_id - if false, use id in tag array, even if ''.
+function tagspec_parse_spec($spec, $no_explode = array(), $merge_attributes = TRUE, $merge_classes = TRUE, $keep_id = TRUE) {
+	$spec = trim($spec);
+	$tag = array(
+		'raw_specification' => $spec,
+		'tag'               => '',
+		'id'                => '',
+		'classes'           => array(),
+		'no_explode'        => $no_explode,
+		'string_attributes' => array(),
+		'array_attributes'  => array(),
+		'merge_classes'     => $merge_classes,
+		'merge_attributes'  => $merge_attributes,
+		'keep_id'           => $keep_id,
+	);
+	if($spec == '') {
+		return $tag;
+	}
+
+	$tname = $spec;
+	$pos = strpos($spec, ' ');
+	if($pos) {
+		$tname = trim(substr($spec, 0, $pos));
+	}
+	$p = new simple_html_dom();
+	$a = $p->load('<' . $spec . '>')->find($tname);
+	$a = $a[0]->attr;
+	$p->clear();
+
+	$tag['tag'] = $tname;
+
+	if(isset($a['id'])) {
+		$tag['id'] = $a['id'];
+		unset($a['id']);
+	}
+
+	if(isset($a['class'])) {
+		$tag['classes'] = explode(' ', $a['class']);
+		unset($a['class']);
+	}
+
+	foreach($a as $k => $v) {
+		if(in_array($k, $no_explode) || strpos($v, ' ') === FALSE) {
+			$tag['string_attributes'][$k] = $v;
+		} else {
+			$tag['array_attributes'][$k] = explode(' ', $v);
+		}
+	}
+
+	return $tag;
+}
+
+//tagspec_to_render_array converts a tagspec into a drupal render array.
+//
+//This is only useful when the only source of tag info is from a tagspec.
+function tagspec_to_render_array($tag, $children = array()) {
+	$open = '';
+	$close = '';
+	if(isset($tag['tag']) && $tag['tag'] != '') {
+		$attr = array();
+		if(isset($tag['id']) && $tag['id'] != '') {
+			$attr['id'] = $tag['id'];
+		}
+		if(isset($tag['classes']) && !empty($tag['classes'])) {
+			$attr['class'] = $tag['classes'];
+		}
+		if(isset($tag['string_attributes']) && !empty($tag['string_attributes'])) {
+			$attr = $attr + $tag['string_attributes'];
+		}
+		if(isset($tag['array_attributes']) && !empty($tag['array_attributes'])) {
+			$attr = $attr + $tag['array_attributes'];
+		}
+		$da = drupal_attributes($attr);
+		$open = '<' . $tag['tag'] . $da . '>';
+		$close = '</' . $tag['tag'] . '>';
+	}
+	$ra = array();
+	if($open != '') {
+		$ra['#prefix'] = $open;
+		$ra['#suffix'] = $close;
+	}
+	return $ra + $children;
+}
+
+function _tagspec_m($o, $n) {
+	return array_keys(array_merge(array_flip($o), array_flip($n)));
+}
+
+function tagspec_merge_attributes($tag, $attributes = array(), $has_class = TRUE, $has_id = TRUE) {
+	//make a copy of any attributes to keep that we don't handle specially.
+	$a = array();
+	if($tag['merge_attributes']) {
+		$a = $attributes;
+		if($has_class) {
+			unset($a['class']);
+		}
+		if($has_id) {
+			unset($a['id']);
+		}
+	}
+
+	//if this attributes array can have an id, handle its merge.
+	if($has_id) {
+		if(!$tag['keep_id']) {
+			if(isset($attributes['id'])) {
+				$a['id'] = $attributes['id'];
+			}
+		} else {
+			$a['id'] = $tag['id'];
+		}
+	}
+
+	//if this attributes array can have class, handle its merge.
+	if($has_class) {
+		$cls = array();
+		if($tag['merge_classes'] && isset($attributes['class'])) {
+			$cls = $attributes['class'];
+		}
+		$a['class'] = _tagspec_m($cls, $tag['classes']);
+	}
+
+	//merge in non-special attributes.
+	$a = _tagspec_m($a, $tag['string_attributes']);
+	foreach($tag['array_attributes'] as $ak => $av) {
+		if(array_key_exists($ak, $a)) {
+			$a[$ak] = _tagspec_m($a[$ak], $av);
+		} else {
+			$a[$ak] = $av;
+		}
+	}
+
+	return $a;
+}
+
+//merge classes with any in tag or replace if !$tag['merge_classes'].
+function tagspec_merge_classes($tag, $classes) {
+	if($classes == NULL || !$tag['merge_classes']) {
+		$classes = array();
+	}
+	if(!isset($tag['attributes']['class'])) {
+		return $classes;
+	}
+	return _tagspec_m($classes, $tag['attributes']['class']);
+}
+
+function tagspec_override_id($tag, $id) {
+	if($tag['keep_id']) {
+		return $id;
+	}
+	return $tag['id'];
+}
+
+//everything below is just stuffing this into drupal's form element api
+
+function tagspec_element_info() {
+	return array(
+		'tagspec' => array(
+			'#default_value'            => array(),
+			'#input'                    => TRUE,
+			'#tree'                     => TRUE,
+			'#process'                  => array('tagspec_process_tagspec'),
+			'#theme'                    => array('tagspec_element'),
+			'#value_callback'           => 'tagspec_value_callback',
+			'#tagspec_hide_no_explode'  => FALSE,
+			'#tagspec_hide_keep_id'     => FALSE,
+			'#tagspec_hide_merge_class' => FALSE,
+			'#tagspec_hide_merge_attrs' => FALSE,
+		),
+	);
+}
+
+function tagspec_theme() {
+	return array(
+		'tagspec_element' => array(
+			'render element' => 'element',
+		),
+	);
+}
+
+function _tagspecr($e) {
+	$e['#childen'] = drupal_render($e);
+	return theme_form_element(array('element' => $e));
+}
+
+function theme_tagspec_element($vars) {
+	$elm = $vars['element'];
+	$t = $elm['tagspec'];
+	$output  = '<fieldset class=form-type-tagspec><legend><span class=fieldset-legend>' . $elm['#title'];
+    $output	.= '</span></legend><div class=fieldset-wrapper>';
+	$output .= _tagspecr($t['tagspec']);
+	if(!$elm['#tagspec_hide_no_explode']) {
+		$output .= _tagspecr($t['noexplode']);
+	}
+	if(!$elm['#tagspec_hide_keep_id']) {
+		$output .= _tagspecr($t['keep_id']);
+	}
+	if(!$elm['#tagspec_hide_merge_class']) {
+		$output .= _tagspecr($t['merge_classes']);
+	}
+	if(!$elm['#tagspec_hide_merge_attrs']) {
+		$output .= _tagspecr($t['merge_attributes']);
+	}
+	$output .= '</div></fieldset>';
+	return $output;
+}
+
+function tagspec_process_tagspec($elm, $state, $form) {
+	$t = &$elm['tagspec'];
+	$t['#tree'] = TRUE;
+	$t['#type'] = 'container';
+
+	$hide_no_explode = FALSE;
+	if(isset($elm['#tagspec_hide_no_explode'])) {
+		$hide_no_explode = $elm['#tagspec_hide_no_explode'];
+	}
+
+	$hide_keep_id = FALSE;
+	if(isset($elm['#tagspec_hide_keep_id'])) {
+		$hide_keep_id = $elm['#tagspec_hide_keep_id'];
+	}
+
+
+	$hide_merge_class = FALSE;
+	if(isset($elm['#tagspec_hide_merge_class'])) {
+		$hide_merge_class = $elm['#tagspec_hide_merge_class'];
+	}
+
+	$hide_merge_attrs = FALSE;
+	if(isset($elm['#tagspec_hide_merge_attrs'])) {
+		$hide_merge_attrs = $elm['#tagspec_hide_merge_attrs'];
+	}
+
+	$default_tag = '';
+	$default_no_explode = array();
+	$default_keep_id = !$hide_keep_id;
+	$default_merge_class = !$hide_merge_class;
+	$default_merge_attr = !$hide_merge_attrs;
+	if(isset($elm['#default_value'])) {
+		$d = &$elm['#default_value'];
+
+		if(isset($d['raw_specification'])) {
+			$default_tag = $d['raw_specification'];
+		}
+
+		if(isset($d['no_explode'])) {
+			$ne = $d['no_explode'];
+			if(is_array($ne)) {
+				$default_no_explode = $ne;
+			} else {
+				//oh the irony.
+				$default_no_explode = explode(' ', $ne);
+			}
+		}
+
+		if(isset($d['keep_id'])) {
+			$default_keep_id = $d['keep_id'];
+		}
+
+		if(isset($d['merge_classes'])) {
+			$default_merge_class = $d['merge_classes'];
+		}
+
+		if(isset($d['merge_attributes'])) {
+			$default_merge_attr = $d['merge_attributes'];
+		}
+	}
+
+	$size = '50';
+	if(isset($elm['#size'])) {
+		$size = $elm['#size'];
+	}
+
+	$t['tagspec'] = array(
+		'#type'           => 'textfield',
+		'#size'           => $size,
+		'#title'          => t('Tag specification'),
+		'#theme_wrappers' => array(),
+		'#description'    => t('An html tag, with any desired attributes, and no < or >'),
+		'#attributes'     => array(
+			'placeholder' => 'tag key1=value1 key2=value2 etc',
+		),
+		'#default_value'  => $default_tag,
+	);
+
+	$t['noexplode'] = array(
+		'#type'           => 'textfield',
+		'#size'           => $size,
+		'#title'          => t('No explode keys'),
+		'#theme_wrappers' => array(),
+		'#description'    => t('Attributes to keep as strings even if their value contain spaces (works for any attribute except class and id)'),
+		'#access'         => !$hide_no_explode,
+		'#attributes'     => array(
+			'placeholder' => 'key1 key2',
+		),
+		'#default_value'  => $default_no_explode,
+	);
+
+	$t['keep_id'] = array(
+		'#type'           => 'checkbox',
+		'#title'          => t('Keep id'),
+		'#description'    => t('Keep original id attribute even if not specified above'),
+		'#theme_wrappers' => array(),
+		'#access'         => !$hide_keep_id,
+		'#default_value'  => $default_keep_id,
+	);
+
+	$t['merge_classes'] = array(
+		'#type'           => 'checkbox',
+		'#title'          => t('Merge classes'),
+		'#description'    => t('Merge classes in render array with any defined above'),
+		'#theme_wrappers' => array(),
+		'#access'         => !$hide_merge_class,
+		'#default_value'  => $default_merge_class,
+	);
+
+	$t['merge_attributes'] = array(
+		'#type'           => 'checkbox',
+		'#title'          => t('Merge attributes'),
+		'#description'    => t('Merge attributes in render array with any defined above'),
+		'#theme_wrappers' => array(),
+		'#access'         => !$hide_merge_attrs,
+		'#default_value'  => $default_merge_attr,
+	);
+
+	return $elm;
+}
+
+function tagspec_value_callback($elm, $input = FALSE, &$state) {
+	if($input !== FALSE) {
+		$input = $input['tagspec'];
+
+		$no_explode = isset($input['noexplode']) ? explode(' ', $input['noexplode']) : array();
+
+		$keep_id = isset($input['keep_id']) ? $input['keep_id'] : FALSE;
+		$merge_classes = isset($input['merge_classes']) ? $input['merge_classes'] : FALSE;
+		$merge_attributes = isset($input['merge_attributes']) ? $input['merge_attributes'] : FALSE;
+
+		$tag = tagspec_parse_spec(
+			$input['tagspec'],
+			$no_explode,
+			$merge_attributes,
+			$merge_classes,
+			$keep_id);
+		return $tag;
+	} elseif(!empty($elm['#default_value'])) {
+		return $elm['#default_value'];
+	} else {
+		return array(
+			'raw_specification' => '',
+			'tag'               => '',
+			'id'                => '',
+			'string_attributes' => array(),
+			'array_attributes'  => array(),
+			'classes'           => array(),
+			'no_explode'        => array(),
+			'keep_id'           => TRUE,
+			'merge_classes'     => TRUE,
+			'merge_attributes'  => TRUE,
+		);
+	}
+}

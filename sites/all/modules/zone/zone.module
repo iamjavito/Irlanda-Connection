@@ -1,0 +1,536 @@
+<?php
+
+function zone_permission() {
+	return array(
+		'administer zones' => array(
+			'title'       => t('Administer zones'),
+			'description' => t('Create, edit, and organize zones'),
+		),
+	);
+}
+
+function zone_menu() {
+	$default_theme = variable_get('theme_default', 'bartik');
+
+	$themes = array();
+	$default_theme_enabled = FALSE;
+	foreach(list_themes() as $key => $theme) {
+		if(!$theme->status) {
+			continue;
+		}
+		if(!isset($theme->info['zone_enabled']) || $theme->info['zone_enabled'] != 'true') {
+			continue;
+		}
+
+		$themes[$key] = $theme;
+		if($key == $default_theme) {
+			$default_theme_enabled = TRUE;
+		}
+	}
+
+	$bp = 'admin/structure/zones';
+	if(count($themes) == 0) {
+		return array(
+			$bp => array(
+				'title'            => t('Zones'),
+				'page callback'    => 'zone_no_zone_enabled_themes',
+				'access arguments' => array('administer zones'),
+			),
+		);
+	}
+
+	if(!$default_theme_enabled) {
+		$fst = array_shift($themes);
+		$default_theme = $fst->name;
+	}
+
+	$def = array(
+		'page callback'    => 'drupal_get_form',
+		'access arguments' => array('administer zones'),
+		'file'             => 'zone.admin.inc',
+	);
+	$menu = array(
+		$bp . '/edit/%zone' => $def + array(
+			'title'          => t('Edit Zone'),
+			'page arguments' => array('zones_edit_form', 4),
+		),
+		$bp => $def + array(
+			'title'          => t('Zones'),
+			'page arguments' => array('zones_manage_form', $default_theme),
+		),
+		$bp . '/new' => $def + array(
+			'title'          => t('Add Zone'),
+			'page arguments' => array('zones_new_form', $default_theme),
+			'type'           => MENU_LOCAL_ACTION,
+		),
+	);
+
+	foreach($themes as $key => $theme) {
+		$menu[$bp . '/of/' . $key] = $def + array(
+			'title'          => check_plain($theme->info['name']),
+			'page arguments' => array('zones_manage_form', $key),
+			'type'           => $key == $default_theme ? MENU_DEFAULT_LOCAL_TASK : MENU_LOCAL_TASK,
+			'weight'         => $key == $default_theme ? -10 : 0,
+		);
+		if($key != $default_theme) {
+			$menu[$bp . '/of/' . $key . '/new'] = $def + array(
+				'title'          => t('Add Zone'),
+				'page arguments' => array('zones_new_form', $key),
+				'type'           => MENU_LOCAL_ACTION,
+			);
+		}
+	}
+
+	return $menu;
+}
+
+function zone_theme() {
+	return array(
+		'zone_tabledrag_components' => array(
+			'render element' => 'element',
+		),
+	);
+}
+
+function zone_no_zone_enabled_themes() {
+	return t('No zone-enabled themes are active');
+}
+
+function theme_zone_tabledrag_components($vars) {
+	$elm = $vars['element'];
+
+	//no zones
+	if(!isset($elm['#tree'])) {
+		return drupal_render($elm);
+	}
+	drupal_add_tabledrag('zonetree', 'match', 'parent', 'zone-def-parent', 'zone-def-parent', 'zone-def-id', TRUE);
+	drupal_add_tabledrag('zonetree', 'order', 'sibling', 'zone-def-weight', NULL, NULL, TRUE);
+
+	$header = array(
+		'label'   => t('Name'),
+		'weight'  => t('Weight'),
+		'summary' => t('Summary'),
+		'edit'    => t('Edit'),
+	);
+
+	$rows = array();
+	foreach(element_children($elm) as $k) {
+		$row = array(
+			'class' => array('draggable'),
+			'data' => array(
+				'label'   => array(),
+				'weight'  => array(),
+				'summary' => array(),
+				'edit'    => array(),
+			),
+		);
+		$ek = &$elm[$k];
+		$row['class'] = array_merge($row['class'], $ek['#attributes']['class']);
+
+		$d = &$row['data'];
+
+		$d['label'] = $ek['indent']['#markup'] . drupal_render($ek['label']);
+		$d['summary'] = drupal_render($ek['summary']);
+		$d['edit'] = drupal_render($ek['edit']);
+
+		$w  = drupal_render($ek['zid']);
+		$w .= drupal_render($ek['parent']);
+		$w .= drupal_render($ek['weight']);
+		$d['weight'] = $w;
+
+		$rows[] = $row;
+	}
+	return theme('table', array(
+		'header'     => $header,
+		'rows'       => $rows,
+		'sticky'     => FALSE,
+		'attributes' => array('id' => 'zonetree'),
+	));
+}
+
+//zone_profile_bulk_create is a declaritive helper for profiles.
+//
+//It lets you create a fully configured default set of zones for multiple themes
+//while assigning default blocks.
+//
+//It takes an array of machine names of themes whose values are like:
+//'theme_name' => array(
+//	'Zone Name' => array(
+//		'machine name' => 'zone_name', //defaults to same machine name as would be created in UI
+//		'empty' => TRUE, //render if empty, defaults to false
+//		'hidden' => TRUE, //hidden by default, defaults to false
+//		'region' => TRUE, //is this a region zone, defaults to false
+//		'tag' => 'div class=zone-name data-random=7', //defaults to nil, can be a string or like next line
+//		'tag' => array( //use this instead of the above if you need a noexplode list
+//			'tag' => 'aside data-fancy="a, b(c, d)"',
+//			'no explode' => array('data-fancy'),
+//		),
+//		'children' => array( //this is only valid when region == false
+//			'A Child Zone' => array(... // defined same as Zone Name
+//		),
+//		'blocks' => array( //this is only valid when region == true
+//			'module1' => array( //an array for multiple deltas
+//				'delta1',
+//				'delta2',
+//				),
+//			'module2' => array('delta1'),
+//		),
+//	),
+//)
+function zone_profile_bulk_create($v) {
+	foreach($v as $theme => $root) {
+		$i = 0;
+		foreach($root as $name => $obj) {
+			_zone_profile_bulk_create_rec($theme, 0, $name, $obj, $i);
+			$i++;
+		}
+	}
+}
+
+function _zone_profile_bulk_create_rec($theme, $parent, $name, $obj, $weight) {
+	$zone = array(
+		'theme'  => $theme,
+		'parent' => $parent,
+		'name'   => $name,
+		'weight' => $weight,
+	);
+
+	if(isset($obj['machine_name'])) {
+		$zone['machine_name'] = $obj['machine_name'];
+	} else {
+		$zone['machine_name'] = preg_replace('/[^a-z]/', '_', strtolower(trim($name)));
+	}
+
+	$zone['hidden'] = (int)(isset($obj['hidden']) ? $obj['hidden'] : FALSE);
+	$zone['region'] = (int)(isset($obj['region']) ? $obj['region'] : FALSE);
+	$zone['empty']  = (int)(isset($obj['empty'])  ? $obj['empty']  : FALSE);
+
+	$tag = '';
+	$noexplode = array();
+	if(isset($obj['tag'])) {
+		$t = $obj['tag'];
+		if(is_array($t)) {
+			$tag = $t['tag'];
+			if(isset($t['noexplode'])) {
+				$noexplode = $t['noexplode'];
+			}
+		} else {
+			$tag = $t;
+		}
+	}
+	$zone['tag'] = serialize(tagspec_parse_spec($tag, $noexplode));
+
+	$id = db_insert('zones')->fields($zone)->execute();
+
+	if(!$zone['region'] && isset($obj['children'])) {
+		$i = 0;
+		foreach($obj['children'] as $cname => $cobj) {
+			_zone_profile_bulk_create_rec($theme, $id, $cname, $cobj, $i);
+			$i++;
+		}
+	} else if($zone['region'] && isset($obj['blocks'])) {
+		$q = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache'));
+		$n = 0;
+		foreach($obj['blocks'] as $module => $ds) {
+			foreach($ds as $delta) {
+				$q->values(array(
+					'module' => $module,
+					'delta'  => $delta,
+					'theme'  => $theme,
+					'weight' => $n,
+					'region' => $zone['machine_name'],
+					'status' => 1,
+					'pages'  => '',
+					'cache'  => -1,
+				));
+				$n++;
+			}
+		}
+		$q->execute();
+	}
+}
+
+function zone_load($zid) {
+	$zone = db_select('zones', 'z')
+		->fields('z')
+		->condition('z.id', $zid, '=')
+		->execute()
+		->fetchAssoc();
+	//drupal does not seem to do this for no reason
+	//but let's assume it might later
+	if(!is_array($zone['tag'])) {
+		$zone['tag'] = unserialize($zone['tag']);
+	}
+	return $zone;
+}
+
+//return for $theme_key:
+//* a list of all zones, as retrieved from the database,
+//* a tree of all (not necessarily displayed) zones,
+//* and a list of zones marked as regions.
+function zone_load_for($theme_key, $rebuild = FALSE) {
+	//try to load cached
+	//TODO cache zone:$theme_key
+	static $results;
+	if(!isset($results)) {
+		$results = &drupal_static(__FUNCTION__);
+		if(!isset($results)) {
+			if($cache = cache_get('zone')) {
+				$results = $cache->data;
+			}
+		}
+	}
+	//if cache exists for this theme and not rebuilding, return
+	if(isset($results) && isset($results[$theme_key]) && !$rebuild) {
+		return $results[$theme_key];
+	}
+	//build zone info
+	$zones = db_select('zones', 'z')
+		->fields('z')
+		->condition('z.theme', $theme_key, '=')
+		->execute()
+		->fetchAllAssoc('id', PDO::FETCH_ASSOC);
+
+	if(count($zones) == 0) {
+		return FALSE;
+	}
+	//drupal does not seem to do this for no reason
+	//but let's assume it might later
+	foreach($zones as $k => $z) {
+		if(!is_array($z['tag'])) {
+			$zones[$k]['tag'] = unserialize($z['tag']);
+		}
+
+		//stuff this in here as long as we're doing this
+		$zones[$k]['depth'] = 0;
+		$zones[$k]['children'] = array();
+	}
+	$tree = _zone_tree($zones); //technically a forest
+	$list = _zone_flatten($tree);
+	$regions = _zone_regions($list);
+
+	$result = array(
+		'list'    => $list,
+		'tree'    => $tree,
+		'regions' => $regions,
+	);
+
+	//save to cache
+	$results[$theme_key] = $result;
+	cache_set('zone', $results);
+
+	return $result;
+}
+
+function _zone_sort_byweight($a, $b) {
+	if($a['weight'] == $b['weight']) {
+		return $a['id'] > $b['id'];
+	}
+	return $a['weight'] > $b['weight'];
+}
+
+function _zone_sort(&$list) {
+	usort($list, '_zone_sort_byweight');
+}
+
+function _zone_regions($zones) {
+	$regions = array();
+	foreach($zones as $zone) {
+		if($zone['region']) {
+			$regions[] = $zone;
+		}
+	}
+	_zone_sort($regions);
+	return $regions;
+}
+
+function _zone_tree(&$zones) {
+	$parents = array();
+	$children = array();
+	foreach($zones as &$zone) {
+		if($zone['parent']) {
+			$children[] = $zone;
+		} else {
+			$parents[] = $zone;
+		}
+	}
+	_zone_sort($parents);
+	foreach($parents as &$parent) {
+		_zone_tree_rec($parent, $children, 0);
+	}
+	return $parents;
+}
+
+function _zone_tree_rec(&$parent, &$potential, $depth) {
+	$parent['depth'] = $depth;
+
+	if(count($potential) < 1) {
+		return;
+	}
+
+	$me = $parent['id'];
+	$ch = &$parent['children'];
+	foreach($potential as $k => &$p) {
+		if($p['parent'] == $me) {
+			$ch[] = &$p;
+			//were removing key from potential here but that seemed to drop elements,
+			//look into later because iterating over claimed children is stupid
+			_zone_tree_rec($p, $potential, $depth + 1);
+		}
+	}
+	_zone_sort($ch);
+}
+
+function _zone_flatten($tree) {
+	$list = array();
+	foreach($tree as $root) {
+		_zone_flatten_rec($root, $list);
+	}
+	return $list;
+}
+
+function _zone_flatten_rec($root, &$list) {
+	$list[] = $root;
+	foreach($root['children'] as $c) {
+		_zone_flatten_rec($c, $list);
+	}
+}
+
+function zone_system_info_alter(&$info, $file, $type) {
+	//only check themes
+	if($type != 'theme') {
+		return;
+	}
+	//make sure theme's info has zone_enabled = true
+	if(!isset($info['zone_enabled']) || $info['zone_enabled'] != 'true') {
+		return;
+	}
+
+	$regions = array();
+	$zones = zone_load_for($file->name);
+	if($zones === FALSE) {
+		return;
+	}
+
+	foreach($zones['regions'] as $pseudoregion) {
+		$regions[$pseudoregion['machine_name']] = $pseudoregion['name'];
+	}
+
+	//preserve the hidden regions
+	foreach($info['regions_hidden'] as $r) {
+		$regions[$r] = $info['regions'][$r];
+	}
+
+	//save originals for debugging
+	$info['original_regions'] = $info['regions'];
+	//override
+	$info['regions'] = $regions;
+}
+
+function zone_module_implements_alter(&$impl, $hook) {
+	if($hook == 'flush_caches') {
+		unset($impl['block']);
+	}
+
+	if($hook != 'page_build') {
+		return;
+	}
+
+	//remove block_page_build and make us first so we can totally
+	//take over.
+	//(If we can't handle the request we just call block_page_build).
+	unset($impl['block']);
+	unset($impl['zone']);
+
+	$impl = array('zone' => FALSE) + $impl;
+}
+
+function zone_flush_caches() {
+	//this is all copied from block_flush_caches so we can insert our logic
+	$themes = _system_rebuild_theme_data(); //ensure synthetic regions are exposed even if we're running nutty
+	foreach($themes as $theme) {
+		_block_rehash($theme->name);
+	}
+
+	return array('cache_block');
+}
+
+function zone_page_build(&$page) {
+	global $theme;
+	drupal_theme_initialize();
+
+	$item = menu_get_item();
+	if($item['path'] == 'admin/structure/block/demo/' . $theme) {
+		//TODO we should also menu alter the block list to remove the link
+		drupal_set_message('block demonstration not available for zone enabled themes');
+		drupal_goto('admin/structure/block/list' . $theme);
+	}
+
+	$zones = zone_load_for($theme);
+	if($zones == FALSE) {
+		//no zones, manually call the disconnected block hook.
+		block_page_build($page);
+		return;
+	}
+
+	//no zones are defined, build site just usable enough to do something about it
+	if(count($zones['regions']) < 1) {
+		$page['page'] = array(
+			'warning' => array(
+				'#type'   => 'markup',
+				'#markup' => '<div class=no-zones><b>No zones have been defined for ' . $theme . ' yet</b></div>',
+			),
+			'main' => array(
+				'#type'   => 'markup',
+				'#markup' => render(module_invoke('system', 'block_view', 'main')),
+			),
+		);
+		return;
+	}
+
+	$visible_zones = $zones['list'];
+	drupal_alter('zone_visibility', $visible_zones);
+	$vm = array();
+	foreach($visible_zones as $z) {
+		$vm[$z['id']] = $z['hidden'];
+	}
+	$page['content'] = array(
+		'#sorted' => TRUE,
+	);
+	zone_render($page['content'], $zones['tree'], $vm);
+}
+
+function zone_render(&$page, &$tree, &$hidden_zones) {
+	foreach($tree as &$root) {
+		if($hidden_zones[$root['id']]) {
+			continue;
+		}
+		$page[$root['machine_name']] = _zone_render_rec($root, $hidden_zones);
+	}
+	unset($root);
+}
+
+function _zone_render_rec(&$root, &$hm) {
+	$r = array();
+	if($hm[$root['id']]) {
+		return $r;
+	}
+
+	if($root['region']) {
+		$r = block_get_blocks_by_region($root['machine_name']);
+	} else {
+		foreach($root['children'] as &$n) {
+			$c = _zone_render_rec($n, $hm);
+			if(!empty($c)) {
+				$r[] = $c;
+			}
+		}
+		unset($n);
+	}
+
+	if(!$root['empty'] && count($r) == 0) {
+		return $r;
+	}
+
+	return tagspec_to_render_array($root['tag'], $r + array('#sorted' => TRUE));
+}

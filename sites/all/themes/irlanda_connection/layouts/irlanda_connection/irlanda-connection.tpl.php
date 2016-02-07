@@ -17,16 +17,13 @@
           <h2 class="site-slogan"><?php print $site_slogan; ?></h2>
         <?php endif; ?>
       <?php endif; ?>
-      <?php print render($page['navigation']); ?>
     </div>
-
+    <?php print render($page['navigation']); ?>
     <?php print render($page['header']); ?>
   </header>
-
   <div class="section-main">
     <div class="section-content" role="main">
       <?php print render($page['highlighted']); ?>
-      <?php print $breadcrumb; ?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>

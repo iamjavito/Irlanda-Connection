@@ -1,0 +1,94 @@
+<?php
+
+function zone_install() {
+	variable_set('menu_rebuild_needed', TRUE);
+}
+
+function zone_schema() {
+	return array(
+		'zones' => array(
+			'description' => 'A nestable replacement for regions',
+
+			'fields' => array(
+				'id' => array(
+					'description' => 'The unique id of this zone',
+					'type'        => 'serial',
+					'unsigned'    => TRUE,
+					'not null'    => TRUE,
+				),
+				'parent' => array(
+					'description' => 'The parent id or 0',
+					'type'        => 'int',
+					'unsigned'    => TRUE,
+					'not null'    => TRUE,
+					'default'     => '0',
+				),
+				'name' => array(
+					'description'  => 'the display name of this zone',
+					'type'         => 'varchar',
+					'length'       => '255',
+					'not null'     => TRUE,
+					'translatable' => TRUE,
+				),
+				'machine_name' => array(
+					'description'  => 'the machine name of this zone',
+					'type'         => 'varchar',
+					'length'       => '255',
+					'not null'     => TRUE,
+				),
+				'theme' => array(
+					'description' => 'the theme of this zone',
+					'type'        => 'varchar',
+					'length'      => '64',
+					'not null'    => TRUE,
+				),
+				'weight' => array(
+					'description' => 'The weight of this zone within its current depth',
+					'type'        => 'int',
+					'unsigned'    => FALSE,
+					'not null'    => TRUE,
+					'default'     => '0',
+				),
+				'hidden' => array(
+					'description' => 'Whether this zone is hidden by default',
+					'type'        => 'int',
+					'unsigned'    => TRUE,
+					'not null'    => TRUE,
+					'default'     => '0',
+				),
+				'empty' => array(
+					'description' => 'Whether to render this zone if empty',
+					'type'        => 'int',
+					'unsigned'    => TRUE,
+					'not null'    => TRUE,
+					'default'     => '0',
+				),
+				'region' => array(
+					'description' => 'Whether this zone should be treated as a region',
+					'type'        => 'int',
+					'unsigned'    => TRUE,
+					'not null'    => TRUE,
+					'default'     => '0',
+				),
+				'tag' => array(
+					'description' => 'The tag to use for this zone',
+					'type'        => 'text',
+					'size'        => 'medium',
+					'not null'    => TRUE,
+					'serialize'   => TRUE,
+				),
+			),
+
+			'primary key' => array('id'),
+
+			'indexes' => array(
+				'list'    => array('theme', 'weight'),
+				'machine' => array('machine_name'),
+			),
+
+			'unique keys' => array(
+				'machine_and_theme' => array('machine_name', 'theme'),
+			),
+		),
+	);
+}

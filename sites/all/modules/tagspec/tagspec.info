@@ -1,0 +1,12 @@
+name = "Tag Specification Form Element"
+description = "A form element for easily specifying html tags"
+package = "Other"
+core = 7.x
+dependencies[] = simplehtmldom
+
+; Information added by Drupal.org packaging script on 2015-10-07
+version = "7.x-1.0"
+core = "7.x"
+project = "tagspec"
+datestamp = "1444259040"
+

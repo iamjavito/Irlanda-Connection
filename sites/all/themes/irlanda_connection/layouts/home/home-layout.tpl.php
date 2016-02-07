@@ -16,21 +16,21 @@
           <h2 class="site-slogan"><?php print $site_slogan; ?></h2>
         <?php endif; ?>
       <?php endif; ?>
-      <?php print render($page['navigation']); ?>
     </div>
-
-    <?php print render($page['header']); ?>
+    <?php print render($page['navigation']); ?>
+    <div id="zone-graphic-header" style="background-image: url(sites/default/files/home-top-img.png);">
+      <?php print render($page['header']); ?>
+      <?php if ($title): ?>
+        <h1>CURSOS DE INGLÉS EN EL EXTRANJERO</h1>
+        <!-- <h1><?php print $title; ?></h1> -->
+      <?php endif; ?>
+    </div>
   </header>
-
   <div class="section-main">
     <div class="section-content" role="main">
       <?php print render($page['highlighted']); ?>
-      <?php print $breadcrumb; ?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h1><?php print $title; ?></h1>
-      <?php endif; ?>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
       <?php print render($tabs); ?>

@@ -1,5 +1,11 @@
+body{
+	margin: $bodymargin;
+	padding: $bodypadding;
+
+}
 img, media {
   max-width: 100%;
+  
 
 }
 .section-branding{
@@ -15,5 +21,11 @@ img, media {
     height: 197px;
     background-color: $mainbg;
 }
+#zone-graphic-header{
+  min-height: 700px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 
+}
 
