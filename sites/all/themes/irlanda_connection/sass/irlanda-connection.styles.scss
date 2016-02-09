@@ -1,23 +1,19 @@
 // Import external libraries.
-//@import "breakpoint" -> Great for Responsive
+@import "breakpoint";
 
 // Import variables, abstractions, base styles and components.
 // Uncomment the next lines and adjust them to your needs.
 
-//Variables
-@import "variables/_colors.scss";
-@import "variables/_spacing.scss";
-@import "variables/_typography.scss";
+// Variables
+@import "variables/**/*";
 
-//Base
-@import "base/_blocks.scss";
-@import "base/_forms.scss";
-@import "base/_headers.scss";
+// Base
+@import "base/**/*";
 
-//Components
-@import "components/_navigation.scss";
+// Components
+@import "components/**/*";
 
-//abstratctions
-@import "abstractions/_typography.scss";
+// abstratctions
+@import "abstractions/**/*";
 
 

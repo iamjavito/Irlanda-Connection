@@ -14,6 +14,14 @@ img, media {
     margin-right: 1.26582%;
     max-width: 250px;
     max-height: 150px;
+
+    @media(min-width: 500px) {
+      width: 36.70886%;
+      float: left;
+      margin-right: 1.26582%;
+      max-width: 250px;
+      max-height: 150px;
+    }
     
 }
 .block__content{
@@ -40,13 +48,17 @@ img, media {
 
 }
 #zone-graphic-first {
+  margin: 0;
+  padding: 0;
   height: $wrapper;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 700px;
 
 }
 #zone-graphic-destinos {
+  margin: 0;
+  padding: 0;
   height: $wrapper;
   background-position: center center;
   background-repeat: no-repeat;

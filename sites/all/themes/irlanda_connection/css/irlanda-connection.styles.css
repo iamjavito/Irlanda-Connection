@@ -14,6 +14,15 @@ img, media {
   max-width: 250px;
   max-height: 150px;
 }
+@media (min-width: 500px) {
+  .section-branding {
+    width: 36.70886%;
+    float: left;
+    margin-right: 1.26582%;
+    max-width: 250px;
+    max-height: 150px;
+  }
+}
 
 .block__content {
   color: #fff;
@@ -38,13 +47,17 @@ img, media {
 }
 
 #zone-graphic-first {
+  margin: 0;
+  padding: 0;
   height: 36em;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 700px;
 }
 
 #zone-graphic-destinos {
+  margin: 0;
+  padding: 0;
   height: 36em;
   background-position: center center;
   background-repeat: no-repeat;
@@ -113,3 +126,5 @@ h2 {
 #block-system-navigation .leaf {
   margin: 0px 0px 0px 88px;
 }
+
+/*# sourceMappingURL=irlanda-connection.styles.css.map */

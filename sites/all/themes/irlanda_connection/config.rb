@@ -7,3 +7,10 @@ relative_assets = false # by Compass.app
 line_comments = false # by Compass.app 
 sass_options = {:debug_info=>false} # by Compass.app 
 sourcemap = false # by Compass.app 
+
+
+# Require any additional compass plugins installed on your system.
+
+require 'breakpoint'
+require 'compass-normalize'
+# require 'singularitygs'
