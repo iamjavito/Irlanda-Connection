@@ -17,8 +17,14 @@
       font-size: 100px;
       text-decoration: bold;
       margin-top: 5%;
+      line-height: 148px;
 
     }
+  }
+  #btn-home{
+    @include grid-span(4,4);
+    background: $maingreen;
+
   }
 }
 
@@ -41,7 +47,6 @@
       h2{
         padding: $wrap-h2;
         text-align: center;
-        font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
       }
       .block__content{
@@ -93,7 +98,7 @@
       h2{
         padding: $wrap-h2;
         text-align: center;
-        font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        
       }
       .block__content{
         font-family: Brandon_Reg;

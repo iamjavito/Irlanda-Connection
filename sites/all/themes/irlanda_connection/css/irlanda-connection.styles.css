@@ -16,7 +16,12 @@ input {
   border: solid 2px #666;
 }
 
+h1 {
+  font-family: Brandon_Bold;
+}
+
 h2 {
+  font-family: Brandon_Bold;
   color: white;
   font-size: 61px;
   color: #fff;
@@ -108,7 +113,16 @@ h2 {
     font-size: 100px;
     text-decoration: bold;
     margin-top: 5%;
+    line-height: 148px;
   }
+}
+#zone-graphic-header #btn-home {
+  width: 32.20339%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 25.42373%;
+  clear: none;
+  background: #018740;
 }
 
 @media (min-width: 60em) {
@@ -138,7 +152,6 @@ h2 {
   #zone-graphic-first #block-bean-por-que-ingles h2 {
     padding: 40px 20px 20px;
     text-align: center;
-    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
   }
   #zone-graphic-first #block-bean-por-que-ingles .block__content {
     font-family: Brandon_Reg;
@@ -200,7 +213,6 @@ h2 {
   #zone-graphic-third #block-bean-por-que-nosotros h2 {
     padding: 40px 20px 20px;
     text-align: center;
-    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
   }
   #zone-graphic-third #block-bean-por-que-nosotros .block__content {
     font-family: Brandon_Reg;
@@ -279,6 +291,8 @@ h2 {
 @font-face {
   font-family: Brandon_Reg;
   src: url("fonts/brandon_reg.otf");
+  font-family: Brandon_Bold;
+  src: url("fonts/brandon_bld.otf");
 }
 
 /*# sourceMappingURL=irlanda-connection.styles.css.map */

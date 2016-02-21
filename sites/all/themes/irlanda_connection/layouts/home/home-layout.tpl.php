@@ -32,6 +32,9 @@
         <?php if ($title): ?>
           <h1>CURSOS DE INGLÉS EN EL EXTRANJERO</h1>
         <?php endif; ?>
+        <div id='btn-home' class="btn">
+          <a href="?q=destinos">DESCUBRE EL MUNDO CON NOSOTROS</a>
+        </div>
       </div> 
       <div id="zone-graphic-first" style="background-image: url(sites/default/files/images/porqueingles-img.png);">
         <?php print render($page['wrapper-first']); ?>
