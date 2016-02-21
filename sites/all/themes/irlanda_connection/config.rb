@@ -1,4 +1,5 @@
 
+
 css_dir = "css" # by Compass.app 
 sass_dir = "sass" # by Compass.app 
 images_dir = "images" # by Compass.app 
@@ -13,4 +14,4 @@ sourcemap = false # by Compass.app
 
 require 'breakpoint'
 require 'compass-normalize'
-# require 'singularitygs'
+require 'singularitygs'

@@ -18,7 +18,9 @@
         <?php endif; ?>
       <?php endif; ?>
     </div>
-    <?php print render($page['navigation']); ?>
+    <div class="section-navbar">
+      <?php print render($page['navigation']); ?>
+    </div>
     <?php print render($page['header']); ?>
   </header>
   <div class="section-main">

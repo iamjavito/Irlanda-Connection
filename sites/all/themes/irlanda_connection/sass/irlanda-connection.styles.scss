@@ -1,5 +1,6 @@
 // Import external libraries.
 @import "breakpoint";
+@import "singularitygs";
 
 // Import variables, abstractions, base styles and components.
 // Uncomment the next lines and adjust them to your needs.
@@ -14,6 +15,6 @@
 @import "components/**/*";
 
 // abstratctions
-@import "abstractions/**/*";
+@import "abstractions/*";
 
 

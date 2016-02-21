@@ -17,29 +17,27 @@
         <?php endif; ?>
       <?php endif; ?>
     </div>
-    <?php print render($page['navigation']); ?>
-    <div id="zone-graphic-header" style="background-image: url(sites/default/files/images/home-top-img.png);">
-      <?php print render($page['header']); ?>
-      <?php if ($title): ?>
-        <h1>CURSOS DE INGLÉS EN EL EXTRANJERO</h1>
-      <?php endif; ?>
+    <div class="section-navbar">
+      <?php print render($page['navigation']); ?>
     </div>
   </header>
   <div class="section-main">
     <div class="section-content" role="main">
-      <?php print render($page['highlighted']); ?>
-      <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
-      <?php print render($tabs); ?>
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?> 
+      <?php endif; ?>
+      <!-- Header Image -->
+      <div id="zone-graphic-header" style="background-image: url(sites/default/files/images/home-top-img.png);">
+        <?php print render($page['header']); ?>
+        <?php if ($title): ?>
+          <h1>CURSOS DE INGLÉS EN EL EXTRANJERO</h1>
+        <?php endif; ?>
+      </div> 
       <div id="zone-graphic-first" style="background-image: url(sites/default/files/images/porqueingles-img.png);">
         <?php print render($page['wrapper-first']); ?>
       </div>
       <div id="zone-graphic-destinos" style="background-image: url(sites/default/files/images/destinos-img.png);">
+          <h2>DESTINOS</h2>
         <?php print render($page['wrapper-second']); ?>        
       </div>
       <div id="zone-graphic-third" style="background-image: url(sites/default/files/images/porquenosotros-img.png);">

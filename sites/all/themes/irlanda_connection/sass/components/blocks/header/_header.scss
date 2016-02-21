@@ -1,0 +1,32 @@
+.section-header{
+    background-color: $mainbg;
+    height: 48px;
+
+    @include breakpoint($desk) {
+    	display: block;
+    	height: 197px;
+
+    }
+
+}
+.section-branding{	
+    margin-top: 23.5px;
+	margin-left: 40px; 
+	display: none;
+
+	@include breakpoint($desk) {
+		@include grid-span(2,2);
+		display: block;
+		margin-top: 23.5px;
+		margin-left: 40px; 
+
+	}
+
+    .site-logo{
+        img {	
+            width: 250px;
+            height: 150px;
+
+        }
+    }
+}

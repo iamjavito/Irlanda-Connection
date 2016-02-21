@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "18268",
+"creatorBuild": "19115",
 "files": {
 	"\/config.rb": {
 		"fileType": 131072,
@@ -13,9 +13,18 @@
 		},
 	"\/css\/irlanda-connection.reset.css": {
 		"fileType": 16,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/irlanda-connection.reset.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/irlanda-connection.styles.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/irlanda-connection.styles.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -76,7 +85,7 @@
 		"outputAbbreviatedPath": "\/images\/home-top-img.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/logo.png": {
 		"fileType": 32768,
@@ -87,7 +96,7 @@
 		"outputAbbreviatedPath": "\/images\/logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/logo_0.png": {
 		"fileType": 32768,
@@ -98,7 +107,7 @@
 		"outputAbbreviatedPath": "\/images\/logo_0.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/logo_1.png": {
 		"fileType": 32768,
@@ -109,7 +118,7 @@
 		"outputAbbreviatedPath": "\/images\/logo_1.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/logo_2.png": {
 		"fileType": 32768,
@@ -120,7 +129,7 @@
 		"outputAbbreviatedPath": "\/images\/logo_2.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/js\/irlanda-connection.behaviors.js": {
 		"fileType": 64,
@@ -151,17 +160,37 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/libraries\/normalize-css\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/libraries\/normalize-css\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/libraries\/normalize-css\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/libraries\/normalize-css\/LICENSE.md": {
-		"enableFootnoteSupport": 1,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/libraries\/normalize-css\/LICENSE.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/libraries\/normalize-css\/LICENSE.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/libraries\/normalize-css\/normalize.css": {
 		"fileType": 16,
@@ -173,16 +202,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/libraries\/normalize-css\/README.md": {
-		"enableFootnoteSupport": 1,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/libraries\/normalize-css\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/libraries\/normalize-css\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/logo.png": {
 		"fileType": 32768,
@@ -193,11 +231,33 @@
 		"outputAbbreviatedPath": "\/logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
+		},
+	"\/min\/gulpfile-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/min\/gulpfile-min.js",
+		"outputAbbreviatedPath": "\/min\/min\/gulpfile-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/package.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/package.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/package-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/sass\/abstractions\/_typography.scss": {
 		"createSourceMap": 1,
-		"debugStyle": 0,
+		"debugStyle": 1,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
@@ -213,7 +273,7 @@
 		},
 	"\/sass\/base\/_blocks.scss": {
 		"createSourceMap": 1,
-		"debugStyle": 0,
+		"debugStyle": 1,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
@@ -229,7 +289,7 @@
 		},
 	"\/sass\/base\/_forms.scss": {
 		"createSourceMap": 1,
-		"debugStyle": 0,
+		"debugStyle": 1,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
@@ -245,7 +305,7 @@
 		},
 	"\/sass\/base\/_headers.scss": {
 		"createSourceMap": 1,
-		"debugStyle": 0,
+		"debugStyle": 1,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
@@ -259,15 +319,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/sass\/components\/blocks\/_navigation.scss": {
+	"\/sass\/components\/blocks\/_footer.scss": {
 		"createSourceMap": 1,
-		"debugStyle": 0,
+		"debugStyle": 1,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/components\/blocks\/_navigation.scss",
-		"outputAbbreviatedPath": "\/css\" # by Compass.app \/_navigation.css",
+		"inputAbbreviatedPath": "\/sass\/components\/blocks\/_footer.scss",
+		"outputAbbreviatedPath": "\/css\" # by Compass.app \/_footer.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -277,7 +337,7 @@
 		},
 	"\/sass\/components\/blocks\/_wrappers.scss": {
 		"createSourceMap": 1,
-		"debugStyle": 0,
+		"debugStyle": 1,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
@@ -291,9 +351,41 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/sass\/components\/blocks\/header\/_header.scss": {
+		"createSourceMap": 1,
+		"debugStyle": 1,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/components\/blocks\/header\/_header.scss",
+		"outputAbbreviatedPath": "\/css\" # by Compass.app \/_header.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/sass\/components\/blocks\/header\/_navigation.scss": {
+		"createSourceMap": 1,
+		"debugStyle": 1,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/components\/blocks\/header\/_navigation.scss",
+		"outputAbbreviatedPath": "\/css\" # by Compass.app \/_navigation.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/sass\/irlanda-connection.reset.scss": {
 		"createSourceMap": 1,
-		"debugStyle": 0,
+		"debugStyle": 1,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 0,
@@ -309,11 +401,11 @@
 		},
 	"\/sass\/irlanda-connection.styles.scss": {
 		"createSourceMap": 1,
-		"debugStyle": 0,
+		"debugStyle": 1,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/irlanda-connection.styles.scss",
 		"outputAbbreviatedPath": "\/css\" # by Compass.app \/irlanda-connection.styles.css",
 		"outputPathIsOutsideProject": 0,
@@ -325,7 +417,7 @@
 		},
 	"\/sass\/layouts\/home\/home.layout.scss": {
 		"createSourceMap": 1,
-		"debugStyle": 0,
+		"debugStyle": 1,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 0,
@@ -341,7 +433,7 @@
 		},
 	"\/sass\/layouts\/home\/wrapper.layout.scss": {
 		"createSourceMap": 1,
-		"debugStyle": 0,
+		"debugStyle": 1,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 0,
@@ -357,7 +449,7 @@
 		},
 	"\/sass\/layouts\/wrapper\/irlanda-wrapper.layout.scss": {
 		"createSourceMap": 1,
-		"debugStyle": 0,
+		"debugStyle": 1,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 0,
@@ -373,7 +465,7 @@
 		},
 	"\/sass\/layouts\/wrapper\/wrapper.layout.scss": {
 		"createSourceMap": 1,
-		"debugStyle": 0,
+		"debugStyle": 1,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 0,
@@ -389,7 +481,7 @@
 		},
 	"\/sass\/variables\/_breakpoints.scss": {
 		"createSourceMap": 1,
-		"debugStyle": 0,
+		"debugStyle": 1,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
@@ -405,7 +497,7 @@
 		},
 	"\/sass\/variables\/_colors.scss": {
 		"createSourceMap": 1,
-		"debugStyle": 0,
+		"debugStyle": 1,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
@@ -419,9 +511,25 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/sass\/variables\/_grids.scss": {
+		"createSourceMap": 1,
+		"debugStyle": 1,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/variables\/_grids.scss",
+		"outputAbbreviatedPath": "\/css\" # by Compass.app \/_grids.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/sass\/variables\/_spacing.scss": {
 		"createSourceMap": 1,
-		"debugStyle": 0,
+		"debugStyle": 1,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
@@ -437,7 +545,7 @@
 		},
 	"\/sass\/variables\/_typography.scss": {
 		"createSourceMap": 1,
-		"debugStyle": 0,
+		"debugStyle": 1,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
@@ -460,7 +568,7 @@
 		"outputAbbreviatedPath": "\/screenshot.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/template.php": {
 		"fileType": 8192,
@@ -498,7 +606,7 @@
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
 	"displayValue": "irlanda_connection",
-	"displayValueWasSetByUser": 0,
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "pencil_yellow"
 	},
 "projectSettings": {
@@ -538,6 +646,10 @@
 			},
 		"empty_constructor_needs_parens": {
 			"active": 0,
+			"flagValue": -1
+			},
+		"ensure_comprehensions": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"indentation": {
@@ -588,8 +700,16 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"no_nested_string_interpolation": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"no_plusplus": {
 			"active": 0,
+			"flagValue": -1
+			},
+		"no_private_function_fat_arrows": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"no_stand_alone_at": {
@@ -598,6 +718,10 @@
 			},
 		"no_tabs": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"no_this": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"no_throwing_strings": {
@@ -630,6 +754,10 @@
 			},
 		"space_operators": {
 			"active": 0,
+			"flagValue": -1
+			},
+		"spacing_after_comma": {
+			"active": 1,
 			"flagValue": -1
 			}
 		},
@@ -687,6 +815,10 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"browserify": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"camelcase": {
 			"active": 0,
 			"flagValue": -1
@@ -709,6 +841,10 @@
 			},
 		"dojo": {
 			"active": 0,
+			"flagValue": -1
+			},
+		"elision": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"eqeqeq": {
@@ -747,6 +883,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"futurehostile": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"globalstrict": {
 			"active": 0,
 			"flagValue": -1
@@ -760,6 +900,10 @@
 			"flagValue": 4
 			},
 		"iterator": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"jasmine": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -807,6 +951,10 @@
 			"active": 0,
 			"flagValue": 4
 			},
+		"mocha": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"mootools": {
 			"active": 0,
 			"flagValue": -1
@@ -825,6 +973,10 @@
 			},
 		"noarg": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"nocomma": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"node": {
@@ -872,6 +1024,10 @@
 			"flagValue": -1
 			},
 		"prototypejs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"qunit": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -923,6 +1079,10 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"varstmt": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"withstmt": {
 			"active": 0,
 			"flagValue": -1
@@ -941,10 +1101,6 @@
 			}
 		},
 	"jsLintFlags2": {
-		"ass": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"bitwise": {
 			"active": 0,
 			"flagValue": -1
@@ -953,15 +1109,7 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"closure": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"continue": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"debug": {
+		"couch": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -969,75 +1117,27 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"eqeq": {
+		"es6": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"evil": {
+		"eval": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"forin": {
+		"for": {
 			"active": 0,
 			"flagValue": -1
-			},
-		"indent": {
-			"active": 0,
-			"flagValue": 4
 			},
 		"maxlen": {
 			"active": 0,
 			"flagValue": 150
 			},
-		"newcap": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"node": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"nomen": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"plusplus": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"properties": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"regexp": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"rhino": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"sloppy": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"stupid": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"sub": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"todo": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"unparam": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"vars": {
+		"this": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -1046,6 +1146,14 @@
 			"flagValue": -1
 			}
 		},
+	"jsonAutoOutputPathEnabled": 0,
+	"jsonAutoOutputPathFilenamePattern": "*-min.json",
+	"jsonAutoOutputPathRelativePath": "",
+	"jsonAutoOutputPathReplace1": "",
+	"jsonAutoOutputPathReplace2": "",
+	"jsonAutoOutputPathStyle": 0,
+	"jsonOrderOutput": 0,
+	"jsonOutputStyle": 1,
 	"kitAutoOutputPathEnabled": 1,
 	"kitAutoOutputPathFilenamePattern": "*.html",
 	"kitAutoOutputPathRelativePath": "",
@@ -1073,9 +1181,18 @@
 	"markdownAutoOutputPathReplace1": "",
 	"markdownAutoOutputPathReplace2": "",
 	"markdownAutoOutputPathStyle": 0,
+	"markdownCriticStyle": 0,
 	"markdownEnableFootnotes": 1,
-	"markdownEnableSmartyPants": 1,
-	"markdownExpandTabs": 1,
+	"markdownEnableLabels": 1,
+	"markdownEnableSmartQuotes": 1,
+	"markdownEscapeLineBreaks": 0,
+	"markdownMaskEmailAddresses": 1,
+	"markdownOutputFormat": 0,
+	"markdownOutputStyle": 0,
+	"markdownParseMetadata": 1,
+	"markdownProcessHTML": 0,
+	"markdownRandomFootnoteNumbers": 0,
+	"markdownUseCompatibilityMode": 0,
 	"reloadFileURLs": 0,
 	"sassAutoOutputPathEnabled": 1,
 	"sassAutoOutputPathFilenamePattern": "*.css",
@@ -1084,7 +1201,7 @@
 	"sassAutoOutputPathReplace2": "css",
 	"sassAutoOutputPathStyle": 2,
 	"sassCreateSourceMap": 1,
-	"sassDebugStyle": 0,
+	"sassDebugStyle": 1,
 	"sassDecimalPrecision": 10,
 	"sassOutputStyle": 1,
 	"sassUseLibsass": 0,
@@ -1099,6 +1216,7 @@
 	"slimAutoOutputPathStyle": 0,
 	"slimCompileOnly": 0,
 	"slimLogicless": 0,
+	"slimOutputFormat": 0,
 	"slimOutputStyle": 1,
 	"slimRailsCompatible": 0,
 	"stylusAutoOutputPathEnabled": 1,
@@ -1120,15 +1238,22 @@
 	"typescriptAutoOutputPathStyle": 2,
 	"typescriptCreateDeclarationFile": 0,
 	"typescriptCreateSourceMap": 0,
+	"typescriptJSXMode": 0,
 	"typescriptMinifyOutput": 0,
+	"typescriptModuleResolutionType": 0,
 	"typescriptModuleType": 0,
 	"typescriptNoImplicitAny": 0,
-	"typescriptNoResolve": 0,
+	"typescriptPreserveConstEnums": 0,
 	"typescriptRemoveComments": 0,
+	"typescriptSuppressImplicitAnyIndexErrors": 0,
 	"typescriptTargetECMAVersion": 0,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
 		"ascii-only": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"bare-returns": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -1161,6 +1286,10 @@
 			"flagValue": -1
 			},
 		"dead_code": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"drop_console": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -1204,6 +1333,14 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"keep_fargs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"keep_fnames": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"loops": {
 			"active": 1,
 			"flagValue": -1
@@ -1216,8 +1353,16 @@
 			"active": 1,
 			"flagValue": 32000
 			},
+		"negate_iife": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"properties": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"pure_getters": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"quote-keys": {
