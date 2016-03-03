@@ -27,7 +27,7 @@
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
       <!-- Header Image -->
-      <div id="zone-graphic-header" style="background-image: url(sites/default/files/images/home-top-img.png);">
+      <div id="zone-graphic-header" style="background-image: url(sites/default/files/storage/images/home_page/home-top-img.png);">
         <?php print render($page['header']); ?>
         <?php if ($title): ?>
           <h1>CURSOS DE INGLÉS EN EL EXTRANJERO</h1>
@@ -36,14 +36,14 @@
           <a href="?q=destinos">DESCUBRE EL MUNDO CON NOSOTROS</a>
         </div>
       </div> 
-      <div id="zone-graphic-first" style="background-image: url(sites/default/files/images/porqueingles-img.png);">
+      <div id="zone-graphic-first" style="background-image: url(sites/default/files/storage/images/home_page/porqueingles-img.png);">
         <?php print render($page['wrapper-first']); ?>
       </div>
-      <div id="zone-graphic-destinos" style="background-image: url(sites/default/files/images/destinos-img.png);">
+      <div id="zone-graphic-destinos" style="background-image: url(sites/default/files/storage/images/home_page/destinos-img.png);">
           <h2>DESTINOS</h2>
         <?php print render($page['wrapper-second']); ?>        
       </div>
-      <div id="zone-graphic-third" style="background-image: url(sites/default/files/images/porquenosotros-img.png);">
+      <div id="zone-graphic-third" style="background-image: url(sites/default/files/storage/images/home_page/porquenosotros-img.png);">
         <?php print render($page['wrapper-third']); ?>
       </div>
       <?php print $feed_icons; ?>

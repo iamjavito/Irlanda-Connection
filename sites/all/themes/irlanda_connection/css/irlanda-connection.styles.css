@@ -1,3 +1,13 @@
+html, body, div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  font: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -286,6 +296,54 @@ h2 {
 .section-navbar #block-system-navigation ul li {
   display: inline-block;
   margin: 0px 6em 0px 0px;
+}
+
+.destinos-grid {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 44em) {
+  .destinos-grid .views-row {
+    float: left;
+    width: 100%;
+  }
+  .destinos-grid .views-row h2 {
+    position: absolute;
+    bottom: 10px;
+  }
+  .destinos-grid .views-row h2 a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .destinos-grid .views-row img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+@media (min-width: 60em) {
+  .destinos-grid .views-row {
+    float: left;
+    width: 33.33%;
+  }
+  .destinos-grid .views-row h2 {
+    position: absolute;
+    bottom: 10px;
+  }
+  .destinos-grid .views-row h2 a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .destinos-grid .views-row img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 }
 
 @font-face {

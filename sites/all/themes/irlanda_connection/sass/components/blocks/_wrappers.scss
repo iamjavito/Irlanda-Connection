@@ -1,6 +1,6 @@
 #zone-graphic-header{
   @include breakpoint($desk) {
-    @include grid-span(12,1);
+    @include grid-span($grids,1);
     //height: 700px;
     height: 74vh;
     background-position: center center;
@@ -30,7 +30,7 @@
 
 #zone-graphic-first {
   @include breakpoint($desk) {
-    @include grid-span(12,1);
+    @include grid-span($grids,1);
     margin: 0;
     padding: 0;
     height: $wrapper;
@@ -62,7 +62,7 @@
 
 #zone-graphic-destinos {
   @include breakpoint($desk) {
-    @include grid-span(12,1);
+    @include grid-span($grids,1);
     margin: 0;
     padding: 0;
     height: $wrapper;
@@ -71,7 +71,7 @@
     background-size: cover;
 
     h2{
-      @include grid-span(12,1);
+      @include grid-span($grids,1);
       text-align: center;
       width: 100%;
       background-color: $maingreen_opacity; 
@@ -82,7 +82,7 @@
 
 #zone-graphic-third {
   @include breakpoint($desk) {
-    @include grid-span(12,1);
+    @include grid-span($grids,1);
     margin: 0;
     padding: 0;
     height: $wrapper;

@@ -1,9 +1,9 @@
 .section-footer{
-	@include grid-span(12,1);
+	@include grid-span($grids,1);
 	height: $footer;
 	background-color: $footerbg;
 	border-top: solid 9px $maingreen;
-	padding: 50px 0; 
+	padding: 50px 0;
 
 	#block-menu-menu-footer{
 		@include grid-span(3,4);
@@ -21,13 +21,13 @@
 			list-style: none;
 
 			li:first-child{
-				font-size: $foot-links;	
+				font-size: $foot-links;
 				padding: 0px 0px 0px 0px;
 				list-style: none;
 
 			}
 			li{
-				font-size: $foot-links;	
+				font-size: $foot-links;
 				padding: 22px 0px 0px 0px;
 				list-style: none;
 
