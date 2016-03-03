@@ -495,6 +495,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/sass\/variables\/_blocks.scss": {
+		"createSourceMap": 1,
+		"debugStyle": 1,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/variables\/_blocks.scss",
+		"outputAbbreviatedPath": "\/css\" # by Compass.app \/_blocks.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/sass\/variables\/_breakpoints.scss": {
 		"createSourceMap": 1,
 		"debugStyle": 1,

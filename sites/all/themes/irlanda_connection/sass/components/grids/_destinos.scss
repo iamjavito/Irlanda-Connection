@@ -2,51 +2,37 @@
 	@include grid-span($grids,1);
 	margin: 0;
 	padding: 0;
-	@include breakpoint($tab) {
-		.views-row{
+	.views-row{
+		height: $dest_hg;
+
+		h2{	
+			a{
+				@include grid-span(4,4);
+				height: $dest_hg;
+				position: absolute;
+				width: 100%;
+				color: #fff;
+				text-decoration: none;
+				
+			}
+		}
+		img{
+			width: 100%;
+			height: $dest_hg;
+			object-fit: cover;
+
+		}
+
+		@include breakpoint($tab) {
 			float: left;
 			width: 100%;
-
-			h2{
-				position: absolute;
-				bottom: 10px;
-
-				a{
-					color: #fff;
-					text-decoration: none;
-					
-				}
-			}
-			img{
-				width: 100%;
-				height: auto;
-				object-fit: cover;
-
-			}
 		}
-	}
-	@include breakpoint($desk) {
-		.views-row{
+
+		@include breakpoint($desk) {
 			float: left;
 			width: 33.33%;
-
-			h2{
-				position: absolute;
-				bottom: 10px;
-
-				a{
-					color: #fff;
-					text-decoration: none;
-					
-				}
-			}
-			img{
-				width: 100%;
-				height: auto;
-				object-fit: cover;
-
-			}
 		}
 	}
+
 }
 

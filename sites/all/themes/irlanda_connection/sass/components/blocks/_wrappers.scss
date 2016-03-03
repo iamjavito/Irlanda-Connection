@@ -1,7 +1,6 @@
 #zone-graphic-header{
   @include breakpoint($desk) {
     @include grid-span($grids,1);
-    //height: 700px;
     height: 74vh;
     background-position: center center;
     background-repeat: no-repeat;
