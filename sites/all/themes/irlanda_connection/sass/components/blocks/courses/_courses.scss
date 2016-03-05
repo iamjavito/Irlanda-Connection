@@ -1,0 +1,71 @@
+.course-boxes{
+	@include grid-span($grids,1);
+	font-family: helvetica;
+	margin: 0;
+	padding: 0;
+	background-color: $course-box-page;
+
+	.course-box{
+		@include grid-span(7,3.5);
+		background-color: $course-box-bg;
+		margin-top: $course-box-mar;
+		margin-bottom: $course-box-mar;
+		border: solid 1px $course-box-border;
+		height: $course-box-hg;
+
+		.course-box-label{
+			padding-right: 3px;
+
+		}
+		.course-icon{
+			@include grid-span(3.5,1);
+			height: 100%;
+			background-color: $courseorange_opacity;
+
+			img{
+				object-fit: cover;
+   				width: 100%;
+
+			}
+		}
+		.course-details{
+			@include grid-span(8,4.5);
+			float: none;
+			padding: $course-box-details-pad;
+			
+				.course-box-label{
+					font-weight: bold;
+					float: left;
+
+				}
+		}
+		.course-box-classes-week{
+			text-align: center;
+
+			span{
+				font-weight: bold;
+				color: $course-box-classes;
+				font-size: $course-classes-txt;
+
+			}
+		}
+		.course-box-title{
+			a{
+				text-decoration: none;
+				color: $course-box-title;
+				font-size: $course-title;
+				font-family: helvetica;
+				font-weight: bold;
+
+			}
+		}
+		.course-box-short-desc{
+			font-size: $course-short-desc;
+			padding: $short-description-pad;
+
+		}
+		.course-box-level{
+
+		}
+	}
+}

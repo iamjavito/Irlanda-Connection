@@ -35,6 +35,7 @@ h2 {
   color: white;
   font-size: 61px;
   color: #fff;
+  text-decoration: none;
 }
 
 .section-footer {
@@ -232,6 +233,120 @@ h2 {
   }
 }
 
+.course-boxes {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  font-family: helvetica;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+.course-boxes .course-box {
+  width: 57.62712%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 21.18644%;
+  clear: none;
+  background-color: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: solid 1px #E6E6E6;
+  height: 300px;
+}
+.course-boxes .course-box .course-box-label {
+  padding-right: 3px;
+}
+.course-boxes .course-box .course-icon {
+  width: 27.9661%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+  height: 100%;
+  background-color: rgba(239, 118, 11, 0.5);
+}
+.course-boxes .course-box .course-icon img {
+  object-fit: cover;
+  width: 100%;
+}
+.course-boxes .course-box .course-details {
+  width: 66.10169%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 29.66102%;
+  clear: none;
+  float: none;
+  padding: 5px 0px 5px 20px;
+}
+.course-boxes .course-box .course-details .course-box-label {
+  font-weight: bold;
+  float: left;
+}
+.course-boxes .course-box .course-box-classes-week {
+  text-align: center;
+}
+.course-boxes .course-box .course-box-classes-week span {
+  font-weight: bold;
+  color: #fff;
+  font-size: 25px;
+}
+.course-boxes .course-box .course-box-title a {
+  text-decoration: none;
+  color: #000;
+  font-size: 44px;
+  font-family: helvetica;
+  font-weight: bold;
+}
+.course-boxes .course-box .course-box-short-desc {
+  font-size: 16px;
+  padding: 7px 0px 10px 20px;
+}
+
+.destinos-grid {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  margin: 0;
+  padding: 0;
+}
+.destinos-grid .views-row {
+  height: 503px;
+}
+.destinos-grid .views-row h2 a {
+  width: 32.20339%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 25.42373%;
+  clear: none;
+  height: 503px;
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+}
+.destinos-grid .views-row img {
+  width: 100%;
+  height: 503px;
+  object-fit: cover;
+}
+@media (min-width: 44em) {
+  .destinos-grid .views-row {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 60em) {
+  .destinos-grid .views-row {
+    float: left;
+    width: 33.33%;
+  }
+}
+
 .section-header {
   background-color: #fff;
   height: 48px;
@@ -247,6 +362,7 @@ h2 {
   margin-top: 23.5px;
   margin-left: 40px;
   display: none;
+  background-color: #fff;
 }
 @media (min-width: 60em) {
   .section-branding {
@@ -270,6 +386,7 @@ h2 {
   overflow: hidden;
   min-height: 197px;
   display: none;
+  background-color: #fff;
 }
 @media (min-width: 60em) {
   .section-navbar {
@@ -298,45 +415,137 @@ h2 {
   margin: 0px 6em 0px 0px;
 }
 
-.destinos-grid {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  margin: 0;
-  padding: 0;
+@media (min-width: 60em) {
+  #zone-graphic-header {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    height: 74vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
-.destinos-grid .views-row {
-  height: 47vh;
+@media (min-width: 60em) {
+  #zone-graphic-header h1 {
+    width: 66.10169%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 16.94915%;
+    clear: none;
+    text-align: center;
+    color: #fff;
+    font-size: 100px;
+    text-decoration: bold;
+    margin-top: 5%;
+    line-height: 148px;
+  }
 }
-.destinos-grid .views-row h2 a {
+#zone-graphic-header #btn-home {
   width: 32.20339%;
   float: left;
   margin-right: -100%;
   margin-left: 25.42373%;
   clear: none;
-  height: 47vh;
-  position: absolute;
-  width: 100%;
-  color: #fff;
-  text-decoration: none;
+  background: #018740;
 }
-.destinos-grid .views-row img {
-  width: 100%;
-  height: 47vh;
-  object-fit: cover;
-}
-@media (min-width: 44em) {
-  .destinos-grid .views-row {
-    float: left;
+
+@media (min-width: 60em) {
+  #zone-graphic-first {
     width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    margin: 0;
+    padding: 0;
+    height: 589px;
+    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #zone-graphic-first #block-bean-por-que-ingles {
+    width: 32.20339%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+    height: 589px;
+    background: rgba(239, 118, 11, 0.8);
+  }
+  #zone-graphic-first #block-bean-por-que-ingles h2 {
+    padding: 40px 20px 20px;
+    text-align: center;
+  }
+  #zone-graphic-first #block-bean-por-que-ingles .block__content {
+    font-family: Brandon_Reg;
+    padding: 20px 20px 20px 20px;
+    text-align: left;
+    line-height: 41px;
   }
 }
+
 @media (min-width: 60em) {
-  .destinos-grid .views-row {
-    float: left;
-    width: 33.33%;
+  #zone-graphic-destinos {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    margin: 0;
+    padding: 0;
+    height: 589px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #zone-graphic-destinos h2 {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(1, 135, 64, 0.8);
+  }
+}
+
+@media (min-width: 60em) {
+  #zone-graphic-third {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    margin: 0;
+    padding: 0;
+    height: 589px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #zone-graphic-third #block-bean-por-que-nosotros {
+    width: 40.67797%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    height: 589px;
+    background: rgba(239, 118, 11, 0.8);
+  }
+  #zone-graphic-third #block-bean-por-que-nosotros h2 {
+    padding: 40px 20px 20px;
+    text-align: center;
+  }
+  #zone-graphic-third #block-bean-por-que-nosotros .block__content {
+    font-family: Brandon_Reg;
+    padding: 20px 20px 20px 20px;
+    text-align: left;
+    line-height: 41px;
   }
 }
 

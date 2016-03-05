@@ -1,5 +1,5 @@
 .section-header{
-    background-color: $mainbg;
+    background-color: $navbar-colour;
     height: 48px;
 
     @include breakpoint($desk) {
@@ -13,6 +13,7 @@
     margin-top: 23.5px;
 	margin-left: 40px; 
 	display: none;
+    background-color: $branding-colour;
 
 	@include breakpoint($desk) {
 		@include grid-span(2,2);

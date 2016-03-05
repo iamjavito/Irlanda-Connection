@@ -1,8 +1,9 @@
 .section-navbar{
-    background: $mainbg;
+    background: $navbar-colour;
     overflow: hidden;
     min-height: 197px;
     display: none;
+    background-color: $navbar-colour;
 
     @include breakpoint($desk) {
         display: block; 
