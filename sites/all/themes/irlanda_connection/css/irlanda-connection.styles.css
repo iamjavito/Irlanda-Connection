@@ -297,10 +297,10 @@ h2 {
     .course-boxes .course-box .course-box-classes-week {
       text-align: center; }
       .course-boxes .course-box .course-box-classes-week div {
-        line-height: 300px;
         font-weight: bold;
         color: #fff;
-        font-size: 51px; }
+        font-size: 51px;
+        padding: 86px 20px 20px 20px; }
     .course-boxes .course-box .course-box-title a {
       text-decoration: none;
       color: #000;

@@ -101,10 +101,10 @@
 			text-align: center;
 
 			div{
-				line-height: $course-box-hg;
 				font-weight: bold;
 				color: $course-box-classes;
 				font-size: $course-classes-txt;
+				padding: $course-classes-pad;
 
 			}
 		}
