@@ -1,0 +1,35 @@
+.bean-head-image{
+	@include grid-span(12,1);
+	position: relative;
+
+	.field--name-field-header-image{
+
+		.background-image-header{
+			float: right;
+			width: 100%;
+			height: 500px;
+			background-position: bottom;
+			background-size: cover;
+
+		}
+	}
+	.field--name-field-button-link{
+		@include grid-span(4,5);
+		height: $btn-home-height;
+		background-color: $mainorange;
+		line-height: $btn-home-height;
+		font-family: Brandon_Bold;
+		text-align: center;
+		position: absolute;
+		bottom: 12%;
+
+		a{
+			@include grid-span(12,1);
+			height: 100%;
+			color: $btn-txt;
+			text-decoration: none;
+
+		}
+
+	}
+}

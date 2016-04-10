@@ -7,12 +7,14 @@
 
 		h2{	
 			a{
-				@include grid-span(4,4);
+				width: 100%;
+				text-align: center;
 				height: $dest_hg;
 				position: absolute;
 				width: 100%;
 				color: #fff;
 				text-decoration: none;
+				line-height: $dest_hg;
 				
 			}
 		}

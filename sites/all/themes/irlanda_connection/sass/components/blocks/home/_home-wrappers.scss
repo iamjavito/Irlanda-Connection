@@ -2,6 +2,7 @@
   @include breakpoint($desk) {
     @include grid-span($grids,1);
     height: 74vh;
+    position: relative;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,9 +22,24 @@
     }
   }
   #btn-home{
-    @include grid-span(4,4);
+    @include grid-span(4,5);
     background: $maingreen;
+    height: $btn-home-height;
+    text-align: center;
+    position: absolute;
+    bottom: 15%;
 
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;      
+      line-height: $btn-home-height;
+      font-family: Brandon_Bold;
+      color: $btn-txt;
+      text-decoration: none; 
+      font-size: $btn-home-txt;
+
+    }
   }
 }
 

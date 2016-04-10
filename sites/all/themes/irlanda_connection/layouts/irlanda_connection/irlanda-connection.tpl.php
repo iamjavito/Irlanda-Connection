@@ -23,6 +23,9 @@
     </div>
     <?php print render($page['header']); ?>
   </header>
+  <div class="section-header-img">
+    <?php print render($page['header_image']); ?>
+  </div>
   <div class="section-main">
     <div class="section-content" role="main">
       <?php print render($page['highlighted']); ?>

@@ -4,9 +4,11 @@
 	margin: 0;
 	padding: 0;
 	background-color: $course-box-page;
-
+	
 	.course-box{
 		@include grid-span(7,3.5);
+		position: relative;
+		float: none;
 		background-color: $course-box-bg;
 		margin-top: $course-box-mar;
 		margin-bottom: $course-box-mar;
@@ -27,6 +29,10 @@
    				width: 100%;
 
 			}
+
+			div{
+				
+			}
 		}
 		.course-details{
 			@include grid-span(8,4.5);
@@ -36,13 +42,66 @@
 				.course-box-label{
 					font-weight: bold;
 					float: left;
+					font-size: $course-box-font;
 
 				}
+				.course-box-content{
+					font-size: $course-box-font;
+
+				}
+		}
+		.more-info-btn{
+			@include grid-span(3, 10);
+			position: absolute;
+			right: 0;
+			bottom: $course-button-height;
+			background-color: $mainorange;
+			color: $btn-txt;
+			text-align: center;
+			height: $course-button-height;
+			margin-top: $course-more-margin;
+			padding: 0;
+
+			a{
+				display: block;
+				width: 100%;
+				height: 100%;
+				text-decoration: none;
+				font-size: 1.5em;
+				line-height: $course-button-height;
+				color: $course-box-link;
+
+			}
+
+		}
+		.cotizacion-btn{
+			@include grid-span(3, 10);
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			background-color: $maingreen;
+			color: $btn-txt;
+			text-align: center;
+			height: $course-button-height;
+			margin-top: $course-cotizacion-margin;
+			padding: 0;
+
+			a{
+				display: block;
+				width: 100%;
+				height: 100%;
+				text-decoration: none;
+				font-size: 1.5em;
+				line-height: $course-button-height;
+				color: $course-box-link;
+
+			}
 		}
 		.course-box-classes-week{
 			text-align: center;
 
-			span{
+			div{
+				line-height: $course-box-hg;
 				font-weight: bold;
 				color: $course-box-classes;
 				font-size: $course-classes-txt;
@@ -60,7 +119,7 @@
 			}
 		}
 		.course-box-short-desc{
-			font-size: $course-short-desc;
+			font-size: $course-box-font;
 			padding: $short-description-pad;
 
 		}
