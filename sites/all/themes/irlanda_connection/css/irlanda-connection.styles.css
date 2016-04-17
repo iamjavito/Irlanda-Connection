@@ -587,9 +587,13 @@ h2 {
   clear: none;
   clear: both;
   float: none; }
-  .services-grid .views-row-odd {
+  .services-grid .views-row-odd .service-description {
     background-color: rgba(1, 135, 64, 0.8); }
-  .services-grid .views-row-even {
+  .services-grid .views-row-odd .service-title {
+    background-color: rgba(1, 135, 64, 0.8); }
+  .services-grid .views-row-even .service-title {
+    background-color: rgba(239, 118, 11, 0.8); }
+  .services-grid .views-row-even .service-description {
     background-color: rgba(239, 118, 11, 0.8); }
   .services-grid .service-box {
     width: 33.33%;
@@ -605,17 +609,21 @@ h2 {
       background-repeat: no-repeat;
       background-position: center center;
       position: relative;
-      overflow: hidden;
-      float: left; }
+      overflow: hidden; }
     .services-grid .service-box .service-title {
       color: #000;
       text-align: center;
-      color: #fff; }
+      color: #fff;
+      position: absolute;
+      width: 33.33%; }
       .services-grid .service-box .service-title h2 {
         font-size: 24px; }
     .services-grid .service-box .service-description {
       color: #fff;
-      text-align: center; }
+      text-align: center;
+      position: absolute;
+      width: 33.33%;
+      margin: 34px 0px 0px 0px; }
       .services-grid .service-box .service-description h3 {
         font-size: 20px; }
 
