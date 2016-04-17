@@ -13,7 +13,7 @@
     @include breakpoint($desk) {
       @include grid-span(8,3);
       text-align: center;
-      color: $white;
+      color: $head-text-colour;
       font-size: 100px;
       text-decoration: bold;
       margin-top: 5%;

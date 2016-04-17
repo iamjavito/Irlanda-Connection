@@ -13,6 +13,18 @@
 
 		}
 	}
+	.field--name-field-header-text{
+		@include grid-span(8,3);
+		font-family: Brandon_Bold;
+		text-align: center;
+		color: $head-text-colour;
+		font-size: 100px;
+		text-decoration: bold;
+		text-transform: uppercase;
+		line-height: 148px;
+		margin-top: 5%;
+
+	}
 	.field--name-field-button-link{
 		@include grid-span(4,5);
 		height: $btn-home-height;

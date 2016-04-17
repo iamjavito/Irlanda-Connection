@@ -356,6 +356,20 @@ h2 {
     height: 500px;
     background-position: bottom;
     background-size: cover; }
+  .bean-head-image .field--name-field-header-text {
+    width: 66.10169%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 16.94915%;
+    clear: none;
+    font-family: Brandon_Bold;
+    text-align: center;
+    color: #fff;
+    font-size: 100px;
+    text-decoration: bold;
+    text-transform: uppercase;
+    line-height: 148px;
+    margin-top: 5%; }
   .bean-head-image .field--name-field-button-link {
     width: 32.20339%;
     float: left;
@@ -564,6 +578,46 @@ h2 {
         padding: 20px 20px 20px 20px;
         text-align: left;
         line-height: 41px; } }
+
+.services-grid {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  clear: both;
+  float: none; }
+  .services-grid .views-row-odd {
+    background-color: rgba(1, 135, 64, 0.8); }
+  .services-grid .views-row-even {
+    background-color: rgba(239, 118, 11, 0.8); }
+  .services-grid .service-box {
+    width: 33.33%;
+    float: left; }
+    .services-grid .service-box .service-img {
+      width: 100%;
+      float: right;
+      margin-left: 0;
+      margin-right: 0;
+      clear: none;
+      min-height: 300px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: relative;
+      overflow: hidden;
+      float: left; }
+    .services-grid .service-box .service-title {
+      color: #000;
+      text-align: center;
+      color: #fff; }
+      .services-grid .service-box .service-title h2 {
+        font-size: 24px; }
+    .services-grid .service-box .service-description {
+      color: #fff;
+      text-align: center; }
+      .services-grid .service-box .service-description h3 {
+        font-size: 20px; }
 
 @font-face {
   font-family: Brandon_Reg;
