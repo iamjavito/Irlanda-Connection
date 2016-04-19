@@ -198,6 +198,21 @@ h2 {
         text-align: left;
         line-height: 41px; } }
 
+.view-blog-view .view-content {
+  width: 66.10169%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 8.47458%;
+  clear: none;
+  clear: both;
+  float: none; }
+  .view-blog-view .view-content .view-blog-post {
+    width: 33.33%;
+    float: left; }
+    .view-blog-view .view-content .view-blog-post .blog-img {
+      max-width: 300px;
+      max-height: 200px; }
+
 .course-boxes {
   width: 100%;
   float: right;

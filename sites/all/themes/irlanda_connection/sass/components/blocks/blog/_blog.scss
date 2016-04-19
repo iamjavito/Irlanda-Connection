@@ -1,0 +1,34 @@
+.view-blog-view{
+	.view-content{
+		@include grid-span(8,2);
+		clear: both;
+		float: none;
+
+		.view-blog-post{
+			width: 33.33%;
+			float: left;
+
+			.blog-title{
+
+			}
+			.blog-img{
+			    position: absolute;
+			    margin: 0px;
+			    padding: 0px;
+			    border: none;
+			    width: 379.2px;
+			    height: 237px;
+			    max-height: none;
+			    max-width: none;
+			    z-index: -999999;
+			    left: -0.1px;
+			    top: 0px;
+			    
+			}
+			.blog-desc{
+
+			}
+
+		}
+	}
+}
