@@ -217,7 +217,7 @@ h2 {
       margin-left: 16.94915%;
       clear: none;
       float: none;
-      padding-bottom: 62.3%; }
+      padding-bottom: 57%; }
       .view-blog-view .view-content .view-blog-post .field--name-field-blog-image a {
         position: absolute;
         margin: 0px;
@@ -243,10 +243,15 @@ h2 {
         top: 0px; }
     .view-blog-view .view-content .view-blog-post .field--name-field-blog-description {
       width: 379.2px;
-      text-align: center; }
+      text-align: center;
+      color: #565A5C;
+      padding-bottom: 20px;
+      font-family: Brandon_Reg; }
     .view-blog-view .view-content .view-blog-post h1 {
       text-align: center;
-      width: 379.2px; }
+      width: 379.2px;
+      font-size: 20px;
+      padding: 5px 0px 5px 0px; }
       .view-blog-view .view-content .view-blog-post h1 a {
         text-decoration: none;
         color: #EF760B; }
@@ -396,20 +401,22 @@ h2 {
         float: left;
         width: 33.33%; } }
 
-.bean-head-image {
+.bean-head-image, .view-blog-teaser-slides {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
   position: relative; }
-  .bean-head-image .field--name-field-header-image .background-image-header {
+  .bean-head-image .flexslider, .view-blog-teaser-slides .flexslider {
+    border: 0; }
+  .bean-head-image .background-image-header, .view-blog-teaser-slides .background-image-header {
     float: right;
     width: 100%;
     height: 500px;
     background-position: bottom;
     background-size: cover; }
-  .bean-head-image .field--name-field-header-text {
+  .bean-head-image .field--name-field-header-text, .view-blog-teaser-slides .field--name-field-header-text {
     width: 66.10169%;
     float: left;
     margin-right: -100%;
@@ -417,13 +424,20 @@ h2 {
     clear: none;
     font-family: Brandon_Bold;
     text-align: center;
-    color: #fff;
     font-size: 100px;
-    text-decoration: bold;
     text-transform: uppercase;
     line-height: 148px;
     margin-top: 5%; }
-  .bean-head-image .field--name-field-button-link {
+    .bean-head-image .field--name-field-header-text a, .view-blog-teaser-slides .field--name-field-header-text a {
+      width: 100%;
+      float: right;
+      margin-left: 0;
+      margin-right: 0;
+      clear: none;
+      height: 100%;
+      text-decoration: none;
+      color: #fff; }
+  .bean-head-image .field--name-field-button-link, .view-blog-teaser-slides .field--name-field-button-link {
     width: 32.20339%;
     float: left;
     margin-right: -100%;
@@ -436,7 +450,7 @@ h2 {
     text-align: center;
     position: absolute;
     bottom: 12%; }
-    .bean-head-image .field--name-field-button-link a {
+    .bean-head-image .field--name-field-button-link a, .view-blog-teaser-slides .field--name-field-button-link a {
       width: 100%;
       float: right;
       margin-left: 0;
@@ -445,6 +459,13 @@ h2 {
       height: 100%;
       color: #fff;
       text-decoration: none; }
+  .bean-head-image .flex-control-paging, .view-blog-teaser-slides .flex-control-paging {
+    z-index: 6;
+    bottom: 0; }
+    .bean-head-image .flex-control-paging .flex-active, .view-blog-teaser-slides .flex-control-paging .flex-active {
+      background-color: #EF760B; }
+    .bean-head-image .flex-control-paging li a, .view-blog-teaser-slides .flex-control-paging li a {
+      background-color: #fff; }
 
 .section-header {
   background-color: #fff;

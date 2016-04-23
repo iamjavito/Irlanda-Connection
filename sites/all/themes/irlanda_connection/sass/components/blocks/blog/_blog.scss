@@ -12,7 +12,7 @@
 			.field--name-field-blog-image{
 				@include grid-span(8,3);
 				float: none;
-				padding-bottom: 62.3%;
+				padding-bottom: 57%;
 
 				a{
 				    position: absolute;
@@ -47,10 +47,17 @@
 			.field--name-field-blog-description {
 				width: $teaser-width;
 				text-align: center;
+				color: $link;
+				padding-bottom: $view-post-pad;
+				font-family: Brandon_Reg;
+
 			}
+
 			h1{
 				text-align: center;
 				width: $teaser-width;
+				font-size: $blog-teaser-title;
+				padding: $post-tea-title;
 
 				a{
 					text-decoration: none;
