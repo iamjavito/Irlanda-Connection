@@ -202,16 +202,54 @@ h2 {
   width: 66.10169%;
   float: left;
   margin-right: -100%;
-  margin-left: 8.47458%;
+  margin-left: 16.94915%;
   clear: none;
+  padding: 35px 0px 0px 40px;
   clear: both;
   float: none; }
   .view-blog-view .view-content .view-blog-post {
     width: 33.33%;
     float: left; }
-    .view-blog-view .view-content .view-blog-post .blog-img {
-      max-width: 300px;
-      max-height: 200px; }
+    .view-blog-view .view-content .view-blog-post .field--name-field-blog-image {
+      width: 66.10169%;
+      float: left;
+      margin-right: -100%;
+      margin-left: 16.94915%;
+      clear: none;
+      float: none;
+      padding-bottom: 62.3%; }
+      .view-blog-view .view-content .view-blog-post .field--name-field-blog-image a {
+        position: absolute;
+        margin: 0px;
+        padding: 0px;
+        border: none;
+        width: 379.2px;
+        height: 237px;
+        max-height: none;
+        max-width: none;
+        left: -0.1px;
+        top: 0px; }
+      .view-blog-view .view-content .view-blog-post .field--name-field-blog-image img {
+        position: absolute;
+        margin: 0px;
+        padding: 0px;
+        border: none;
+        width: 379.2px;
+        height: 237px;
+        max-height: none;
+        max-width: none;
+        z-index: -999999;
+        left: -0.1px;
+        top: 0px; }
+    .view-blog-view .view-content .view-blog-post .field--name-field-blog-description {
+      width: 379.2px;
+      text-align: center; }
+    .view-blog-view .view-content .view-blog-post h1 {
+      text-align: center;
+      width: 379.2px; }
+      .view-blog-view .view-content .view-blog-post h1 a {
+        text-decoration: none;
+        color: #EF760B; }
 
 .course-boxes {
   width: 100%;

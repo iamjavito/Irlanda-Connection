@@ -1,6 +1,7 @@
 .view-blog-view{
 	.view-content{
-		@include grid-span(8,2);
+		@include grid-span(8,3);
+		padding: $view-content-pad;
 		clear: both;
 		float: none;
 
@@ -8,25 +9,54 @@
 			width: 33.33%;
 			float: left;
 
-			.blog-title{
+			.field--name-field-blog-image{
+				@include grid-span(8,3);
+				float: none;
+				padding-bottom: 62.3%;
 
-			}
-			.blog-img{
-			    position: absolute;
-			    margin: 0px;
-			    padding: 0px;
-			    border: none;
-			    width: 379.2px;
-			    height: 237px;
-			    max-height: none;
-			    max-width: none;
-			    z-index: -999999;
-			    left: -0.1px;
-			    top: 0px;
+				a{
+				    position: absolute;
+					margin: 0px;
+				    padding: 0px;
+				    border: none;
+				    width: $teaser-width;
+				    height: $teaser-img-hg;
+				    max-height: none;
+				    max-width: none;
+				    left: -0.1px;
+				    top: 0px;
+
+				}
+
+				img{
+				    position: absolute;
+				    margin: 0px;
+				    padding: 0px;
+				    border: none;
+				    width: $teaser-width;
+				    height: $teaser-img-hg;
+				    max-height: none;
+				    max-width: none;
+				    z-index: -999999;
+				    left: -0.1px;
+				    top: 0px;
 			    
+				}
 			}
-			.blog-desc{
 
+			.field--name-field-blog-description {
+				width: $teaser-width;
+				text-align: center;
+			}
+			h1{
+				text-align: center;
+				width: $teaser-width;
+
+				a{
+					text-decoration: none;
+					color: $mainorange;
+
+				}
 			}
 
 		}
