@@ -1,28 +1,14 @@
 .services-grid{
-	@include grid-span(12,1);
-	clear: both;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: $view-content-pad;
 	float: none;
-	.views-row-odd{
-		.service-description{
-			background-color: $maingreen_opacity;
-		}
-		.service-title{
-			background-color: $maingreen_opacity;
-		}
 
-	}
-	.views-row-even{
-		.service-title{
-			background-color: $mainorange_opacity;
-		}
-		.service-description{
-			background-color: $mainorange_opacity;
-		}
-
-	}
 	.service-box{
-		width: 33.33%;
+		width: 360px;
 		float: left;
+    	margin: $service-box-mar;
 
 		.service-img{
 			@include grid-span(12,1);
@@ -35,26 +21,25 @@
 
 		}
 		.service-title{
-			color: $service-title-colour;
+			@include grid-span(12,1);
 			text-align: center;
-			color: #fff;
-			position: absolute;
-			width: 33.33%;
+			margin: $service-title-mar;
 
 			h2{
 				font-size: 24px;
+				color: $link;
+
 			}
 
 		}
 		.service-description{
-			color: #fff;
+			@include grid-span(12,1);
 			text-align: center;
-			position: absolute;
-			width: 33.33%;
-			margin: 34px 0px 0px 0px;
 
 			h3{
-				font-size: 20px;	
+				font-size: 20px;
+				color: $link;
+
 			}
 		}
 	}

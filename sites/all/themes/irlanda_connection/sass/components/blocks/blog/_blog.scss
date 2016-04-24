@@ -1,9 +1,11 @@
 .view-blog-view{
 	.view-content{
-		@include grid-span(8,3);
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
 		padding: $view-content-pad;
-		clear: both;
 		float: none;
+		height: 700px;
 
 		.view-blog-post{
 			width: 33.33%;
@@ -12,12 +14,10 @@
 			.field--name-field-blog-image{
 				@include grid-span(8,3);
 				float: none;
-				padding-bottom: 57%;
+				padding-bottom: 59%;
 
 				a{
 				    position: absolute;
-					margin: 0px;
-				    padding: 0px;
 				    border: none;
 				    width: $teaser-width;
 				    height: $teaser-img-hg;
@@ -66,6 +66,26 @@
 				}
 			}
 
+		}
+	}
+	.pager-load-more{
+		@include grid-span(2,6.15);
+		height: $ver-mas-line;
+		float: none;
+
+		.pager-next{
+			a{
+				@include grid-span(12,1);
+				line-height: $ver-mas-line;
+				background-color: $mainorange;
+				text-decoration: none;
+				margin-bottom: $ver-mas-mar;
+				color: $btn-txt;
+				font-size: $btn-mas-size;
+				font-family: Brandong_Bold;
+			    box-shadow: 1px 2px 1px #888888;
+
+			}
 		}
 	}
 }
