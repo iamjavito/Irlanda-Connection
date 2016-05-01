@@ -4,4 +4,17 @@
 	background-position: top;
 	background-size: cover;
 
+	.section-form{
+		h1{
+			font-family: Helvetica;
+			font-size: 61px;
+			color: $text;
+			text-decoration: none;
+
+		}
+		h2{
+
+			font-size: 12px;
+		}
+	}
 }

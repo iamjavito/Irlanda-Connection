@@ -1,6 +1,54 @@
-input{
-	border: solid 1px #666;
-	height: 40px;
-	width: 400px; 
-	
+.block--webform{
+
+	.form-item{
+		margin-bottom: 0.5em;
+
+	}
+	.form-type-checkbox{
+		padding: $form-check-padd;
+
+	}
+	h2{
+		color: $text;
+		font-family: helvetica;
+		margin: $form-title-mar;
+		
+	}
+	input{
+		border: solid 1px #666;
+		height: 40px;
+		font-size: $form-input-txt;
+		color: $text;
+		padding-left: 16px;
+
+	}
+	textarea{
+		border: solid 1px #666;
+		padding: $form-textarea-padd;
+		color: $text;
+		font-size: $form-input-txt;
+
+	}
+	label{
+		color: $text;
+		font-family: Brandon_Reg;
+		font-size: $form-label-txt;
+		margin: $form-label-mar;
+
+		.form-required{
+			color: $mainorange;
+
+		}
+	}
+	.webform-submit{
+		width: 100%;
+		background-color: $maingreen;
+		border: none;
+		color: $btn-txt;
+
+		:hover{
+			cursor: crosshair;
+
+		}
+	}
 }

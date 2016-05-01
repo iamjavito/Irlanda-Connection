@@ -18,10 +18,39 @@ img, media {
   color: #fff;
   font-size: 29px; }
 
-input {
+.block--webform .form-item {
+  margin-bottom: 0.5em; }
+.block--webform .form-type-checkbox {
+  padding: 0px 5px 0px 0px; }
+.block--webform h2 {
+  color: #565A5C;
+  font-family: helvetica;
+  margin: 0px 0px 20px 0px; }
+.block--webform input {
   border: solid 1px #666;
   height: 40px;
-  width: 400px; }
+  font-size: 18px;
+  color: #565A5C;
+  padding-left: 16px; }
+.block--webform textarea {
+  border: solid 1px #666;
+  padding: 16px 16px 16px 16px;
+  color: #565A5C;
+  font-size: 18px; }
+.block--webform label {
+  color: #565A5C;
+  font-family: Brandon_Reg;
+  font-size: 18px;
+  margin: 0px 0px 3px 0px; }
+  .block--webform label .form-required {
+    color: #EF760B; }
+.block--webform .webform-submit {
+  width: 100%;
+  background-color: #018740;
+  border: none;
+  color: #fff; }
+  .block--webform .webform-submit :hover {
+    cursor: crosshair; }
 
 h1 {
   font-family: Brandon_Bold; }
@@ -281,6 +310,13 @@ h2 {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover; }
+  .page-contacto .section-form h1 {
+    font-family: Helvetica;
+    font-size: 61px;
+    color: #565A5C;
+    text-decoration: none; }
+  .page-contacto .section-form h2 {
+    font-size: 12px; }
 
 .course-boxes {
   width: 100%;
@@ -433,9 +469,6 @@ h2 {
   background-color: #fff;
   padding: 20px 20px 20px 20px;
   margin: 20px auto 20px auto; }
-
-.block--webform h2 {
-  color: #565A5C; }
 
 .bean-head-image, .view-blog-teaser-slides {
   width: 100%;
