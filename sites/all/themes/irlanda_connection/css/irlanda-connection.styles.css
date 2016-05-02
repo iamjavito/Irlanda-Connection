@@ -317,6 +317,9 @@ h2 {
     text-decoration: none; }
   .page-contacto .section-form h2 {
     font-size: 12px; }
+  .page-contacto .section-locations .location-txt h3 {
+    color: #565A5C;
+    text-decoration: none; }
 
 .course-boxes {
   width: 100%;
