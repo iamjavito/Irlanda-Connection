@@ -5,26 +5,66 @@
 	background-size: cover;
 
 	.section-form{
-		h1{
+		@include grid-span(7,4);
+		background-color: $white;
+		float: none;
+		padding: $form-padd;
+		margin: $form-box-mar;
+		border: solid 1px $main-border-colour;
+
+		h2{
 			font-family: Helvetica;
 			font-size: 61px;
 			color: $text;
 			text-decoration: none;
 
 		}
-		h2{
 
-			font-size: 12px;
-		}
 	}
 
 	.section-locations{
 		.location-txt{
+			margin: $location-mar;
+
 			h3{
 				color: $text;
 				text-decoration: none;
+				font-size: $loca-main-txt;
 
 			}
+		}
+		.location-map{
+			.vcard{
+				@include grid-span(4.5,2);
+				color: $text;
+				padding: $location-address-pad;
+
+				.fn{
+					font-weight: bold;
+
+				}
+
+				.street-address{
+					font-size: $loca-address-txt;
+
+				}
+ 	
+				.country-name{
+					font-size: $loca-address-txt;
+
+				}
+
+			}
+
+			.gmap{
+				@include grid-span(3,7);
+				width: 500px;
+				height: 400px;
+				border: solid 1px $main-border-colour;
+				float: none;
+
+			}
+
 		}
 
 	}

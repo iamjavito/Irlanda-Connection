@@ -22,21 +22,23 @@ img, media {
   margin-bottom: 0.5em; }
 .block--webform .form-type-checkbox {
   padding: 0px 5px 0px 0px; }
-.block--webform h2 {
+.block--webform h1 {
   color: #565A5C;
   font-family: helvetica;
   margin: 0px 0px 20px 0px; }
 .block--webform input {
-  border: solid 1px #666;
-  height: 40px;
+  border: solid 1px #c5c5c5;
+  height: 38px;
   font-size: 18px;
   color: #565A5C;
-  padding-left: 16px; }
+  padding-left: 16px;
+  background-color: #f7f7f7; }
 .block--webform textarea {
-  border: solid 1px #666;
+  border: solid 1px #c5c5c5;
   padding: 16px 16px 16px 16px;
   color: #565A5C;
-  font-size: 18px; }
+  font-size: 18px;
+  background-color: #f7f7f7; }
 .block--webform label {
   color: #565A5C;
   font-family: Brandon_Reg;
@@ -49,8 +51,8 @@ img, media {
   background-color: #018740;
   border: none;
   color: #fff; }
-  .block--webform .webform-submit :hover {
-    cursor: crosshair; }
+.block--webform .webform-submit:hover {
+  cursor: pointer; }
 
 h1 {
   font-family: Brandon_Bold; }
@@ -310,16 +312,52 @@ h2 {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover; }
-  .page-contacto .section-form h1 {
-    font-family: Helvetica;
-    font-size: 61px;
+  .page-contacto .section-form {
+    width: 57.62712%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 25.42373%;
+    clear: none;
+    background-color: #fff;
+    float: none;
+    padding: 35px 48px 25px 35px;
+    margin: 40px auto 40px auto;
+    border: solid 1px #f2f2f2; }
+    .page-contacto .section-form h2 {
+      font-family: Helvetica;
+      font-size: 61px;
+      color: #565A5C;
+      text-decoration: none; }
+  .page-contacto .section-locations .location-txt {
+    margin: 20px 20px 30px 20px; }
+    .page-contacto .section-locations .location-txt h3 {
+      color: #565A5C;
+      text-decoration: none;
+      font-size: 20px; }
+  .page-contacto .section-locations .location-map .vcard {
+    width: 36.44068%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 8.47458%;
+    clear: none;
     color: #565A5C;
-    text-decoration: none; }
-  .page-contacto .section-form h2 {
-    font-size: 12px; }
-  .page-contacto .section-locations .location-txt h3 {
-    color: #565A5C;
-    text-decoration: none; }
+    padding: 133px 181px 0px 0px; }
+    .page-contacto .section-locations .location-map .vcard .fn {
+      font-weight: bold; }
+    .page-contacto .section-locations .location-map .vcard .street-address {
+      font-size: 20px; }
+    .page-contacto .section-locations .location-map .vcard .country-name {
+      font-size: 20px; }
+  .page-contacto .section-locations .location-map .gmap {
+    width: 23.72881%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 50.84746%;
+    clear: none;
+    width: 500px;
+    height: 400px;
+    border: solid 1px #f2f2f2;
+    float: none; }
 
 .course-boxes {
   width: 100%;
@@ -466,12 +504,12 @@ h2 {
         float: left;
         width: 33.33%; } }
 
-.section-form {
-  max-width: 900px;
-  width: 60%;
-  background-color: #fff;
-  padding: 20px 20px 20px 20px;
-  margin: 20px auto 20px auto; }
+.block--webform h2 {
+  color: #565A5C;
+  padding: 0px 0px 22px 0px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: bold; }
 
 .bean-head-image, .view-blog-teaser-slides {
   width: 100%;

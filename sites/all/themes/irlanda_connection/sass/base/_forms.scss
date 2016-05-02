@@ -8,25 +8,27 @@
 		padding: $form-check-padd;
 
 	}
-	h2{
+	h1{
 		color: $text;
 		font-family: helvetica;
 		margin: $form-title-mar;
 		
 	}
 	input{
-		border: solid 1px #666;
-		height: 40px;
+		border: solid 1px $form-input-colour;
+		height: 38px;
 		font-size: $form-input-txt;
 		color: $text;
 		padding-left: 16px;
+		background-color: $input-bg-colour;
 
 	}
 	textarea{
-		border: solid 1px #666;
+		border: solid 1px $form-input-colour;
 		padding: $form-textarea-padd;
 		color: $text;
 		font-size: $form-input-txt;
+		background-color: $input-bg-colour;
 
 	}
 	label{
@@ -46,9 +48,9 @@
 		border: none;
 		color: $btn-txt;
 
-		:hover{
-			cursor: crosshair;
+	}
+	.webform-submit:hover{
+		cursor: pointer;
 
-		}
 	}
 }
