@@ -453,8 +453,10 @@ h2 {
   color: #565A5C;
   font-size: 1.3em;
   padding: 80px 20px 80px 20px;
-  z-index: 1;
+  z-index: -1;
   line-height: 2em; }
+  .node-type-cursos .block-main-block .field {
+    padding: 0px 5px 0px 5px; }
 .node-type-cursos #block-views-courses-view-block-1 {
   width: 23.72881%;
   float: left;
@@ -463,8 +465,8 @@ h2 {
   clear: none;
   float: none;
   padding: 120px 20px 120px 20px;
-  line-height: 5.3em;
-  z-index: -1;
+  line-height: 4em;
+  z-index: 1;
   border-right: solid 1px #f2f2f2; }
   .node-type-cursos #block-views-courses-view-block-1 .view-content {
     width: 66.10169%;
@@ -476,6 +478,45 @@ h2 {
   .node-type-cursos #block-views-courses-view-block-1 .course-list-comp span a {
     text-decoration: none;
     color: #b1b1b1; }
+.node-type-cursos #block-bean-preguntanos-tus-dudas {
+  width: 32.20339%;
+  float: right;
+  clear: none;
+  height: 65px;
+  background-color: #018740;
+  line-height: 65px;
+  font-family: Brandon_Bold;
+  text-align: center;
+  margin: -30px 30px 55px 30px;
+  margin-right: 60px; }
+  .node-type-cursos #block-bean-preguntanos-tus-dudas .field--name-field-link a {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    height: 100%;
+    color: #fff;
+    text-decoration: none; }
+.node-type-cursos #block-bean-solicita-ya-tu-cotizacin {
+  width: 32.20339%;
+  float: right;
+  clear: none;
+  height: 65px;
+  background-color: #EF760B;
+  line-height: 65px;
+  font-family: Brandon_Bold;
+  text-align: center;
+  margin: -30px 30px 55px 30px; }
+  .node-type-cursos #block-bean-solicita-ya-tu-cotizacin .field--name-field-link a {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    height: 100%;
+    color: #fff;
+    text-decoration: none; }
 
 .course-boxes {
   width: 100%;

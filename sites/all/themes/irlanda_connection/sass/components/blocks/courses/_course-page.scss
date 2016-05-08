@@ -44,9 +44,13 @@
 		color: $text;
 		font-size: 1.3em;
 		padding: $course-content-padd;
-		z-index: 1;
+		z-index: -1;
 		line-height: 2em;
 
+		.field{
+			padding: $course-field-padd;
+
+		}
 	}
 
 	//Block Courses List
@@ -54,8 +58,8 @@
 		@include grid-span(3,1);
 		float: none;
 		padding: $course-list-padd;
-		line-height: 5.3em;
-		z-index: -1;
+		line-height: 4em;
+		z-index: 1;
 		border-right: solid 1px $main-border-colour;
 
 		.view-content{
@@ -70,6 +74,59 @@
 					color: $light-text;
 
 				}
+			}
+		}
+	}
+
+	//Course Page Buttons
+	#block-bean-preguntanos-tus-dudas{
+	 	width: 32.20339%;
+		float: right;
+		clear: none;
+		height: $btn-course-height;
+		background-color: $maingreen;
+		line-height: $btn-course-height;
+		font-family: Brandon_Bold;
+		text-align: center;
+		margin: $btn-course-marg;
+		margin-right: $btn-course-right-mar;
+
+		.field--name-field-link{
+			a{
+				width: 100%;
+				float: right;
+				margin-left: 0;
+				margin-right: 0;
+				clear: none;
+				height: 100%;
+				color: $white;
+				text-decoration: none;
+
+			}
+		}
+	}
+	#block-bean-solicita-ya-tu-cotizacin{
+	    width: 32.20339%;
+		float: right;
+		clear: none;
+		height: $btn-course-height;
+		background-color: $mainorange;
+		line-height: $btn-course-height;
+		font-family: Brandon_Bold;
+		text-align: center;
+		margin: $btn-course-marg;
+
+		.field--name-field-link{
+			a{
+				width: 100%;
+				float: right;
+				margin-left: 0;
+				margin-right: 0;
+				clear: none;
+				height: 100%;
+				color: $white;
+				text-decoration: none;
+
 			}
 		}
 	}
