@@ -1,0 +1,76 @@
+.node-type-cursos{
+	//Course Page Title Section
+	.block-course-pg-title{
+		@include grid-span(12,1);
+		background-color: $maingreen;
+		height: 70px;
+		line-height: 70px;
+
+		.course-pg-title{
+			width: 49%;
+			float: left;
+
+			h1{
+				font-size: $course-title; 
+				text-align: right;
+
+			}
+		}
+		.course-pg-hyphen{
+			width: 2%;
+			float: left;
+			text-align: center;
+
+			span{
+				font-size: $course-title;		
+
+			}
+		}
+		.course-pg-classweek{
+			width: 49%;
+			float: right;
+
+			h2{
+				font-size: $course-title;
+				text-align: left;
+
+			}
+		}
+	}
+
+	//Block Main Descrition Section
+	.block-main-block{
+		@include grid-span(7,5);
+		color: $text;
+		font-size: 1.3em;
+		padding: $course-content-padd;
+		z-index: 1;
+		line-height: 2em;
+
+	}
+
+	//Block Courses List
+	#block-views-courses-view-block-1{
+		@include grid-span(3,1);
+		float: none;
+		padding: $course-list-padd;
+		line-height: 5.3em;
+		z-index: -1;
+		border-right: solid 1px $main-border-colour;
+
+		.view-content{
+			@include grid-span(8,3);
+			float: none;	
+		
+		}
+		.course-list-comp{
+			span{
+				a{
+					text-decoration: none;
+					color: $light-text;
+
+				}
+			}
+		}
+	}
+}
