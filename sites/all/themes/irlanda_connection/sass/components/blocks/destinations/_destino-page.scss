@@ -1,0 +1,19 @@
+.node-type-destino{
+	.tabs--primary{
+		display: none;
+
+	}
+	.view-destino-page-view{
+		.field--type-image{
+			img{
+				@include grid-span(12,1);
+				height: $header-hg;
+				background-size: cover;
+				background-repeat: no-repeat;
+
+			}
+
+		}
+	}
+
+}

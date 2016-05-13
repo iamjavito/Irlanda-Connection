@@ -663,12 +663,31 @@ h2 {
         float: left;
         width: 33.33%; } }
 
+.node-type-destino .tabs--primary {
+  display: none; }
+.node-type-destino .field--type-image img {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
 .block--webform h2 {
   color: #565A5C;
   padding: 0px 0px 22px 0px;
   text-align: left;
   font-size: 12px;
   font-weight: bold; }
+
+.background-image-header {
+  float: right;
+  width: 100%;
+  height: 500px;
+  background-position: top;
+  background-size: cover; }
 
 .bean-head-image, .view-blog-teaser-slides, .section-header-img {
   width: 100%;
@@ -679,12 +698,6 @@ h2 {
   position: relative; }
   .bean-head-image .flexslider, .view-blog-teaser-slides .flexslider, .section-header-img .flexslider {
     border: 0; }
-  .bean-head-image .background-image-header, .view-blog-teaser-slides .background-image-header, .section-header-img .background-image-header {
-    float: right;
-    width: 100%;
-    height: 500px;
-    background-position: top;
-    background-size: cover; }
   .bean-head-image .field--name-field-header-text, .view-blog-teaser-slides .field--name-field-header-text, .section-header-img .field--name-field-header-text {
     width: 66.10169%;
     float: left;

@@ -1,17 +1,17 @@
+.background-image-header{
+	float: right;
+	width: 100%;
+	height: $header-hg;
+	background-position: top;
+	background-size: cover;
+
+}
 .bean-head-image, .view-blog-teaser-slides, .section-header-img{
 	@include grid-span(12,1);
 	position: relative;
 
 	.flexslider{
 		border: 0;
-
-	}
-	.background-image-header{
-		float: right;
-		width: 100%;
-		height: 500px;
-		background-position: top;
-		background-size: cover;
 
 	}
 	.field--name-field-header-text{
