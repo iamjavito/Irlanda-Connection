@@ -44,7 +44,7 @@ img, media {
   float: right;
   clear: none;
   height: 65px;
-  background-color: #EF760B;
+  background-color: #f7941e;
   line-height: 65px;
   font-family: Brandon_Bold;
   text-align: center;
@@ -86,7 +86,7 @@ img, media {
   font-size: 18px;
   margin: 0px 0px 3px 0px; }
   .block--webform label .form-required {
-    color: #EF760B; }
+    color: #f7941e; }
 .block--webform .webform-submit {
   width: 100%;
   background-color: #018740;
@@ -144,16 +144,19 @@ h2 {
     margin-left: 59.32203%;
     clear: none; }
     .section-footer #block-bean-footer-block h2 {
-      color: #565A5C;
-      padding: 0px 0px 22px 0px;
+      color: #f7941e;
+      margin-left: -10px;
+      text-decoration: underline;
+      padding: 0px 0px 12px 0px;
       text-align: left;
       font-size: 24px;
-      font-weight: bold; }
+      font-weight: bold;
+      font-family: Brandon_Reg; }
     .section-footer #block-bean-footer-block .block__content {
       color: #565A5C;
       font-size: 24px; }
       .section-footer #block-bean-footer-block .block__content .field {
-        padding: 22px 0px 0px 0px; }
+        padding: 12px 0px 0px 0px; }
   .section-footer #block-bean-social-media-footer {
     width: 100%;
     float: right;
@@ -175,9 +178,9 @@ h2 {
           width: 30px;
           height: 30px; }
           .section-footer #block-bean-social-media-footer .social-footer .social-icon a img {
-            margin-top: -30px; }
+            margin-top: 0px; }
             .section-footer #block-bean-social-media-footer .social-footer .social-icon a img:hover {
-              margin-top: 0px;
+              margin-top: -30px;
               cursor: pointer; }
   .section-footer #block-bean-copyright-block-footer {
     width: 32.20339%;
@@ -363,7 +366,7 @@ h2 {
       padding: 9px 0px 20px 0px; }
       .node-type-blog-entry #block-views-blog-block-1-block-2 .block-blog-teaser .blog-txt h1 a {
         text-decoration: none;
-        color: #EF760B; }
+        color: #f7941e; }
 
 .view-blog-view .view-content {
   max-width: 1200px;
@@ -417,7 +420,7 @@ h2 {
       padding: 5px 0px 5px 0px; }
       .view-blog-view .view-content .view-blog-post h1 a {
         text-decoration: none;
-        color: #EF760B; }
+        color: #f7941e; }
 .view-blog-view .pager-load-more {
   width: 15.25424%;
   float: left;
@@ -433,7 +436,7 @@ h2 {
     margin-right: 0;
     clear: none;
     line-height: 50px;
-    background-color: #EF760B;
+    background-color: #f7941e;
     text-decoration: none;
     margin-bottom: 35px;
     color: #fff;
@@ -614,7 +617,7 @@ h2 {
       position: absolute;
       right: 0;
       bottom: 56px;
-      background-color: #EF760B;
+      background-color: #f7941e;
       color: #fff;
       text-align: center;
       height: 56px;
@@ -803,7 +806,7 @@ h2 {
     margin-left: 33.89831%;
     clear: none;
     height: 65px;
-    background-color: #EF760B;
+    background-color: #f7941e;
     line-height: 65px;
     font-family: Brandon_Bold;
     text-align: center;
@@ -822,7 +825,7 @@ h2 {
     z-index: 6;
     bottom: 0; }
     .bean-head-image .flex-control-paging .flex-active, .view-blog-teaser-slides .flex-control-paging .flex-active, .section-header-img .flex-control-paging .flex-active {
-      background-color: #EF760B; }
+      background-color: #f7941e; }
     .bean-head-image .flex-control-paging li a, .view-blog-teaser-slides .flex-control-paging li a, .section-header-img .flex-control-paging li a {
       background-color: #fff; }
 

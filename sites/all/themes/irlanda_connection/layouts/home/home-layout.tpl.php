@@ -28,10 +28,7 @@
       <?php endif; ?>
       <!-- Header Image -->
       <div id="zone-graphic-header" style="background-image: url(sites/default/files/storage/images/home_page/home-top-img.png);">
-        <?php print render($page['header']); ?>
-        <?php if ($title): ?>
-          <h1>CURSOS DE INGLÉS EN EL EXTRANJERO</h1>
-        <?php endif; ?>
+        <h1>CURSOS DE INGLÉS EN EL EXTRANJERO</h1>
         <div id='btn-home' class="btn">
           <a href="?q=destinos">DESCUBRE EL MUNDO CON NOSOTROS</a>
         </div>
