@@ -1,4 +1,4 @@
-.page-contacto{
+.page-contacto, .page-cotizacion{
 	background-image:url('http://192.168.99.100/sites/default/files/storage/bg_form.jpg');
 	background-repeat: no-repeat;
 	background-position: top;
@@ -15,7 +15,7 @@
 		h2{
 			font-family: Helvetica;
 			font-size: 61px;
-			color: $text;
+			color: $mainorange;
 			text-decoration: none;
 
 		}

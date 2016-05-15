@@ -67,7 +67,7 @@ img, media {
   color: #565A5C;
   font-family: helvetica;
   margin: 0px 0px 20px 0px; }
-.block--webform input {
+.block--webform input, .block--webform select {
   border: solid 1px #c5c5c5;
   height: 38px;
   font-size: 18px;
@@ -444,12 +444,12 @@ h2 {
     font-family: Brandong_Bold;
     box-shadow: 1px 2px 1px #888888; }
 
-.page-contacto {
+.page-contacto, .page-cotizacion {
   background-image: url("http://192.168.99.100/sites/default/files/storage/bg_form.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover; }
-  .page-contacto .section-form {
+  .page-contacto .section-form, .page-cotizacion .section-form {
     width: 57.62712%;
     float: left;
     margin-right: -100%;
@@ -460,18 +460,18 @@ h2 {
     padding: 35px 48px 25px 35px;
     margin: 40px auto 40px auto;
     border: solid 1px #f2f2f2; }
-    .page-contacto .section-form h2 {
+    .page-contacto .section-form h2, .page-cotizacion .section-form h2 {
       font-family: Helvetica;
       font-size: 61px;
-      color: #565A5C;
+      color: #f7941e;
       text-decoration: none; }
-  .page-contacto .section-locations .location-txt {
+  .page-contacto .section-locations .location-txt, .page-cotizacion .section-locations .location-txt {
     margin: 20px 20px 30px 20px; }
-    .page-contacto .section-locations .location-txt h3 {
+    .page-contacto .section-locations .location-txt h3, .page-cotizacion .section-locations .location-txt h3 {
       color: #565A5C;
       text-decoration: none;
       font-size: 20px; }
-  .page-contacto .section-locations .location-map .vcard {
+  .page-contacto .section-locations .location-map .vcard, .page-cotizacion .section-locations .location-map .vcard {
     width: 36.44068%;
     float: left;
     margin-right: -100%;
@@ -479,13 +479,13 @@ h2 {
     clear: none;
     color: #565A5C;
     padding: 133px 181px 0px 0px; }
-    .page-contacto .section-locations .location-map .vcard .fn {
+    .page-contacto .section-locations .location-map .vcard .fn, .page-cotizacion .section-locations .location-map .vcard .fn {
       font-weight: bold; }
-    .page-contacto .section-locations .location-map .vcard .street-address {
+    .page-contacto .section-locations .location-map .vcard .street-address, .page-cotizacion .section-locations .location-map .vcard .street-address {
       font-size: 20px; }
-    .page-contacto .section-locations .location-map .vcard .country-name {
+    .page-contacto .section-locations .location-map .vcard .country-name, .page-cotizacion .section-locations .location-map .vcard .country-name {
       font-size: 20px; }
-  .page-contacto .section-locations .location-map .gmap {
+  .page-contacto .section-locations .location-map .gmap, .page-cotizacion .section-locations .location-map .gmap {
     width: 23.72881%;
     float: left;
     margin-right: -100%;
