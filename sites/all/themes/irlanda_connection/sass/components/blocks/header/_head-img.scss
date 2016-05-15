@@ -1,13 +1,14 @@
 .background-image-header{
-	float: right;
 	width: 100%;
 	height: $header-hg;
-	background-position: top;
+	background-position: center center;
 	background-size: cover;
+	float: right;
 
 }
 .bean-head-image, .view-blog-teaser-slides, .section-header-img{
 	@include grid-span(12,1);
+	float: none;
 	position: relative;
 
 	.flexslider{

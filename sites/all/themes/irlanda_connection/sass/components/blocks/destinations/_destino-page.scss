@@ -10,10 +10,72 @@
 				height: $header-hg;
 				background-size: cover;
 				background-repeat: no-repeat;
+				background-position: center center;
 
 			}
 
 		}
 	}
+	.dest-wrap-img{
+		.background-image-formatter{
+			@include grid-span(12,1);
+			height: $header-hg;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
 
+		}
+
+	}
+	.dest-title{
+		@include grid-span(8,3);
+		margin-top: $dest-title-mar;
+
+		h1{
+			font-size: $dest-title;
+
+		}
+
+		h2{
+			font-size: $dest-title;
+			
+		}
+
+	}
+	.dest-text{
+		@include grid-span(8,3);
+		margin-top: $dest-text-mar;
+
+		p{
+
+		}
+
+	}
+
+	//Blocks for last wrap
+	.block--views-destino-page-view-block-2{
+		.dest-title{
+			margin-top: $dest-title-last-mar;
+
+		}
+		.dest-text{
+			margin-top: $dest-text-last-mar;
+
+		}
+
+	}
+
+
+	//Modify Buttons for Destinos
+	#block-bean-preguntanos-tus-dudas{
+		margin: $btn-dest-lef-mar;
+		float: left;
+
+	}
+
+	#block-bean-solicita-ya-tu-cotizacin{
+		margin: $btn-dest-rig-mar;
+		float: right;
+
+	}
 }

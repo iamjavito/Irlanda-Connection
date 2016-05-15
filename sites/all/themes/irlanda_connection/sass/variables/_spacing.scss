@@ -29,6 +29,16 @@ $form-textarea-padd: 16px 16px 16px 16px;
 $form-label-mar: 0px 0px 3px 0px;
 $form-check-padd: 0px 5px 0px 0px;
 
+//Destino Page
+$dest-title-mar: 280px;
+$dest-text-mar: 430px;
+
+//Last Wrap
+$dest-title-last-mar: 20px;
+$dest-text-last-mar: 200px;
+$btn-dest-lef-mar: -144px 0px 0px 15%;
+$btn-dest-rig-mar: -144px 15% 0px 0px;
+
 //Locations
 $location-mar: 20px 20px 30px 20px;
 $location-address-pad: 133px 181px 0px 0px;
@@ -64,4 +74,7 @@ $post-tea-title: 5px 0px 5px 0px;
 $ver-mas-mar: 35px;
 
 // Footer
-$footer: 544px; 
+$social-box-mar: 300px;
+$social-mar: 0 auto 0px auto;
+$copy-box-mar: 360px;
+$sm-btn-mar: 10px 10px 10px 10px;

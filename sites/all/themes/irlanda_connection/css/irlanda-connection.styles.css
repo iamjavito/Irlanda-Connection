@@ -18,6 +18,47 @@ img, media {
   color: #fff;
   font-size: 29px; }
 
+#block-bean-preguntanos-tus-dudas {
+  width: 32.20339%;
+  float: right;
+  clear: none;
+  height: 65px;
+  background-color: #018740;
+  line-height: 65px;
+  font-family: Brandon_Bold;
+  text-align: center;
+  margin: -30px 30px 55px 30px;
+  margin-right: 60px; }
+  #block-bean-preguntanos-tus-dudas .field--name-field-link a {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    height: 100%;
+    color: #fff;
+    text-decoration: none; }
+
+#block-bean-solicita-ya-tu-cotizacin {
+  width: 32.20339%;
+  float: right;
+  clear: none;
+  height: 65px;
+  background-color: #EF760B;
+  line-height: 65px;
+  font-family: Brandon_Bold;
+  text-align: center;
+  margin: -30px 30px 55px 30px; }
+  #block-bean-solicita-ya-tu-cotizacin .field--name-field-link a {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    height: 100%;
+    color: #fff;
+    text-decoration: none; }
+
 .block--webform .form-item {
   margin-bottom: 0.5em; }
 .block--webform .form-type-checkbox {
@@ -70,7 +111,6 @@ h2 {
   margin-left: 0;
   margin-right: 0;
   clear: none;
-  height: 544px;
   background-color: #fff;
   border-top: solid 9px #018740;
   padding: 50px 0; }
@@ -114,6 +154,42 @@ h2 {
       font-size: 24px; }
       .section-footer #block-bean-footer-block .block__content .field {
         padding: 22px 0px 0px 0px; }
+  .section-footer #block-bean-social-media-footer {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    margin-top: 300px; }
+    .section-footer #block-bean-social-media-footer .social-footer {
+      width: 200px;
+      margin: 0 auto 0px auto; }
+      .section-footer #block-bean-social-media-footer .social-footer .social-icon {
+        float: left;
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        margin: 10px 10px 10px 10px; }
+        .section-footer #block-bean-social-media-footer .social-footer .social-icon a {
+          display: block;
+          width: 30px;
+          height: 30px; }
+          .section-footer #block-bean-social-media-footer .social-footer .social-icon a img {
+            margin-top: -30px; }
+            .section-footer #block-bean-social-media-footer .social-footer .social-icon a img:hover {
+              margin-top: 0px;
+              cursor: pointer; }
+  .section-footer #block-bean-copyright-block-footer {
+    width: 32.20339%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 33.89831%;
+    clear: none;
+    text-align: center;
+    margin-top: 360px; }
+    .section-footer #block-bean-copyright-block-footer p {
+      color: #565A5C;
+      font-size: 0.8em; }
 
 @media (min-width: 60em) {
   #zone-graphic-header {
@@ -478,45 +554,6 @@ h2 {
   .node-type-cursos #block-views-courses-view-block-1 .course-list-comp span a {
     text-decoration: none;
     color: #b1b1b1; }
-.node-type-cursos #block-bean-preguntanos-tus-dudas {
-  width: 32.20339%;
-  float: right;
-  clear: none;
-  height: 65px;
-  background-color: #018740;
-  line-height: 65px;
-  font-family: Brandon_Bold;
-  text-align: center;
-  margin: -30px 30px 55px 30px;
-  margin-right: 60px; }
-  .node-type-cursos #block-bean-preguntanos-tus-dudas .field--name-field-link a {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-    height: 100%;
-    color: #fff;
-    text-decoration: none; }
-.node-type-cursos #block-bean-solicita-ya-tu-cotizacin {
-  width: 32.20339%;
-  float: right;
-  clear: none;
-  height: 65px;
-  background-color: #EF760B;
-  line-height: 65px;
-  font-family: Brandon_Bold;
-  text-align: center;
-  margin: -30px 30px 55px 30px; }
-  .node-type-cursos #block-bean-solicita-ya-tu-cotizacin .field--name-field-link a {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-    height: 100%;
-    color: #fff;
-    text-decoration: none; }
 
 .course-boxes {
   width: 100%;
@@ -665,7 +702,7 @@ h2 {
 
 .node-type-destino .tabs--primary {
   display: none; }
-.node-type-destino .field--type-image img {
+.node-type-destino .view-destino-page-view .field--type-image img {
   width: 100%;
   float: right;
   margin-left: 0;
@@ -673,7 +710,46 @@ h2 {
   clear: none;
   height: 500px;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-position: center center; }
+.node-type-destino .dest-wrap-img .background-image-formatter {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+.node-type-destino .dest-title {
+  width: 66.10169%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 16.94915%;
+  clear: none;
+  margin-top: 280px; }
+  .node-type-destino .dest-title h1 {
+    font-size: 100px; }
+  .node-type-destino .dest-title h2 {
+    font-size: 100px; }
+.node-type-destino .dest-text {
+  width: 66.10169%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 16.94915%;
+  clear: none;
+  margin-top: 430px; }
+.node-type-destino .block--views-destino-page-view-block-2 .dest-title {
+  margin-top: 20px; }
+.node-type-destino .block--views-destino-page-view-block-2 .dest-text {
+  margin-top: 200px; }
+.node-type-destino #block-bean-preguntanos-tus-dudas {
+  margin: -144px 0px 0px 15%;
+  float: left; }
+.node-type-destino #block-bean-solicita-ya-tu-cotizacin {
+  margin: -144px 15% 0px 0px;
+  float: right; }
 
 .block--webform h2 {
   color: #565A5C;
@@ -683,11 +759,11 @@ h2 {
   font-weight: bold; }
 
 .background-image-header {
-  float: right;
   width: 100%;
   height: 500px;
-  background-position: top;
-  background-size: cover; }
+  background-position: center center;
+  background-size: cover;
+  float: right; }
 
 .bean-head-image, .view-blog-teaser-slides, .section-header-img {
   width: 100%;
@@ -695,6 +771,7 @@ h2 {
   margin-left: 0;
   margin-right: 0;
   clear: none;
+  float: none;
   position: relative; }
   .bean-head-image .flexslider, .view-blog-teaser-slides .flexslider, .section-header-img .flexslider {
     border: 0; }

@@ -46,7 +46,6 @@
       <div id="zone-graphic-third" style="background-image: url(sites/default/files/storage/images/home_page/porquenosotros-img.png);">
         <?php print render($page['wrapper-third']); ?>
       </div>
-      <?php print $feed_icons; ?>
     </div>
   </div>
 
