@@ -61,7 +61,7 @@
 
 	//Social Media Area - Footer
 	#block-bean-social-media-footer{
-		@include grid-span($grids,1);	
+		@include grid-span($grids,1);
 		margin-top: $social-box-mar;
 
 		.social-footer{
@@ -76,7 +76,7 @@
 			    margin: $sm-btn-mar;
 
 			    a{
-		    	    display: block;
+		    	  display: block;
 				    width: 30px;
 				    height: 30px;
 
@@ -94,7 +94,7 @@
 			    }
 
 			}
-		}	
+		}
 	}
 
 	//Copyright Bar
@@ -103,7 +103,7 @@
 		text-align: center;
 		margin-top: $copy-box-mar;
 
-		p{	
+		p{
 			color: $text;
 			font-size: $copy-txt;
 
