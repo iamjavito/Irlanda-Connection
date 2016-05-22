@@ -1,4 +1,4 @@
-.section-header{
+.section-header {
     background-color: $navbar-colour;
     height: 48px;
 
@@ -9,24 +9,22 @@
     }
 
 }
-.section-branding{	
-    margin-top: 23.5px;
-	margin-left: 40px; 
+.section-branding{
+  margin-top: 23.5px;
+	margin-left: 40px;
 	display: none;
-    background-color: $branding-colour;
+  background-color: $branding-colour;
 
 	@include breakpoint($desk) {
 		@include grid-span(2,2);
 		display: block;
 		margin-top: 23.5px;
-		margin-left: 10%; 
+		margin-left: 10%;
 
 	}
 
-    .site-logo{
-        img {	
-            width: 250px;
-            height: 150px;
+    .site-logo {
+        img {
 
         }
     }

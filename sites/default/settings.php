@@ -213,11 +213,11 @@
  * @endcode
  */
 $databases = array (
-  'default' => 
+  'default' =>
   array (
-    'default' => 
+    'default' =>
     array (
-      'database' => 'irlandaconnection',
+      'database' => 'IrlandaConnection',
       'username' => 'ICAdmin',
       'password' => 'Irl4nd4Conn3ct10n',
       'host' => '192.168.99.100',
