@@ -1,13 +1,13 @@
 .section-navbar{
     background: $navbar-colour;
     overflow: hidden;
-    min-height: 197px;
     display: none;
     background-color: $navbar-colour;
 
     @include breakpoint($desk) {
         display: block;
         @include grid-span(9,4);
+        min-height: $head-hg;
 
     }
     #block-system-navigation{

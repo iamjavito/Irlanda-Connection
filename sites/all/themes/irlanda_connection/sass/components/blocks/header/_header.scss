@@ -1,10 +1,10 @@
 .section-header {
     background-color: $navbar-colour;
-    height: 48px;
+    height: $head-hg;
 
     @include breakpoint($desk) {
     	display: block;
-    	height: 197px;
+    	height: $head-hg-desk;
 
     }
 
