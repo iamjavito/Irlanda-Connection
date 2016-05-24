@@ -1,37 +1,54 @@
 .section-navbar{
-    background: $navbar-colour;
-    overflow: hidden;
-    display: none;
-    background-color: $navbar-colour;
+  background: $navbar-colour;
+  overflow: hidden;
+  display: none;
+  background-color: $navbar-colour;
 
-    @include breakpoint($desk) {
-        display: block;
-        @include grid-span(9,4);
-        min-height: $head-hg;
+  @include breakpoint($desk) {
+      display: block;
+      @include grid-span(9,4);
+      min-height: $head-hg;
 
-    }
-    #block-system-navigation{
+  }
+  #block-system-navigation{
+    ul{
+      width: 100%;
+      list-style: none;
+      padding: 0px;
+      margin: $navpadding;
 
-        a{
-            color: $text;
-            display: block;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: $nav-link;
-            font-family: Brandon_Reg;
+      li{
+        display: inline-block;
+        margin: $nav-comp-mar;
 
-        }
-        ul{
-            width: 100%;
-            list-style: none;
-            padding: 0px;
-            margin: 149px 0px 0px 7%;
+          a{
+              color: $text;
+              display: block;
+              padding: 9px 20px;
+              text-decoration: none;
+              font-size: $nav-link;
+              font-family: Brandon_Reg;
+              
+          }
+          &:hover {
+            &:nth-child(odd) {
+                a {
+                  color: $maingreen;
+                  border-bottom: solid 2px $maingreen;
 
-            li{
-                display: inline-block;
-                margin: 0px 6em 0px 0px;
+                }
+              }
+          }
+          &:hover {
+            &:nth-child(even) {
+              a {
+                color: $mainorange;
+                border-bottom: solid 2px $mainorange;
 
+              }
             }
-        }
+          }
+      }
     }
+  }
 }
