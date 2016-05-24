@@ -11,21 +11,25 @@
 }
 .section-branding{
   margin-top: 23.5px;
-	margin-left: 40px;
+	margin-left: 0px;
 	display: none;
   background-color: $branding-colour;
 
-	@include breakpoint($desk) {
-		@include grid-span(2,2);
-		display: block;
-		margin-top: 23.5px;
-		margin-left: 10%;
+	@include breakpoint(1220px) {
+    width: $logo-wd-desk;
+    height: auto;
+    float: left;
+    margin-right: -100%;
+    clear: none;
+    display: block;
+    margin-top: 23.5px;
+    margin-left: 8%;
 
 	}
 
-    .site-logo {
-        img {
+  .site-logo {
+      img {
 
-        }
-    }
+      }
+  }
 }

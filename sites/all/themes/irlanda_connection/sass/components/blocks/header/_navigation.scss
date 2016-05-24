@@ -1,8 +1,6 @@
 .section-navbar{
-  background: $navbar-colour;
   overflow: hidden;
   display: none;
-  background-color: $navbar-colour;
 
   @include breakpoint($desk) {
       display: block;
@@ -28,7 +26,7 @@
               text-decoration: none;
               font-size: $nav-link;
               font-family: Brandon_Reg;
-              
+
           }
           &:hover {
             &:nth-child(odd) {
