@@ -3,29 +3,35 @@
   display: none;
 
   @include breakpoint($desk) {
-      display: block;
-      @include grid-span(9,4);
-      min-height: $head-hg;
+    @include grid-span(9,4);
+    position: relative;
+    display: block;
+    height: $head-hg-desk;
 
   }
   #block-system-navigation{
     ul{
-      width: 100%;
+      position: absolute;
+      bottom: 0;
+      width: $nav-wd;
+      height: $nav-hg;
       list-style: none;
       padding: 0px;
-      margin: $navpadding;
+      margin: $navmargin;
 
       li{
         display: inline-block;
         margin: $nav-comp-mar;
+        width: $nav-link-wd;
+        text-align: center;
 
           a{
               color: $text;
               display: block;
-              padding: 9px 20px;
+              padding-bottom: 0px;
               text-decoration: none;
               font-size: $nav-link;
-              font-family: Brandon_Reg;
+              font-family: Brandon_bold;
 
           }
           &:hover {
