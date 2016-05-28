@@ -2,6 +2,7 @@
  	width: 32.20339%;
 	float: right;
 	clear: none;
+  box-shadow: $btn-shadow;
 	height: $btn-course-height;
 	background-color: $maingreen;
 	line-height: $btn-course-height;
@@ -25,9 +26,10 @@
 	}
 }
 #block-bean-solicita-ya-tu-cotizacin{
-    width: 32.20339%;
+  width: 32.20339%;
 	float: right;
 	clear: none;
+  box-sizing: $btn-shadow;
 	height: $btn-course-height;
 	background-color: $mainorange;
 	line-height: $btn-course-height;

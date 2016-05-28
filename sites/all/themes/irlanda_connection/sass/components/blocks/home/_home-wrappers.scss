@@ -21,13 +21,22 @@
 
     }
   }
-  #btn-home{
+  #btn-home {
     @include grid-span(4,5);
     background: $maingreen;
     height: $btn-home-height;
     text-align: center;
     position: absolute;
     bottom: 15%;
+    box-shadow: $btn-shadow;
+    border-radius: $btn-rad;
+    transition: $color-trans;
+
+    &:hover {
+      background-color: $btn-home-hov;
+      box-shadow: $btn-shadow-ho;
+
+    }
 
     a{
       display: block;

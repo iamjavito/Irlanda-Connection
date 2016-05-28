@@ -14,10 +14,13 @@ $branding-colour: #fff;
 
 //Buttons
 $btn-txt: #fff;
+$btn-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+$btn-shadow-ho: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+$btn-home-hov: #008e43;
 
-//Borders 
+//Borders
 $main-border-colour: #f2f2f2;
-$form-input-colour: #c5c5c5; 
+$form-input-colour: #c5c5c5;
 
 //Header Image
 $head-text-colour: #fff;
@@ -31,7 +34,7 @@ $input-bg-colour: #f7f7f7;
 //Course Boxes
 $course-box-page: #f0f0f0;
 $course-box-bg: #fff;
-$course-box-border: #E6E6E6; 
+$course-box-border: #E6E6E6;
 $course-box-title: #000;
 $course-box-classes: #fff;
 $course-box-link: #fff;

@@ -32,13 +32,14 @@
               text-decoration: none;
               font-size: $nav-link;
               font-family: Brandon_bold;
+              transition: $color-trans;
 
           }
           &:hover {
             &:nth-child(odd) {
                 a {
                   color: $maingreen;
-                  border-bottom: solid 2px $maingreen;
+                  border-bottom: solid 3px $maingreen;
 
                 }
               }
@@ -47,7 +48,7 @@
             &:nth-child(even) {
               a {
                 color: $mainorange;
-                border-bottom: solid 2px $mainorange;
+                border-bottom: solid 3px $mainorange;
 
               }
             }
