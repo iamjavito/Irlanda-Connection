@@ -15,7 +15,7 @@
 	display: none;
   background-color: $branding-colour;
 
-	@include breakpoint(1220px) {
+	@include breakpoint($desk) {
     width: $logo-wd-desk;
     height: auto;
     float: left;

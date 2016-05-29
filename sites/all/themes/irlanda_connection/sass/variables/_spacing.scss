@@ -8,7 +8,10 @@ $branding-mar-desk: 23.5px 10% 0px 0px;
 // menu - navbar
 $menupadding: 178px 37px 0px 49px;
 $navmargin: 0px 0px 0px 8%;
-$nav-comp-mar: 0px 0px 0px 0px;
+// Navbar breakpoints
+$nav-comp-mar-max: 0em 8em 0em 0em;
+$nav-comp-mar-wide: 0em 5em 0em 0em;
+$nav-comp-mar: 0em 3em 0em 0em;
 
 // Buttons
 $btn-course-marg: -30px 30px 55px 30px;

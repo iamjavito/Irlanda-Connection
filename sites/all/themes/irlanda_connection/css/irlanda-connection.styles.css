@@ -844,7 +844,7 @@ h2 {
   margin-left: 0px;
   display: none;
   background-color: #fff; }
-  @media (min-width: 1220px) {
+  @media (min-width: 60em) {
     .section-branding {
       width: 220px;
       height: auto;
@@ -871,24 +871,29 @@ h2 {
   .section-navbar #block-system-navigation ul {
     position: absolute;
     bottom: 0;
-    width: 80%;
     height: 31px;
     list-style: none;
     padding: 0px;
     margin: 0px 0px 0px 8%; }
     .section-navbar #block-system-navigation ul li {
       display: inline-block;
-      margin: 0px 0px 0px 0px;
-      width: 19%;
       text-align: center; }
+      @media (min-width: 900px) {
+        .section-navbar #block-system-navigation ul li {
+          margin: 0em 3em 0em 0em; } }
+      @media (min-width: 1360px) {
+        .section-navbar #block-system-navigation ul li {
+          margin: 0em 5em 0em 0em; } }
+      @media (min-width: 1593px) {
+        .section-navbar #block-system-navigation ul li {
+          margin: 0em 8em 0em 0em; } }
       .section-navbar #block-system-navigation ul li a {
         color: #565A5C;
         display: block;
         padding-bottom: 0px;
         text-decoration: none;
         font-size: 20px;
-        font-family: Brandon_bold;
-        transition: all 0.3s ease-out; }
+        font-family: Brandon_bold; }
       .section-navbar #block-system-navigation ul li:hover:nth-child(odd) a {
         color: #018740;
         border-bottom: solid 3px #018740; }
