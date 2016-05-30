@@ -196,122 +196,6 @@ h2 {
       color: #565A5C;
       font-size: 0.8em; }
 
-@media (min-width: 60em) {
-  #zone-graphic-header {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-    height: 74vh;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; } }
-@media (min-width: 60em) {
-  #zone-graphic-header h1 {
-    width: 66.10169%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 16.94915%;
-    clear: none;
-    text-align: center;
-    color: #fff;
-    font-size: 100px;
-    text-decoration: bold;
-    margin-top: 5%;
-    line-height: 148px; } }
-#zone-graphic-header #btn-home {
-  width: 32.20339%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 25.42373%;
-  clear: none;
-  background: #018740; }
-
-@media (min-width: 60em) {
-  #zone-graphic-first {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-    margin: 0;
-    padding: 0;
-    height: 589px;
-    text-align: center;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-    #zone-graphic-first #block-bean-por-que-ingles {
-      width: 32.20339%;
-      float: left;
-      margin-right: -100%;
-      margin-left: 0;
-      clear: none;
-      height: 589px;
-      background: rgba(239, 118, 11, 0.8); }
-      #zone-graphic-first #block-bean-por-que-ingles h2 {
-        padding: 40px 20px 20px;
-        text-align: center; }
-      #zone-graphic-first #block-bean-por-que-ingles .block__content {
-        font-family: Brandon_Reg;
-        padding: 20px 20px 20px 20px;
-        text-align: left;
-        line-height: 41px; } }
-
-@media (min-width: 60em) {
-  #zone-graphic-destinos {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-    margin: 0;
-    padding: 0;
-    height: 589px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-    #zone-graphic-destinos h2 {
-      width: 100%;
-      float: right;
-      margin-left: 0;
-      margin-right: 0;
-      clear: none;
-      text-align: center;
-      width: 100%;
-      background-color: rgba(1, 135, 64, 0.8); } }
-
-@media (min-width: 60em) {
-  #zone-graphic-third {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-    margin: 0;
-    padding: 0;
-    height: 589px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-    #zone-graphic-third #block-bean-por-que-nosotros {
-      width: 40.67797%;
-      float: right;
-      margin-left: 0;
-      margin-right: 0;
-      clear: none;
-      height: 589px;
-      background: rgba(239, 118, 11, 0.8); }
-      #zone-graphic-third #block-bean-por-que-nosotros h2 {
-        padding: 40px 20px 20px;
-        text-align: center; }
-      #zone-graphic-third #block-bean-por-que-nosotros .block__content {
-        font-family: Brandon_Reg;
-        padding: 20px 20px 20px 20px;
-        text-align: left;
-        line-height: 41px; } }
-
 .node-type-blog-entry .block-main-block article {
   max-width: 980px;
   font-family: "Open Sans",open-sans,sans-serif;
@@ -840,19 +724,19 @@ h2 {
       height: 183px; } }
 
 .section-branding {
+  width: 220px;
+  height: auto;
+  float: left;
+  margin-right: -100%;
+  clear: none;
+  display: block;
   margin-top: 23.5px;
-  margin-left: 0px;
-  display: none;
   background-color: #fff; }
-  @media (min-width: 60em) {
+  @media (min-width: 45em) {
     .section-branding {
-      width: 220px;
-      height: auto;
-      float: left;
-      margin-right: -100%;
-      clear: none;
-      display: block;
-      margin-top: 23.5px;
+      margin-left: 4%; } }
+  @media (min-width: 1250px) {
+    .section-branding {
       margin-left: 8%; } }
 
 .section-navbar {
@@ -901,19 +785,17 @@ h2 {
         color: #f7941e;
         border-bottom: solid 3px #f7941e; }
 
-@media (min-width: 60em) {
-  #zone-graphic-header {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-    height: 600px;
-    position: relative;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; } }
-@media (min-width: 60em) {
+#zone-graphic-header {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  height: 600px;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
   #zone-graphic-header h1 {
     width: 66.10169%;
     float: left;
@@ -922,120 +804,142 @@ h2 {
     clear: none;
     text-align: center;
     color: #fff;
-    font-size: 5.5em;
     text-decoration: bold;
     margin-top: 5%;
-    line-height: 148px; } }
-#zone-graphic-header #btn-home {
-  width: 32.20339%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 33.89831%;
-  clear: none;
-  background: #018740;
-  height: 65px;
-  text-align: center;
-  position: absolute;
-  bottom: 15%;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  border-radius: 2px;
-  transition: all 0.3s ease-out; }
-  #zone-graphic-header #btn-home:hover {
-    background-color: #008e43;
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
-  #zone-graphic-header #btn-home a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    line-height: 65px;
-    font-family: Brandon_Bold;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5vw; }
-
-@media (min-width: 60em) {
-  #zone-graphic-first {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
+    line-height: 148px; }
+    @media (min-width: 45em) {
+      #zone-graphic-header h1 {
+        font-size: 4em; } }
+    @media (min-width: 1100px) {
+      #zone-graphic-header h1 {
+        font-size: 4.9em; } }
+    @media (min-width: 1600px) {
+      #zone-graphic-header h1 {
+        font-size: 5.5em; } }
+  #zone-graphic-header #btn-home {
+    width: 32.20339%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 33.89831%;
     clear: none;
-    margin: 0;
-    padding: 0;
-    height: 589px;
+    background: #018740;
+    height: 65px;
     text-align: center;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-    #zone-graphic-first #block-bean-por-que-ingles {
-      width: 32.20339%;
-      float: left;
-      margin-right: -100%;
-      margin-left: 0;
-      clear: none;
-      height: 589px;
-      background: rgba(239, 118, 11, 0.8); }
-      #zone-graphic-first #block-bean-por-que-ingles h2 {
-        padding: 40px 20px 20px;
-        text-align: center; }
-      #zone-graphic-first #block-bean-por-que-ingles .block__content {
-        font-family: Brandon_Reg;
-        padding: 20px 20px 20px 20px;
-        text-align: left;
-        line-height: 41px; } }
+    position: absolute;
+    bottom: 15%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    transition: all 0.3s ease-out; }
+    #zone-graphic-header #btn-home:hover {
+      background-color: #008e43;
+      box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+    #zone-graphic-header #btn-home a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: 65px;
+      font-family: Brandon_Bold;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5vw; }
 
-@media (min-width: 60em) {
-  #zone-graphic-destinos {
+#zone-graphic-first, #zone-graphic-third {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  margin: 0;
+  padding: 0;
+  height: 400px;
+  text-align: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media (min-width: 1210px) {
+    #zone-graphic-first, #zone-graphic-third {
+      height: 589px; } }
+  #zone-graphic-first #block-bean-por-que-ingles, #zone-graphic-third #block-bean-por-que-ingles {
+    width: 49.15254%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+    /**@include breakpoint($hm-bp-max) {
+      @include grid-span(4,1);
+
+    }**/ }
+    @media (min-width: 1438px) {
+      #zone-graphic-first #block-bean-por-que-ingles, #zone-graphic-third #block-bean-por-que-ingles {
+        width: 40.67797%;
+        float: left;
+        margin-right: -100%;
+        margin-left: 0;
+        clear: none; } }
+  #zone-graphic-first #block-bean-por-que-nosotros, #zone-graphic-third #block-bean-por-que-nosotros {
+    width: 49.15254%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    /**@include breakpoint($hm-bp-max) {
+      @include grid-span(4,9);
+
+    }**/ }
+    @media (min-width: 1438px) {
+      #zone-graphic-first #block-bean-por-que-nosotros, #zone-graphic-third #block-bean-por-que-nosotros {
+        width: 40.67797%;
+        float: right;
+        margin-left: 0;
+        margin-right: 0;
+        clear: none; } }
+  #zone-graphic-first #block-bean-por-que-ingles, #zone-graphic-first #block-bean-por-que-nosotros, #zone-graphic-third #block-bean-por-que-ingles, #zone-graphic-third #block-bean-por-que-nosotros {
+    height: 400px;
+    background: rgba(239, 118, 11, 0.8); }
+    @media (min-width: 1210px) {
+      #zone-graphic-first #block-bean-por-que-ingles, #zone-graphic-first #block-bean-por-que-nosotros, #zone-graphic-third #block-bean-por-que-ingles, #zone-graphic-third #block-bean-por-que-nosotros {
+        height: 589px; } }
+    #zone-graphic-first #block-bean-por-que-ingles h2, #zone-graphic-first #block-bean-por-que-nosotros h2, #zone-graphic-third #block-bean-por-que-ingles h2, #zone-graphic-third #block-bean-por-que-nosotros h2 {
+      font-size: 41px;
+      padding: 40px 20px 20px;
+      text-align: center; }
+      @media (min-width: 1438px) {
+        #zone-graphic-first #block-bean-por-que-ingles h2, #zone-graphic-first #block-bean-por-que-nosotros h2, #zone-graphic-third #block-bean-por-que-ingles h2, #zone-graphic-third #block-bean-por-que-nosotros h2 {
+          font-size: 51px; } }
+      @media (min-width: 1816px) {
+        #zone-graphic-first #block-bean-por-que-ingles h2, #zone-graphic-first #block-bean-por-que-nosotros h2, #zone-graphic-third #block-bean-por-que-ingles h2, #zone-graphic-third #block-bean-por-que-nosotros h2 {
+          font-size: 61px; } }
+    #zone-graphic-first #block-bean-por-que-ingles .block__content, #zone-graphic-first #block-bean-por-que-nosotros .block__content, #zone-graphic-third #block-bean-por-que-ingles .block__content, #zone-graphic-third #block-bean-por-que-nosotros .block__content {
+      font-family: Brandon_Reg;
+      padding: 20px 20px 20px 20px;
+      text-align: left;
+      line-height: 41px;
+      font-size: 1.1em; }
+      @media (min-width: 1210px) {
+        #zone-graphic-first #block-bean-por-que-ingles .block__content, #zone-graphic-first #block-bean-por-que-nosotros .block__content, #zone-graphic-third #block-bean-por-que-ingles .block__content, #zone-graphic-third #block-bean-por-que-nosotros .block__content {
+          font-size: 2em; } }
+
+#zone-graphic-destinos {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  margin: 0;
+  padding: 0;
+  height: 589px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  #zone-graphic-destinos h2 {
     width: 100%;
     float: right;
     margin-left: 0;
     margin-right: 0;
     clear: none;
-    margin: 0;
-    padding: 0;
-    height: 589px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-    #zone-graphic-destinos h2 {
-      width: 100%;
-      float: right;
-      margin-left: 0;
-      margin-right: 0;
-      clear: none;
-      text-align: center;
-      width: 100%;
-      background-color: rgba(1, 135, 64, 0.8); } }
-
-@media (min-width: 60em) {
-  #zone-graphic-third {
+    text-align: center;
     width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-    margin: 0;
-    padding: 0;
-    height: 589px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-    #zone-graphic-third #block-bean-por-que-nosotros {
-      width: 40.67797%;
-      float: right;
-      margin-left: 0;
-      margin-right: 0;
-      clear: none;
-      height: 589px;
-      background: rgba(239, 118, 11, 0.8); }
-      #zone-graphic-third #block-bean-por-que-nosotros h2 {
-        padding: 40px 20px 20px;
-        text-align: center; }
-      #zone-graphic-third #block-bean-por-que-nosotros .block__content {
-        font-family: Brandon_Reg;
-        padding: 20px 20px 20px 20px;
-        text-align: left;
-        line-height: 41px; } }
+    background-color: rgba(1, 135, 64, 0.8); }
 
 .services-grid {
   max-width: 1200px;

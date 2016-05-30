@@ -1,26 +1,34 @@
-#zone-graphic-header{
-  @include breakpoint($desk) {
-    @include grid-span($grids,1);
-    height: $home-head-hg;
-    position: relative;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#zone-graphic-header {
+  @include grid-span($grids,1);
+  height: $home-head-hg;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  }
+  h1 {
+    @include grid-span(8,3);
+    text-align: center;
+    color: $head-text-colour;
+    text-decoration: bold;
+    margin-top: 5%;
+    line-height: 148px;
 
-  h1{
-    @include breakpoint($desk) {
-      @include grid-span(8,3);
-      text-align: center;
-      color: $head-text-colour;
-      font-size: 5.5em;
-      text-decoration: bold;
-      margin-top: 5%;
-      line-height: 148px;
+    @include breakpoint($tab) {
+      font-size: $h1-tab;
 
     }
+    @include breakpoint(1100px) {
+      font-size: $h1-wide;
+
+    }
+    @include breakpoint(1600px) {
+      font-size: $h1-max;
+
+    }
+
   }
+
   #btn-home {
     @include grid-span(4,5);
     background: $maingreen;
@@ -38,7 +46,7 @@
 
     }
 
-    a{
+    a {
       display: block;
       width: 100%;
       height: 100%;
@@ -52,85 +60,95 @@
   }
 }
 
-#zone-graphic-first {
-  @include breakpoint($desk) {
-    @include grid-span($grids,1);
-    margin: 0;
-    padding: 0;
+#zone-graphic-first, #zone-graphic-third {
+  @include grid-span($grids,1);
+  margin: 0;
+  padding: 0;
+  height: $wrapper-sm;
+  text-align: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include breakpoint($hm-bp-sml) {
     height: $wrapper;
-    text-align: center;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
 
-    #block-bean-por-que-ingles{
-      @include grid-span(4,1);
+  }
+
+  //Specific bp and grids
+  #block-bean-por-que-ingles {
+    @include grid-span(6,1);
+
+    @include breakpoint($hm-bp-wd) {
+      @include grid-span(5,1);
+
+    }
+
+  }
+  #block-bean-por-que-nosotros{
+    @include grid-span(6,7);
+
+    @include breakpoint($hm-bp-wd) {
+      @include grid-span(5,8);
+
+    }
+
+  }
+
+  //Boxes common sets
+  #block-bean-por-que-ingles, #block-bean-por-que-nosotros {
+    height: $wrapper-sm;
+    background: $mainorange_opacity;
+
+    @include breakpoint($hm-bp-sml) {
       height: $wrapper;
-      background: $mainorange_opacity;
 
-      h2{
-        padding: $wrap-h2;
-        text-align: center;
+    }
+
+    h2 {
+      font-size: $h2-sml;
+      padding: $wrap-h2;
+      text-align: center;
+
+      @include breakpoint($hm-bp-wd) {
+        font-size: $h2-wd;
 
       }
-      .block__content{
-        font-family: Brandon_Reg;
-        padding: $wrap-text;
-        text-align: left;
-        line-height: $wrap-line;
+      @include breakpoint($hm-bp-max) {
+        font-size: $h2-max;
 
+      }
+
+    }
+
+    .block__content {
+      font-family: Brandon_Reg;
+      padding: $wrap-text;
+      text-align: left;
+      line-height: $wrap-line;
+      font-size: $box-txt-sm;
+
+      @include breakpoint($hm-bp-sml) {
+        font-size: $box-txt;
       }
     }
   }
 }
 
 #zone-graphic-destinos {
-  @include breakpoint($desk) {
+  @include grid-span($grids,1);
+  margin: 0;
+  padding: 0;
+  height: $wrapper;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h2 {
     @include grid-span($grids,1);
-    margin: 0;
-    padding: 0;
-    height: $wrapper;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    text-align: center;
+    width: 100%;
+    background-color: $maingreen_opacity;
 
-    h2{
-      @include grid-span($grids,1);
-      text-align: center;
-      width: 100%;
-      background-color: $maingreen_opacity;
-
-    }
-  }
-}
-
-#zone-graphic-third {
-  @include breakpoint($desk) {
-    @include grid-span($grids,1);
-    margin: 0;
-    padding: 0;
-    height: $wrapper;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    #block-bean-por-que-nosotros{
-      @include grid-span(5,8);
-      height: $wrapper;
-      background: $mainorange_opacity;
-
-      h2{
-        padding: $wrap-h2;
-        text-align: center;
-
-      }
-      .block__content{
-        font-family: Brandon_Reg;
-        padding: $wrap-text;
-        text-align: left;
-        line-height: $wrap-line;
-
-      }
-    }
   }
 }

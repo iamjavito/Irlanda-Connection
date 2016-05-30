@@ -409,22 +409,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/sass\/components\/blocks\/_home-wrappers.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/components\/blocks\/_home-wrappers.scss",
-		"outputAbbreviatedPath": "\/css\" # by Compass.app \/_home-wrappers.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
 	"\/sass\/components\/blocks\/blog\/_blog-post.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
