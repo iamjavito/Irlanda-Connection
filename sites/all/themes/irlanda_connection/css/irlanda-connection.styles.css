@@ -139,6 +139,12 @@ h2 {
         font-size: 24px;
         padding: 22px 0px 0px 0px;
         list-style: none; }
+        .section-footer #block-menu-menu-footer ul li:hover:nth-child(odd) a {
+          color: #018740;
+          border-bottom: solid 3px #018740; }
+        .section-footer #block-menu-menu-footer ul li:hover:nth-child(even) a {
+          color: #f7941e;
+          border-bottom: solid 3px #f7941e; }
   .section-footer #block-bean-footer-block {
     width: 32.20339%;
     float: left;
@@ -146,7 +152,7 @@ h2 {
     margin-left: 59.32203%;
     clear: none; }
     .section-footer #block-bean-footer-block h2 {
-      color: #f7941e;
+      color: #565A5C;
       margin-left: -10px;
       text-decoration: underline;
       padding: 0px 0px 12px 0px;
@@ -864,11 +870,7 @@ h2 {
     float: left;
     margin-right: -100%;
     margin-left: 0;
-    clear: none;
-    /**@include breakpoint($hm-bp-max) {
-      @include grid-span(4,1);
-
-    }**/ }
+    clear: none; }
     @media (min-width: 1438px) {
       #zone-graphic-first #block-bean-por-que-ingles, #zone-graphic-third #block-bean-por-que-ingles {
         width: 40.67797%;
@@ -881,11 +883,7 @@ h2 {
     float: right;
     margin-left: 0;
     margin-right: 0;
-    clear: none;
-    /**@include breakpoint($hm-bp-max) {
-      @include grid-span(4,9);
-
-    }**/ }
+    clear: none; }
     @media (min-width: 1438px) {
       #zone-graphic-first #block-bean-por-que-nosotros, #zone-graphic-third #block-bean-por-que-nosotros {
         width: 40.67797%;
@@ -927,10 +925,13 @@ h2 {
   clear: none;
   margin: 0;
   padding: 0;
-  height: 589px;
+  height: 400px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover; }
+  @media (min-width: 1438px) {
+    #zone-graphic-destinos {
+      height: 589px; } }
   #zone-graphic-destinos h2 {
     width: 100%;
     float: right;
@@ -938,8 +939,12 @@ h2 {
     margin-right: 0;
     clear: none;
     text-align: center;
+    font-size: 41px;
     width: 100%;
     background-color: rgba(1, 135, 64, 0.8); }
+    @media (min-width: 1210px) {
+      #zone-graphic-destinos h2 {
+        font-size: 61px; } }
 
 .services-grid {
   max-width: 1200px;

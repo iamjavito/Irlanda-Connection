@@ -30,6 +30,24 @@
 				padding: 22px 0px 0px 0px;
 				list-style: none;
 
+				&:hover {
+					&:nth-child(odd) {
+							a {
+								color: $maingreen;
+								border-bottom: solid 3px $maingreen;
+
+							}
+						}
+				}
+				&:hover {
+					&:nth-child(even) {
+						a {
+							color: $mainorange;
+							border-bottom: solid 3px $mainorange;
+
+						}
+					}
+				}
 			}
 		}
 
@@ -38,7 +56,7 @@
 		@include grid-span(4,8);
 
 		h2{
-			color: $mainorange;
+			color: $text;
 			margin-left: -10px;
 			text-decoration: underline;
 			padding: 0px 0px 12px 0px;

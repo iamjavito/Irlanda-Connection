@@ -139,16 +139,25 @@
   @include grid-span($grids,1);
   margin: 0;
   padding: 0;
-  height: $wrapper;
+  height: $wrapper-sm;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 
+  @include breakpoint($hm-bp-wd) {
+    height: $wrapper;
+  }
+
   h2 {
     @include grid-span($grids,1);
     text-align: center;
+    font-size: $h2-sml;
     width: 100%;
     background-color: $maingreen_opacity;
 
+    @include breakpoint($hm-bp-sml) {
+      font-size: $h2-max;
+
+    }
   }
 }
