@@ -30,7 +30,7 @@
   }
 
   #btn-home {
-    @include grid-span(4,5);
+    @include grid-span($grids, 1);
     background: $maingreen;
     height: $btn-home-height;
     text-align: center;
@@ -40,6 +40,10 @@
     border-radius: $btn-rad;
     transition: $color-trans;
 
+    @include breakpoint($desk) {
+      @include grid-span(4, 5);
+
+    }
     &:hover {
       background-color: $btn-home-hov;
       box-shadow: $btn-shadow-ho;
@@ -144,8 +148,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  @include breakpoint($hm-bp-wd) {
+  @include breakpoint($hm-bp-sml) {
     height: $wrapper;
+
   }
 
   h2 {

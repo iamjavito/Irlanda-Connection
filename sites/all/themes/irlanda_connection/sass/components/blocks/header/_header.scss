@@ -2,6 +2,10 @@
     background-color: $navbar-colour;
     height: $head-hg;
 
+    @include breakpoint($tab) {
+      height: $head-hg-tab;
+
+    }
     @include breakpoint($desk) {
     	display: block;
     	height: $head-hg-desk;

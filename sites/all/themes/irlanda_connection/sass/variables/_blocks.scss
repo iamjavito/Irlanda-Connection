@@ -1,7 +1,10 @@
 //Header
 $head-hg-desk: 183px;
 $home-head-hg: 600px;
-$head-hg: 48px;
+  //Mobile
+    $head-hg: 48px;
+  //Tablet
+    $head-hg-tab: 80px;
 $logo-wd-desk: 220px;
 
 //navbar
@@ -12,7 +15,13 @@ $nav-wd: 80%;
 $logo-wd-desk-sml: 200px;
 
 //Destinos
-$dest_hg: 503px;
+  //Width
+    $dest_wt_wd: 33.33%;
+
+  //Height
+    $dest_hg_wd: 503px;
+    $dest_hg_sml: 400px;
+    $dest_hg_tab: 300px;
 
 //Courses
 $course-box-hg: 300px;

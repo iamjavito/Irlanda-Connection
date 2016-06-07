@@ -1,40 +1,73 @@
-.destinos-grid{
+.destinos-grid {
 	@include grid-span($grids,1);
 	margin: 0;
 	padding: 0;
-	.views-row{
-		height: $dest_hg;
 
-		h2{	
-			a{
-				width: 100%;
+	.views-row {
+		h2 {
+			a {
 				text-align: center;
-				height: $dest_hg;
+				height: $dest_hg_tab;
 				position: absolute;
-				width: 100%;
 				color: #fff;
 				text-decoration: none;
-				line-height: $dest_hg;
-				
+
 			}
+
 		}
-		img{
+		img {
 			width: 100%;
-			height: $dest_hg;
 			object-fit: cover;
 
 		}
-
 		@include breakpoint($tab) {
-			float: left;
-			width: 100%;
-		}
+			@include grid-span($grids, 1);
+			height: $dest_hg_tab;
 
+			img {
+				height: $dest_hg_tab;
+
+			}
+			a {
+				@include grid-span($grids, 1);
+				line-height: $dest_hg_tab;
+
+			}
+
+		}
 		@include breakpoint($desk) {
 			float: left;
-			width: 33.33%;
+			width: $dest_wt_wd;
+			height: $dest_hg_sml;
+
+			img {
+				height: $dest_hg_sml;
+
+			}
+			a {
+				width: $dest_wt_wd;
+				line-height: $dest_hg_sml;
+
+			}
+
 		}
+		@include breakpoint($hm-bp-wd) {
+			float: left;
+			width: $dest_wt_wd;
+			height: $dest_hg_wd;
+
+			img {
+				height: $dest_hg_wd;
+
+			}
+			a {
+				width: $dest_wt_wd;
+				line-height: $dest_hg_wd;
+
+			}
+
+		}
+
 	}
 
 }
-

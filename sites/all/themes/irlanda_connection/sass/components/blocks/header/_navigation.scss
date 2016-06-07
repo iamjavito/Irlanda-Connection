@@ -28,6 +28,7 @@
         }
         @include breakpoint(1360px) {
           margin: $nav-comp-mar-wide;
+          
         }
         @include breakpoint(1593px) {
           margin: $nav-comp-mar-max;
