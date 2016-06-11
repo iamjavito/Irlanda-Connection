@@ -9,35 +9,56 @@
 
 	}
 
+	// Nav Footer
 	#block-menu-menu-footer{
-		@include grid-span(3, 3);
+		@include grid-span($grids, 1);
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
+		float: none;
 
+		@include breakpoint($mob) {
+			@include grid-span(3, 3);
+			flex-direction: column;
+			justify-content: center;
+
+		}
 		@include breakpoint($desk) {
 			@include grid-span(3, 4);
+			flex-direction: column;
+			justify-content: center;
 
 		}
 
 		a{
 			color: $text;
 			text-decoration: none;
+			display: block;
 
 		}
 		ul{
 			list-style: none;
 
 			li:first-child{
-				font-size: $foot-links;
+				font-size: $foot-links-sm;
 				padding: 0px 0px 0px 0px;
 				list-style: none;
 
+				@include breakpoint($tab) {
+					font-size: $foot-links;
+
+				}
 			}
 			li{
-				font-size: $foot-links;
+				font-size: $foot-links-sm;
 				padding: 22px 0px 0px 0px;
 				list-style: none;
+				text-align: center;
+
+				@include breakpoint($tab) {
+					font-size: $foot-links;
+					text-align: left;
+
+				}
 
 				&:hover {
 					&:nth-child(odd) {
@@ -61,38 +82,64 @@
 		}
 
 	}
-	#block-bean-footer-block{
-		@include grid-span(3, 8);
 
+	//Contactanos Footer
+	#block-bean-footer-block {
+		@include grid-span(10, 2);
+		margin-top: 36px;
+
+		@include breakpoint(350px) {
+			@include grid-span(4, 4);
+
+		}
+		@include breakpoint($mob) {
+			@include grid-span(3, 8);
+			margin-top: 0;
+
+		}
 		@include breakpoint($desk) {
 			@include grid-span(3, 8);
+			margin-top: 0;
 
 		}
 
-		h2{
+		h2 {
 			color: $text;
-			margin-left: -10px;
 			text-decoration: underline;
 			padding: 0px 0px 12px 0px;
 			text-align: left;
-			font-size: $foot-links;
+			font-size: $foot-links-sm;
 			font-weight: bold;
 			font-family: Brandon_Reg;
 
-		}
-		.block__content{
-			color: $text;
-			font-size: $foot-links;
+			@include breakpoint($tab) {
+				font-size: $foot-links;
+				margin-left: -10px;
 
-			.field{
-				padding: $ft-contact-padd;
+			}
+
+		}
+		.block__content {
+			color: $text;
+			font-size: $foot-links-sm;
+
+			@include breakpoint($tab) {
+				font-size: $foot-links;
+
+			}
+			a {
+				color: $maingreen;
+
+			}
+			.field {
+				padding: $ft-contact-padd-wd;
 
 			}
 		}
 	}
 
 	//Social Media Area - Footer
-	#block-bean-social-media-footer{
+	#block-bean-social-media-footer {
 		@include grid-span($grids,1);
 		margin-top: $social-box-mar;
 
@@ -139,6 +186,7 @@
 		@include grid-span(6, 4);
 		text-align: center;
 		margin-top: $copy-box-mar;
+		margin-bottom: 20px;
 
 		@include breakpoint($desk) {
 			@include grid-span(4, 5);
@@ -148,7 +196,12 @@
 
 		p{
 			color: $text;
-			font-size: $copy-txt;
+			font-size: $copy-txt-sm;
+
+			@include breakpoint($tab) {
+				font-size: $copy-txt;
+
+			}
 
 		}
 

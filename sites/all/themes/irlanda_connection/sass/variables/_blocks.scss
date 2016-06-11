@@ -11,6 +11,9 @@ $logo-wd-desk: 220px;
   $home-head-hg-wd: 600px;
   //Tablet
   $home-head-hg-sm: 400px;
+  //Mobile
+  $home-head-hg: 200px;
+
 
 //navbar
 $nav-hg: 31px;
@@ -47,4 +50,5 @@ $color-trans: all .3s ease-out;
 
 // Wrappers
 $wrapper: 589px;
-$wrapper-sm: 400px;
+$wrapper-sm: 300px;
+$wrapper-tab: 400px;

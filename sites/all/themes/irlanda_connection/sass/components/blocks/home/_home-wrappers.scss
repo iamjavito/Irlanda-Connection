@@ -12,26 +12,35 @@
   }
 
   h1 {
-    @include grid-span(8,3);
+    @include grid-span($grids, 1);
     text-align: center;
     color: $head-text-colour;
     text-decoration: bold;
     max-resolution: 3%;
-    line-height: 148px;
+    line-height: 121%;
+    font-size: $h1-hm;
+    margin-top: 18%;
 
+    @include breakpoint($mob) {
+      font-size: $h1-sm;
+
+    }
     @include breakpoint($tab) {
       font-size: $h1-tab;
-      margin-top: 3%;
+      margin-top: 18%;
 
     }
     @include breakpoint(1100px) {
+      @include grid-span(8, 3);
       font-size: $h1-wide;
       margin-top: 5%;
 
     }
     @include breakpoint(1600px) {
+      @include grid-span(8, 3);
       font-size: $h1-max;
       margin-top: 5%;
+      line-height: 148px;
 
     }
 
@@ -88,6 +97,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @include breakpoint($tab) {
+    height: $wrapper-tab;
+
+  }
   @include breakpoint($hm-bp-sml) {
     height: $wrapper;
 
@@ -95,17 +108,24 @@
 
   //Specific bp and grids
   #block-bean-por-que-ingles {
-    @include grid-span(6,1);
+    @include grid-span($grids, 1);
 
+    @include breakpoint($tab) {
+      @include grid-span(6, 1);
+    }
     @include breakpoint($hm-bp-wd) {
-      @include grid-span(5,1);
+      @include grid-span(5, 1);
 
     }
 
   }
   #block-bean-por-que-nosotros{
-    @include grid-span(6,7);
+    @include grid-span($grids, 1);
 
+    @include breakpoint($tab) {
+      @include grid-span(6, 7);
+
+    }
     @include breakpoint($hm-bp-wd) {
       @include grid-span(5,8);
 
@@ -118,16 +138,24 @@
     height: $wrapper-sm;
     background: $mainorange_opacity;
 
+    @include breakpoint($tab) {
+      height: $wrapper-tab;
+
+    }
     @include breakpoint($hm-bp-sml) {
       height: $wrapper;
 
     }
 
     h2 {
-      font-size: $h2-sml;
+      font-size: $h2-hm;
       padding: $wrap-hm-h2;
       text-align: center;
 
+      @include breakpoint($hm-bp-box-txt) {
+        font-size: $h2-sml;
+
+      }
       @include breakpoint($hm-bp-wd) {
         font-size: $h2-wd;
         padding: $wrap-hm-h2-wd;
@@ -146,10 +174,13 @@
       padding: $wrap-hm-text;
       text-align: left;
       line-height: $wrap-line-sm;
-      font-size: $box-txt-sm;
+      font-size: $box-txt;
 
+      @include breakpoint($hm-bp-box-txt) {
+        font-size: $box-txt-sm;
+      }
       @include breakpoint($hm-bp-sml) {
-        font-size: $box-txt;
+        font-size: $box-txt-wd;
         line-height: $wrap-line;
 
       }

@@ -3,16 +3,22 @@ $base-font-size: 16px;
 // Headers
 $h1: 100px;
 //Home
-$h1-max: 5.5em;
-$h1-wide: 4.9em;
-$h1-tab: 4em;
-$h2-max: 61px;
-$h2-wd: 51px;
-$h2-sml: 41px;
+  //H1
+    $h1-max: 5.5em;
+    $h1-wide: 4.9em;
+    $h1-tab: 4em;
+    $h1-sm: 3.5em;
+    $h1-hm: 2.5em;
+  //H2
+    $h2-max: 61px;
+    $h2-wd: 51px;
+    $h2-sml: 32px;
+    $h2-hm: 1.5em;
 
 //Orange Boxes on Home page text
 $box-txt-sm: 1.1em;
-$box-txt: 2em;
+$box-txt-wd: 2em;
+$box-txt: 2.5vh;
 
 $h2: 45px;
 
@@ -51,4 +57,6 @@ $loca-address-txt: 20px;
 
 //Footer
 $foot-links: 24px;
+$foot-links-sm: 20px;
 $copy-txt: 0.8em;
+$copy-txt-sm: 0.5em;
