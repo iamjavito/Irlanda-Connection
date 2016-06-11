@@ -1,29 +1,37 @@
 #zone-graphic-header {
   @include grid-span($grids,1);
-  height: $home-head-hg;
+  height: $home-head-hg-sm;
   position: relative;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include breakpoint($desk) {
+    height: $home-head-hg-wd;
+
+  }
 
   h1 {
     @include grid-span(8,3);
     text-align: center;
     color: $head-text-colour;
     text-decoration: bold;
-    margin-top: 5%;
+    max-resolution: 3%;
     line-height: 148px;
 
     @include breakpoint($tab) {
       font-size: $h1-tab;
+      margin-top: 3%;
 
     }
     @include breakpoint(1100px) {
       font-size: $h1-wide;
+      margin-top: 5%;
 
     }
     @include breakpoint(1600px) {
       font-size: $h1-max;
+      margin-top: 5%;
 
     }
 
@@ -35,13 +43,14 @@
     height: $btn-home-height;
     text-align: center;
     position: absolute;
-    bottom: 15%;
+    bottom: 0;
     box-shadow: $btn-shadow;
     border-radius: $btn-rad;
     transition: $color-trans;
 
     @include breakpoint($desk) {
       @include grid-span(4, 5);
+      bottom: 15%;
 
     }
     &:hover {
@@ -58,7 +67,12 @@
       font-family: Brandon_Bold;
       color: $btn-txt;
       text-decoration: none;
-      font-size: $btn-home-txt;
+      font-size: $btn-hm-txt;
+
+      @include breakpoint($desk) {
+        font-size: $btn-hm-txt-wd;
+
+      }
 
     }
   }
@@ -111,15 +125,17 @@
 
     h2 {
       font-size: $h2-sml;
-      padding: $wrap-h2;
+      padding: $wrap-hm-h2;
       text-align: center;
 
       @include breakpoint($hm-bp-wd) {
         font-size: $h2-wd;
+        padding: $wrap-hm-h2-wd;
 
       }
       @include breakpoint($hm-bp-max) {
         font-size: $h2-max;
+        padding: $wrap-hm-h2-wd;
 
       }
 
@@ -127,13 +143,15 @@
 
     .block__content {
       font-family: Brandon_Reg;
-      padding: $wrap-text;
+      padding: $wrap-hm-text;
       text-align: left;
-      line-height: $wrap-line;
+      line-height: $wrap-line-sm;
       font-size: $box-txt-sm;
 
       @include breakpoint($hm-bp-sml) {
         font-size: $box-txt;
+        line-height: $wrap-line;
+
       }
     }
   }

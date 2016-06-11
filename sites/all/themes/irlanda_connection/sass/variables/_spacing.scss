@@ -22,9 +22,15 @@ $bodymargin: 0;
 $bodypadding: 0;
 
 // Wrappers
-$wrap-text: 20px 20px 20px 20px;
-$wrap-h2: 40px 20px 20px;
-$wrap-line: 41px;
+  //Home
+    //tab
+    $wrap-hm-text: 20px 20px 20px 20px;
+    $wrap-hm-h2: 31px 0px 0px;
+    $wrap-line-sm: 29px;
+    //desk
+    $wrap-hm-tex-wd: 20px 20px 20px 20px;
+    $wrap-hm-h2-wd: 40px 20px 20px;
+    $wrap-line: 41px;
 
 //Forms
 $form-padd: 35px 48px 25px 35px;
@@ -79,8 +85,14 @@ $post-tea-title: 5px 0px 5px 0px;
 $ver-mas-mar: 35px;
 
 // Footer
-$social-box-mar: 300px;
-$social-mar: 0 auto 0px auto;
-$copy-box-mar: 360px;
+
+  //desk
+    $social-box-mar-wd: 300px;
+    $copy-box-mar-wd: 360px;
+    $social-mar: 0 auto 0px auto;
+  //mob
+    $social-box-mar: 200px;
+    $copy-box-mar: 260px;
+    
 $ft-contact-padd: 12px 0px 0px 0px;
 $sm-btn-mar: 10px 10px 10px 10px;

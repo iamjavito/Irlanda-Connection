@@ -1,11 +1,16 @@
 //Header
 $head-hg-desk: 183px;
-$home-head-hg: 600px;
   //Mobile
     $head-hg: 48px;
   //Tablet
-    $head-hg-tab: 80px;
+    $head-hg-tab: 48px;
 $logo-wd-desk: 220px;
+
+//home
+  //First wrap
+  $home-head-hg-wd: 600px;
+  //Tablet
+  $home-head-hg-sm: 400px;
 
 //navbar
 $nav-hg: 31px;

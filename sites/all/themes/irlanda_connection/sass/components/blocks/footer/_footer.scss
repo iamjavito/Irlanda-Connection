@@ -2,13 +2,23 @@
 	@include grid-span($grids,1);
 	background-color: $footerbg;
 	border-top: solid 9px $maingreen;
-	padding: 50px 0;
+	padding: 20px 0px 0px 0px;
+
+	@include breakpoint($desk) {
+		padding: 50px 0;
+
+	}
 
 	#block-menu-menu-footer{
-		@include grid-span(3,4);
+		@include grid-span(3, 3);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+
+		@include breakpoint($desk) {
+			@include grid-span(3, 4);
+
+		}
 
 		a{
 			color: $text;
@@ -52,7 +62,12 @@
 
 	}
 	#block-bean-footer-block{
-		@include grid-span(4,8);
+		@include grid-span(3, 8);
+
+		@include breakpoint($desk) {
+			@include grid-span(3, 8);
+
+		}
 
 		h2{
 			color: $text;
@@ -80,6 +95,11 @@
 	#block-bean-social-media-footer{
 		@include grid-span($grids,1);
 		margin-top: $social-box-mar;
+
+		@include breakpoint($desk) {
+			margin-top: $social-box-mar-wd;
+
+		}
 
 		.social-footer{
 			width: 200px;
@@ -116,9 +136,15 @@
 
 	//Copyright Bar
 	#block-bean-copyright-block-footer{
-		@include grid-span(4,5);
+		@include grid-span(6, 4);
 		text-align: center;
 		margin-top: $copy-box-mar;
+
+		@include breakpoint($desk) {
+			@include grid-span(4, 5);
+			margin-top: $copy-box-mar-wd;
+
+		}
 
 		p{
 			color: $text;
