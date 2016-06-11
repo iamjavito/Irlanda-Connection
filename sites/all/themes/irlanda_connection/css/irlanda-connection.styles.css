@@ -822,14 +822,20 @@ h2 {
 
 .section-header {
   background-color: #fff;
-  height: 48px; }
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 48px;
+  position: fixed;
+  z-index: 1; }
   @media (min-width: 45em) {
     .section-header {
       height: 48px; } }
   @media (min-width: 60em) {
     .section-header {
       display: block;
-      height: 183px; } }
+      height: 183px;
+      position: relative; } }
 
 .section-branding {
   width: 220px;
@@ -846,6 +852,15 @@ h2 {
   @media (min-width: 1250px) {
     .section-branding {
       margin-left: 8%; } }
+  .section-branding .site-logo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    clip: rect(183px, 425px, 259px, 0px); }
+    @media (min-width: 600px) {
+      .section-branding .site-logo img {
+        position: relative; } }
 
 .section-navbar {
   overflow: hidden;

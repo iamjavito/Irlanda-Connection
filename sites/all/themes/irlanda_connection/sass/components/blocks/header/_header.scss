@@ -1,6 +1,11 @@
 .section-header {
     background-color: $navbar-colour;
+    width: 100%;
+    top: 0;
+    left: 0;
     height: $head-hg;
+    position: fixed;
+    z-index: 1;
 
     @include breakpoint($tab) {
       height: $head-hg-tab;
@@ -9,6 +14,7 @@
     @include breakpoint($desk) {
     	display: block;
     	height: $head-hg-desk;
+      position: relative;
 
     }
 
@@ -27,7 +33,6 @@
     margin-left: 4%;
 
   }
-
 	@include breakpoint(1250px) {
     margin-left: 8%;
 
@@ -35,7 +40,16 @@
 
   .site-logo {
       img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        clip: rect(183px,425px,259px,0px);
 
+        @include breakpoint($mob) {
+          position: relative;
+
+        }
       }
   }
 }
