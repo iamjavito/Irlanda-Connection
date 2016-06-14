@@ -1,6 +1,7 @@
 .section-navbar {
   overflow: hidden;
-  display: none;
+  @include grid-span($grids, 1);
+
 
   @include breakpoint($desk) {
     @include grid-span(9,4);
@@ -19,16 +20,20 @@
       margin: $navmargin;
 
       li{
-        display: inline-block;
         text-align: center;
+        list-style: none;
 
+        @include breakpoint($desk) {
+          display: inline-block;
+
+        }
         @include breakpoint(900px) {
           margin: $nav-comp-mar;
 
         }
         @include breakpoint(1360px) {
           margin: $nav-comp-mar-wide;
-          
+
         }
         @include breakpoint(1593px) {
           margin: $nav-comp-mar-max;

@@ -3,9 +3,14 @@
   <header class="section-header" role="banner">
     <div class="section-branding">
       <?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+        <div class="desk-trigger">
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+        </div>
+        <div class="mob-trigger">
+          <img class="menu-icon" src="/sites/all/themes/irlanda_connection/images/icons/menu-icon.png">
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-logo"><img src="sites/default/files/storage/logo_mob.png" alt="<?php print t('Home'); ?>" /></a>
+        </div>
       <?php endif; ?>
-
       <?php if ($site_name || $site_slogan): ?>
         <?php if ($site_name): ?>
           <h1 class="site-name">
@@ -34,7 +39,7 @@
       <?php print render($tabs); ?>
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?> 
+      <?php endif; ?>
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
     </div>

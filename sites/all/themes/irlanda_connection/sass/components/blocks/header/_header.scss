@@ -18,38 +18,77 @@
 
     }
 
-}
-.section-branding {
-  width: $logo-wd-desk;
-  height: auto;
-  float: left;
-  margin-right: -100%;
-  clear: none;
-  display: block;
-  margin-top: 23.5px;
-  background-color: $branding-colour;
+  .section-branding {
+    background-color: $branding-colour;
 
-  @include breakpoint($tab) {
-    margin-left: 4%;
+    @include breakpoint($desk) {
+      width: $logo-wd-desk;
+      margin-left: 4%;
+      margin-top: 23.5px;
+      height: auto;
+      float: left;
+      margin-right: -100%;
+      clear: none;
+      display: block;
 
+    }
+  	@include breakpoint(1250px) {
+      margin-left: 8%;
+
+  	}
   }
-	@include breakpoint(1250px) {
-    margin-left: 8%;
 
-	}
+  .desk-trigger {
+    display: none;
 
-  .site-logo {
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        overflow: hidden;
-        clip: rect(183px,425px,259px,0px);
+    @include breakpoint($desk) {
+      display: block;
 
-        @include breakpoint($mob) {
+    }
+    .logo-img {
+      a {
+        @include breakpoint($desk) {
+          width: 100%;
           position: relative;
+          top: 0;
+          float: none;
 
         }
       }
+    }
+  }
+
+  .mob-trigger {
+    display: block;
+
+    @include breakpoint($desk) {
+      display: none;
+
+    }
+    .menu-icon {
+      position: absolute;
+      top: 11px;
+      left: 14px;
+
+      &:hover {
+        cursor: pointer;
+
+      }
+    }
+    .site-logo {
+      display: block;
+      width: 140px;
+      height: 32px;
+      margin: 13px auto;
+
+      @include breakpoint(320px) {
+        width: 180px;
+        margin: 9px auto;
+
+      }
+      img {
+
+      }
+    }
   }
 }

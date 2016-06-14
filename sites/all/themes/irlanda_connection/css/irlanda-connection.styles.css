@@ -836,35 +836,60 @@ h2 {
       display: block;
       height: 183px;
       position: relative; } }
-
-.section-branding {
-  width: 220px;
-  height: auto;
-  float: left;
-  margin-right: -100%;
-  clear: none;
-  display: block;
-  margin-top: 23.5px;
-  background-color: #fff; }
-  @media (min-width: 45em) {
-    .section-branding {
-      margin-left: 4%; } }
-  @media (min-width: 1250px) {
-    .section-branding {
-      margin-left: 8%; } }
-  .section-branding .site-logo img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    clip: rect(183px, 425px, 259px, 0px); }
-    @media (min-width: 600px) {
-      .section-branding .site-logo img {
-        position: relative; } }
+  .section-header .section-branding {
+    background-color: #fff; }
+    @media (min-width: 60em) {
+      .section-header .section-branding {
+        width: 220px;
+        margin-left: 4%;
+        margin-top: 23.5px;
+        height: auto;
+        float: left;
+        margin-right: -100%;
+        clear: none;
+        display: block; } }
+    @media (min-width: 1250px) {
+      .section-header .section-branding {
+        margin-left: 8%; } }
+  .section-header .desk-trigger {
+    display: none; }
+    @media (min-width: 60em) {
+      .section-header .desk-trigger {
+        display: block; } }
+    @media (min-width: 60em) {
+      .section-header .desk-trigger .logo-img a {
+        width: 100%;
+        position: relative;
+        top: 0;
+        float: none; } }
+  .section-header .mob-trigger {
+    display: block; }
+    @media (min-width: 60em) {
+      .section-header .mob-trigger {
+        display: none; } }
+    .section-header .mob-trigger .menu-icon {
+      position: absolute;
+      top: 11px;
+      left: 14px; }
+      .section-header .mob-trigger .menu-icon:hover {
+        cursor: pointer; }
+    .section-header .mob-trigger .site-logo {
+      display: block;
+      width: 140px;
+      height: 32px;
+      margin: 13px auto; }
+      @media (min-width: 320px) {
+        .section-header .mob-trigger .site-logo {
+          width: 180px;
+          margin: 9px auto; } }
 
 .section-navbar {
   overflow: hidden;
-  display: none; }
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none; }
   @media (min-width: 60em) {
     .section-navbar {
       width: 74.57627%;
@@ -883,8 +908,11 @@ h2 {
     padding: 0px;
     margin: 0px 0px 0px 8%; }
     .section-navbar #block-system-navigation ul li {
-      display: inline-block;
-      text-align: center; }
+      text-align: center;
+      list-style: none; }
+      @media (min-width: 60em) {
+        .section-navbar #block-system-navigation ul li {
+          display: inline-block; } }
       @media (min-width: 900px) {
         .section-navbar #block-system-navigation ul li {
           margin: 0em 3em 0em 0em; } }
@@ -934,10 +962,11 @@ h2 {
     max-resolution: 3%;
     line-height: 121%;
     font-size: 2.5em;
-    margin-top: 18%; }
+    margin-top: 29%; }
     @media (min-width: 600px) {
       #zone-graphic-header h1 {
-        font-size: 3.5em; } }
+        font-size: 3.5em;
+        margin-top: 18%; } }
     @media (min-width: 45em) {
       #zone-graphic-header h1 {
         font-size: 4em;

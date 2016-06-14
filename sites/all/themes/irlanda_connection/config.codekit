@@ -76,46 +76,13 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/images\/logo.png": {
+	"\/images\/icons\/menu-icon.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 89169,
-		"inputAbbreviatedPath": "\/images\/logo.png",
-		"outputAbbreviatedPath": "\/images\/logo.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/logo_0.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 89169,
-		"inputAbbreviatedPath": "\/images\/logo_0.png",
-		"outputAbbreviatedPath": "\/images\/logo_0.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/logo_1.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 89169,
-		"inputAbbreviatedPath": "\/images\/logo_1.png",
-		"outputAbbreviatedPath": "\/images\/logo_1.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/logo_2.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 89169,
-		"inputAbbreviatedPath": "\/images\/logo_2.png",
-		"outputAbbreviatedPath": "\/images\/logo_2.png",
+		"initialSize": 160,
+		"inputAbbreviatedPath": "\/images\/icons\/menu-icon.png",
+		"outputAbbreviatedPath": "\/images\/icons\/menu-icon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -271,6 +238,17 @@
 		"initialSize": 89169,
 		"inputAbbreviatedPath": "\/logo.png",
 		"outputAbbreviatedPath": "\/logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/logo_mob.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 46967,
+		"inputAbbreviatedPath": "\/logo_mob.png",
+		"outputAbbreviatedPath": "\/logo_mob.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
