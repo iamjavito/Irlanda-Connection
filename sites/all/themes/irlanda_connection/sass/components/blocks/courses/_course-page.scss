@@ -11,7 +11,7 @@
 			float: left;
 
 			h1{
-				font-size: $course-title; 
+				font-size: $course-title;
 				text-align: right;
 
 			}
@@ -22,7 +22,7 @@
 			text-align: center;
 
 			span{
-				font-size: $course-title;		
+				font-size: $course-title;
 
 			}
 		}
@@ -64,8 +64,8 @@
 
 		.view-content{
 			@include grid-span(8,3);
-			float: none;	
-		
+			float: none;
+
 		}
 		.course-list-comp{
 			span{

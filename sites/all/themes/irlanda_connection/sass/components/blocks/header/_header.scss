@@ -6,6 +6,7 @@
     height: $head-hg;
     position: fixed;
     z-index: 1;
+    border-bottom: solid 2px $main-border-colour;
 
     @include breakpoint($tab) {
       height: $head-hg-tab;
@@ -15,6 +16,7 @@
     	display: block;
     	height: $head-hg-desk;
       position: relative;
+      border: none;
 
     }
 
@@ -65,7 +67,7 @@
       display: none;
 
     }
-    .menu-icon {
+    .menu-icon, .close-icon {
       position: absolute;
       top: 11px;
       left: 14px;
@@ -75,6 +77,10 @@
 
       }
     }
+    .close-icon {
+      display: none;
+
+    }
     .site-logo {
       display: block;
       width: 140px;
@@ -83,7 +89,7 @@
 
       @include breakpoint(320px) {
         width: 180px;
-        margin: 9px auto;
+        margin: 10px auto;
 
       }
       img {

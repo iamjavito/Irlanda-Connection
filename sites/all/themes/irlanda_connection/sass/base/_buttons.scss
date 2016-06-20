@@ -1,53 +1,29 @@
-#block-bean-preguntanos-tus-dudas{
- 	width: 32.20339%;
-	float: right;
-	clear: none;
-  box-shadow: $btn-shadow;
-	height: $btn-course-height;
-	background-color: $maingreen;
-	line-height: $btn-course-height;
-	font-family: Brandon_Bold;
-	text-align: center;
-	margin: $btn-course-marg;
-	margin-right: $btn-course-right-mar;
+#block-bean-cotizacion-header {
+  position: absolute;
+  top: 0;
+  right: 0;
 
-	.field--name-field-link{
-		a{
-			width: 100%;
-			float: right;
-			margin-left: 0;
-			margin-right: 0;
-			clear: none;
-			height: 100%;
-			color: $white;
-			text-decoration: none;
+  @include breakpoint($desk) {
+    width: 350px;
+    height: 50px;
+    background-color: $mainorange;
 
-		}
-	}
-}
-#block-bean-solicita-ya-tu-cotizacin{
-  width: 32.20339%;
-	float: right;
-	clear: none;
-  box-sizing: $btn-shadow;
-	height: $btn-course-height;
-	background-color: $mainorange;
-	line-height: $btn-course-height;
-	font-family: Brandon_Bold;
-	text-align: center;
-	margin: $btn-course-marg;
+  }
 
-	.field--name-field-link{
-		a{
-			width: 100%;
-			float: right;
-			margin-left: 0;
-			margin-right: 0;
-			clear: none;
-			height: 100%;
-			color: $white;
-			text-decoration: none;
+  a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    line-height: $btn-cot-height;
+    font-family: Brandon_Bold;
+    color: $btn-txt;
+    text-decoration: none;
+    font-size: $btn-hm-txt;
 
-		}
-	}
+    @include breakpoint($desk) {
+      font-size: $btn-hm-txt-wd;
+
+    }
+  }
 }

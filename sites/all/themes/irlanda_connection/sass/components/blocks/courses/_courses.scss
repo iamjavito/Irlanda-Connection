@@ -4,7 +4,7 @@
 	margin: 0;
 	padding: 0;
 	background-color: $course-box-page;
-	
+
 	.course-box{
 		@include grid-span(7,3.5);
 		position: relative;
@@ -31,14 +31,14 @@
 			}
 
 			div{
-				
+
 			}
 		}
 		.course-details{
 			@include grid-span(8,4.5);
 			float: none;
 			padding: $course-box-details-pad;
-			
+
 				.course-box-label{
 					font-weight: bold;
 					float: left;

@@ -7,6 +7,7 @@
         </div>
         <div class="mob-trigger">
           <img class="menu-icon" src="/sites/all/themes/irlanda_connection/images/icons/menu-icon.png">
+          <img class="close-icon" src="/sites/all/themes/irlanda_connection/images/icons/x-icon.png">
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-logo"><img src="sites/default/files/storage/logo_mob.png" alt="<?php print t('Home'); ?>" /></a>
         </div>
       <?php endif; ?>

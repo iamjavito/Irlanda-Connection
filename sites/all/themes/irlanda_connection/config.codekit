@@ -87,6 +87,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/icons\/x-icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 347,
+		"inputAbbreviatedPath": "\/images\/icons\/x-icon.png",
+		"outputAbbreviatedPath": "\/images\/icons\/x-icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/social\/fb.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -137,6 +148,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/irlanda-connection.behaviors.js",
 		"outputAbbreviatedPath": "\/js\/min\/irlanda-connection.behaviors-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/min\/irlanda-connection.behaviors-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/min\/irlanda-connection.behaviors-min.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/irlanda-connection.behaviors-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

@@ -1,12 +1,18 @@
 .background-image-header{
-	width: 100%;
-	height: $header-hg;
-	background-position: center center;
-	background-size: cover;
-	float: right;
+	@include grid-span($grids,1);
+  height: $home-head-hg-sm;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include breakpoint($desk) {
+    height: $home-head-hg-wd;
+
+  }
 
 }
-.bean-head-image, .view-blog-teaser-slides, .section-header-img{
+.bean-head-image, .view-blog-teaser-slides, .section-header-img, #zone-graphic-header{
 	@include grid-span(12,1);
 	float: none;
 	position: relative;
@@ -15,43 +21,95 @@
 		border: 0;
 
 	}
-	.field--name-field-header-text{
-		@include grid-span(8,3);
-		font-family: Brandon_Bold;
+	.field--name-field-header-text, h1{
+		@include grid-span($grids, 1);
 		text-align: center;
-		font-size: 100px;
-		text-transform: uppercase;
-		line-height: 148px;
-		margin-top: 5%;
+		color: $head-text-colour;
+		text-decoration: bold;
+		max-resolution: 3%;
+		line-height: 121%;
+		font-size: $h1-hm;
+		margin-top: 29%;
 
-		a{
-			@include grid-span(12,1);
-			height: 100%;
-			text-decoration: none;
-			color: $head-text-colour;
+		@include breakpoint($mob) {
+			font-size: $h1-sm;
+			margin-top: 18%;
 
 		}
-
-	}
-	.field--name-field-button-link{
-		@include grid-span(4,5);
-		height: $btn-home-height;
-		background-color: $mainorange;
-		line-height: $btn-home-height;
-		font-family: Brandon_Bold;
-		text-align: center;
-		position: absolute;
-		bottom: 12%;
-
-		a{
-			@include grid-span(12,1);
-			height: 100%;
-			color: $btn-txt;
-			text-decoration: none;
+		@include breakpoint($tab) {
+			font-size: $h1-tab;
+			margin-top: 18%;
 
 		}
+		@include breakpoint(1100px) {
+			@include grid-span(8, 3);
+			font-size: $h1-wide;
+			margin-top: 5%;
 
+		}
+		@include breakpoint(1600px) {
+			@include grid-span(8, 3);
+			font-size: $h1-max;
+			margin-top: 5%;
+			line-height: 148px;
+
+		}
 	}
+
+	//Home and main button settings
+	.field--name-field-button-link, #btn-home {
+		@include grid-span($grids, 1);
+    background: $maingreen;
+    height: $btn-home-height;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    box-shadow: $btn-shadow;
+    border-radius: $btn-rad;
+    transition: $color-trans;
+
+    @include breakpoint($desk) {
+      @include grid-span(4, 5);
+      bottom: 15%;
+
+    }
+    &:hover {
+      background-color: $btn-home-hov;
+      box-shadow: $btn-shadow-ho;
+
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: $btn-home-height;
+      font-family: Brandon_Bold;
+      color: $btn-txt;
+      text-decoration: none;
+      font-size: $btn-hm-txt;
+
+      @include breakpoint($desk) {
+        font-size: $btn-hm-txt-wd;
+
+      }
+
+    }
+	}
+
+	//Button Colour for Courses Header
+	#block-bean-courses-header-image {
+		.field--name-field-button-link, {
+			background-color: $mainorange;
+
+			&:hover {
+				background-color: $btn-home-hov;
+	      box-shadow: $btn-shadow-ho;
+
+			}
+		}
+	}
+
 	.flex-control-paging{
 		z-index: 6;
 		bottom: 0;
@@ -66,4 +124,53 @@
 			}
 		}
 	}
+}
+#zone-graphic-header {
+  @include grid-span($grids,1);
+  height: $home-head-hg-sm;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include breakpoint($desk) {
+    height: $home-head-hg-wd;
+
+  }
+
+  h1 {
+    @include grid-span($grids, 1);
+    text-align: center;
+    color: $head-text-colour;
+    text-decoration: bold;
+    max-resolution: 3%;
+    line-height: 121%;
+    font-size: $h1-hm;
+    margin-top: 29%;
+
+    @include breakpoint($mob) {
+      font-size: $h1-sm;
+      margin-top: 18%;
+
+    }
+    @include breakpoint($tab) {
+      font-size: $h1-tab;
+      margin-top: 18%;
+
+    }
+    @include breakpoint(1100px) {
+      @include grid-span(8, 3);
+      font-size: $h1-wide;
+      margin-top: 5%;
+
+    }
+    @include breakpoint(1600px) {
+      @include grid-span(8, 3);
+      font-size: $h1-max;
+      margin-top: 5%;
+      line-height: 148px;
+
+    }
+
+  }
 }

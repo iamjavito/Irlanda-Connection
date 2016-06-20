@@ -40,21 +40,22 @@
    */
   Drupal.behaviors.irlandaConnectionExampleBehavior = {
     attach: function (context, settings) {
-      // By using the 'context' variable we make sure that our code only runs on
-      // the relevant HTML. Furthermore, by using jQuery.once() we make sure that
-      // we don't run the same piece of code for an HTML snippet that we already
-      // processed previously. By using .once('foo') all processed elements will
-      // get tagged with a 'foo-processed' class, causing all future invocations
-      // of this behavior to ignore them.
-      $('.some-selector', context).once('foo', function () {
-        // Now, we are invoking the previously declared theme function using two
-        // settings as arguments.
-        var $anchor = Drupal.theme('irlandaConnectionExampleButton', settings.myExampleLinkPath, settings.myExampleLinkTitle);
+      var passed_service = false;
+      var passed_clients = false;
 
-        // The anchor is then appended to the current element.
-        $anchor.appendTo(this);
-      });
+      //Navbar display on menu clicked
+      $('.menu-icon, .close-icon').click(function(e){
+        if($('.section-navbar').is(":visible")){
+          $('.section-navbar').fadeOut();
+          $('.menu-icon').fadeIn();
+          $('.close-icon').fadeOut();
+        }
+        else {
+          $('.section-navbar').fadeIn();
+          $('.menu-icon').fadeOut();
+          $('.close-icon').fadeIn();
+        }
+    	});
     }
   };
-
 })(jQuery);

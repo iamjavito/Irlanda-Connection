@@ -1,23 +1,29 @@
 .section-navbar {
   overflow: hidden;
   @include grid-span($grids, 1);
-
+  display: none;
 
   @include breakpoint($desk) {
     @include grid-span(9,4);
-    position: relative;
     display: block;
+    position: relative;
     height: $head-hg-desk;
 
   }
   #block-system-navigation {
     ul{
-      position: absolute;
-      bottom: 0;
-      height: $nav-hg;
-      list-style: none;
-      padding: 0px;
-      margin: $navmargin;
+      @include grid-span($grids, 1);
+      background-color: $branding-colour;
+
+      @include breakpoint($desk) {
+        position: absolute;
+        bottom: 0;
+        height: $nav-hg;
+        list-style: none;
+        padding: 0px;
+        margin: $navmargin;
+
+      }
 
       li{
         text-align: center;
@@ -41,14 +47,19 @@
         }
 
         a {
-            color: $text;
-            display: block;
-            padding-bottom: 0px;
-            text-decoration: none;
-            font-size: $nav-link;
-            font-family: Brandon_bold;
-            //transition: $color-trans;
+          color: $text;
+          display: block;
+          padding: 5px 0px 5px 0px;
+          text-decoration: none;
+          font-size: $nav-link;
+          font-family: Brandon_bold;
+          border-bottom: solid 1px $main-border-colour ;
 
+          @include breakpoint($desk) {
+            padding: $non-padd;
+            border-bottom: none;
+
+          }
         }
         &:hover {
           &:nth-child(odd) {
