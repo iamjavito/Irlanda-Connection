@@ -1,6 +1,6 @@
 #block-bean-cotizacion-header {
   position: absolute;
-  top: 0;
+  top: 20;
   right: 0;
 
   @include breakpoint($desk) {
@@ -11,12 +11,12 @@
   }
 
   a {
+    font-family: Brandon_Reg;
     display: block;
     text-align: center;
     width: 100%;
     height: 100%;
-    line-height: $btn-cot-height;
-    font-family: Brandon_Bold;
+    line-height: 50px;
     color: $btn-txt;
     text-decoration: none;
     font-size: $btn-hm-txt;
@@ -26,4 +26,8 @@
 
     }
   }
+}
+
+#block-bean-contacto-header-button {
+
 }

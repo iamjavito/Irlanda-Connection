@@ -14,33 +14,21 @@
 			.field--name-field-blog-image{
 				@include grid-span(8,3);
 				float: none;
-				padding-bottom: 59%;
 
 				a{
-				    position: absolute;
 				    border: none;
 				    width: $teaser-width;
 				    height: $teaser-img-hg;
-				    max-height: none;
-				    max-width: none;
-				    left: -0.1px;
-				    top: 0px;
 
 				}
 
 				img{
-				    position: absolute;
 				    margin: 0px;
 				    padding: 0px;
 				    border: none;
 				    width: $teaser-width;
 				    height: $teaser-img-hg;
-				    max-height: none;
-				    max-width: none;
-				    z-index: -999999;
-				    left: -0.1px;
-				    top: 0px;
-			    
+
 				}
 			}
 

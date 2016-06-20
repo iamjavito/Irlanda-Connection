@@ -20,7 +20,7 @@ img, media {
 
 #block-bean-cotizacion-header {
   position: absolute;
-  top: 0;
+  top: 20;
   right: 0; }
   @media (min-width: 60em) {
     #block-bean-cotizacion-header {
@@ -28,12 +28,12 @@ img, media {
       height: 50px;
       background-color: #f7941e; } }
   #block-bean-cotizacion-header a {
+    font-family: Brandon_Reg;
     display: block;
     text-align: center;
     width: 100%;
     height: 100%;
-    line-height: 30px;
-    font-family: Brandon_Bold;
+    line-height: 50px;
     color: #fff;
     text-decoration: none;
     font-size: 3.5vw; }
@@ -161,29 +161,17 @@ h2 {
       margin-right: -100%;
       margin-left: 16.94915%;
       clear: none;
-      float: none;
-      padding-bottom: 59%; }
+      float: none; }
       .view-blog-view .view-content .view-blog-post .field--name-field-blog-image a {
-        position: absolute;
         border: none;
         width: 379.2px;
-        height: 237px;
-        max-height: none;
-        max-width: none;
-        left: -0.1px;
-        top: 0px; }
+        height: 237px; }
       .view-blog-view .view-content .view-blog-post .field--name-field-blog-image img {
-        position: absolute;
         margin: 0px;
         padding: 0px;
         border: none;
         width: 379.2px;
-        height: 237px;
-        max-height: none;
-        max-width: none;
-        z-index: -999999;
-        left: -0.1px;
-        top: 0px; }
+        height: 237px; }
     .view-blog-view .view-content .view-blog-post .field--name-field-blog-description {
       width: 379.2px;
       text-align: center;
@@ -1208,6 +1196,7 @@ h2 {
 
 @font-face {
   font-family: Brandon_Reg;
-  src: url("fonts/brandon_reg.otf");
+  src: url("fonts/Brandon_reg.otf"); }
+@font-face {
   font-family: Brandon_Bold;
-  src: url("fonts/brandon_bld.otf"); }
+  src: url("fonts/Brandon_bld.otf"); }
