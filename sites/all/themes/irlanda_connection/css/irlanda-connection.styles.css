@@ -18,28 +18,49 @@ img, media {
   color: #fff;
   font-size: 29px; }
 
-#block-bean-cotizacion-header {
+.btn-header, .block--bean-contacto-header-button, .block--bean-cotizacion-header {
   position: absolute;
-  top: 20;
-  right: 0; }
+  right: 0;
+  line-height: 50px;
+  height: 50px; }
+  @media (min-width: 1210px) {
+    .btn-header, .block--bean-contacto-header-button, .block--bean-cotizacion-header {
+      width: 200px; } }
   @media (min-width: 60em) {
-    #block-bean-cotizacion-header {
-      width: 350px;
-      height: 50px;
-      background-color: #f7941e; } }
-  #block-bean-cotizacion-header a {
-    font-family: Brandon_Reg;
+    .btn-header, .block--bean-contacto-header-button, .block--bean-cotizacion-header {
+      width: 300px; } }
+
+.btn-main, .block--bean-contacto-header-button, .block--bean-cotizacion-header, .bean-head-image .field--name-field-button-link, .bean-head-image #btn-home, .view-blog-teaser-slides .field--name-field-button-link, .view-blog-teaser-slides #btn-home, .section-header-img .field--name-field-button-link, .section-header-img #btn-home, #zone-graphic-header .field--name-field-button-link, #zone-graphic-header #btn-home {
+  transition: all 0.3s ease-out;
+  border-radius: 2px; }
+  .btn-main a, .block--bean-contacto-header-button a, .block--bean-cotizacion-header a, .bean-head-image .field--name-field-button-link a, .bean-head-image #btn-home a, .view-blog-teaser-slides .field--name-field-button-link a, .view-blog-teaser-slides #btn-home a, .section-header-img .field--name-field-button-link a, .section-header-img #btn-home a, #zone-graphic-header .field--name-field-button-link a, #zone-graphic-header #btn-home a {
+    font-family: Brandon_Bold;
     display: block;
     text-align: center;
     width: 100%;
     height: 100%;
-    line-height: 50px;
     color: #fff;
     text-decoration: none;
     font-size: 3.5vw; }
     @media (min-width: 60em) {
-      #block-bean-cotizacion-header a {
+      .btn-main a, .block--bean-contacto-header-button a, .block--bean-cotizacion-header a, .bean-head-image .field--name-field-button-link a, .bean-head-image #btn-home a, .view-blog-teaser-slides .field--name-field-button-link a, .view-blog-teaser-slides #btn-home a, .section-header-img .field--name-field-button-link a, .section-header-img #btn-home a, #zone-graphic-header .field--name-field-button-link a, #zone-graphic-header #btn-home a {
         font-size: 1.5vw; } }
+
+.btn-hover-green:hover, .block--bean-contacto-header-button:hover, .bean-head-image .field--name-field-button-link:hover, .bean-head-image #btn-home:hover, .view-blog-teaser-slides .field--name-field-button-link:hover, .view-blog-teaser-slides #btn-home:hover, .section-header-img .field--name-field-button-link:hover, .section-header-img #btn-home:hover, #zone-graphic-header .field--name-field-button-link:hover, #zone-graphic-header #btn-home:hover {
+  background-color: #008e43;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+
+.btn-hover-orange:hover, .block--bean-cotizacion-header:hover, .bean-head-image #block-bean-courses-header-image .field--name-field-button-link:hover, .view-blog-teaser-slides #block-bean-courses-header-image .field--name-field-button-link:hover, .section-header-img #block-bean-courses-header-image .field--name-field-button-link:hover, #zone-graphic-header #block-bean-courses-header-image .field--name-field-button-link:hover {
+  background-color: #ff9e2b;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+
+.block--bean-contacto-header-button {
+  top: 70px;
+  background-color: #018740; }
+
+.block--bean-cotizacion-header {
+  top: 20px;
+  background-color: #f7941e; }
 
 .block--webform .form-item {
   margin-bottom: 0.5em; }
@@ -560,6 +581,7 @@ h2 {
     margin-left: 0;
     margin-right: 0;
     clear: none;
+    font-family: Brandon_Reg;
     display: flex;
     justify-content: center;
     float: none; }
@@ -583,8 +605,7 @@ h2 {
         justify-content: center; } }
     .section-footer #block-menu-menu-footer a {
       color: #565A5C;
-      text-decoration: none;
-      display: block; }
+      text-decoration: none; }
     .section-footer #block-menu-menu-footer ul {
       list-style: none; }
       .section-footer #block-menu-menu-footer ul li:first-child {
@@ -793,12 +814,10 @@ h2 {
     clear: none;
     background: #018740;
     height: 65px;
-    text-align: center;
+    line-height: 65px;
     position: absolute;
     bottom: 0;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    border-radius: 2px;
-    transition: all 0.3s ease-out; }
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
     @media (min-width: 60em) {
       .bean-head-image .field--name-field-button-link, .bean-head-image #btn-home, .view-blog-teaser-slides .field--name-field-button-link, .view-blog-teaser-slides #btn-home, .section-header-img .field--name-field-button-link, .section-header-img #btn-home, #zone-graphic-header .field--name-field-button-link, #zone-graphic-header #btn-home {
         width: 32.20339%;
@@ -807,26 +826,8 @@ h2 {
         margin-left: 33.89831%;
         clear: none;
         bottom: 15%; } }
-    .bean-head-image .field--name-field-button-link:hover, .bean-head-image #btn-home:hover, .view-blog-teaser-slides .field--name-field-button-link:hover, .view-blog-teaser-slides #btn-home:hover, .section-header-img .field--name-field-button-link:hover, .section-header-img #btn-home:hover, #zone-graphic-header .field--name-field-button-link:hover, #zone-graphic-header #btn-home:hover {
-      background-color: #008e43;
-      box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
-    .bean-head-image .field--name-field-button-link a, .bean-head-image #btn-home a, .view-blog-teaser-slides .field--name-field-button-link a, .view-blog-teaser-slides #btn-home a, .section-header-img .field--name-field-button-link a, .section-header-img #btn-home a, #zone-graphic-header .field--name-field-button-link a, #zone-graphic-header #btn-home a {
-      display: block;
-      width: 100%;
-      height: 100%;
-      line-height: 65px;
-      font-family: Brandon_Bold;
-      color: #fff;
-      text-decoration: none;
-      font-size: 3.5vw; }
-      @media (min-width: 60em) {
-        .bean-head-image .field--name-field-button-link a, .bean-head-image #btn-home a, .view-blog-teaser-slides .field--name-field-button-link a, .view-blog-teaser-slides #btn-home a, .section-header-img .field--name-field-button-link a, .section-header-img #btn-home a, #zone-graphic-header .field--name-field-button-link a, #zone-graphic-header #btn-home a {
-          font-size: 1.5vw; } }
   .bean-head-image #block-bean-courses-header-image .field--name-field-button-link, .view-blog-teaser-slides #block-bean-courses-header-image .field--name-field-button-link, .section-header-img #block-bean-courses-header-image .field--name-field-button-link, #zone-graphic-header #block-bean-courses-header-image .field--name-field-button-link {
     background-color: #f7941e; }
-    .bean-head-image #block-bean-courses-header-image .field--name-field-button-link:hover, .view-blog-teaser-slides #block-bean-courses-header-image .field--name-field-button-link:hover, .section-header-img #block-bean-courses-header-image .field--name-field-button-link:hover, #zone-graphic-header #block-bean-courses-header-image .field--name-field-button-link:hover {
-      background-color: #008e43;
-      box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
   .bean-head-image .flex-control-paging, .view-blog-teaser-slides .flex-control-paging, .section-header-img .flex-control-paging, #zone-graphic-header .flex-control-paging {
     z-index: 6;
     bottom: 0; }

@@ -1,22 +1,29 @@
-#block-bean-cotizacion-header {
+.btn-header {
   position: absolute;
-  top: 20;
   right: 0;
+  line-height: 50px;
+  height: 50px;
 
-  @include breakpoint($desk) {
-    width: 350px;
-    height: 50px;
-    background-color: $mainorange;
+  @include breakpoint($hm-bp-sml) {
+    width: 200px;
 
   }
+  @include breakpoint($desk) {
+    width: 300px;
+
+  }
+}
+
+.btn-main {
+  transition: $color-trans;
+  border-radius: $btn-rad;
 
   a {
-    font-family: Brandon_Reg;
+    font-family: Brandon_Bold;
     display: block;
     text-align: center;
     width: 100%;
     height: 100%;
-    line-height: 50px;
     color: $btn-txt;
     text-decoration: none;
     font-size: $btn-hm-txt;
@@ -28,6 +35,40 @@
   }
 }
 
-#block-bean-contacto-header-button {
+.btn-hover-green {
+  &:hover {
+    background-color: $btn-green-hov;
+    box-shadow: $btn-shadow-ho;
+
+  }
+}
+
+.btn-hover-orange {
+  &:hover {
+    background-color: $btn-oran-hov;
+    box-shadow: $btn-shadow-ho;
+
+  }
+}
+
+//Contacto Button Header
+.block--bean-contacto-header-button {
+  top: 70px;
+  background-color: $maingreen;
+
+  @extend .btn-header;
+  @extend .btn-main;
+  @extend .btn-hover-green;
+
+}
+
+//Quotation Button Header
+.block--bean-cotizacion-header {
+  top: 20px;
+  background-color: $mainorange;
+
+  @extend .btn-header;
+  @extend .btn-main;
+  @extend .btn-hover-orange;
 
 }
