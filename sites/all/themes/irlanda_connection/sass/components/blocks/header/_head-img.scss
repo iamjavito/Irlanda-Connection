@@ -66,6 +66,20 @@
     bottom: 0;
     box-shadow: $btn-shadow;
 
+		a {
+			font-size: $btn-txt-size;
+
+			@include breakpoint($desk) {
+				font-size: $btn-txt-size-desk;
+
+			}
+			@include breakpoint($hm-bp-sml) {
+				font-size: $btn-txt-size-wd;
+
+			}
+
+		}
+
 		@extend .btn-main;
 
     @include breakpoint($desk) {
@@ -84,7 +98,7 @@
 			background-color: $mainorange;
 
 			@extend .btn-hover-orange;
-			
+
 		}
 	}
 

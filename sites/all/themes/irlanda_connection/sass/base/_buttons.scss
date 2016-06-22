@@ -3,17 +3,23 @@
   right: 0;
   line-height: 50px;
   height: 50px;
+  width: 200px;
 
-  @include breakpoint($hm-bp-sml) {
-    width: 200px;
+  a {
+    font-size: 0.7em;
 
+    @include breakpoint($hm-bp-max) {
+      font-size: 1em;
+
+    }
   }
-  @include breakpoint($desk) {
+  @include breakpoint($hm-bp-max) {
     width: 300px;
 
   }
 }
 
+//main button settings
 .btn-main {
   transition: $color-trans;
   border-radius: $btn-rad;
@@ -26,12 +32,7 @@
     height: 100%;
     color: $btn-txt;
     text-decoration: none;
-    font-size: $btn-hm-txt;
 
-    @include breakpoint($desk) {
-      font-size: $btn-hm-txt-wd;
-
-    }
   }
 }
 
@@ -53,7 +54,7 @@
 
 //Contacto Button Header
 .block--bean-contacto-header-button {
-  top: 70px;
+  top: 80px;
   background-color: $maingreen;
 
   @extend .btn-header;
@@ -64,7 +65,7 @@
 
 //Quotation Button Header
 .block--bean-cotizacion-header {
-  top: 20px;
+  top: 30px;
   background-color: $mainorange;
 
   @extend .btn-header;
