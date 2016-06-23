@@ -1,9 +1,9 @@
 .btn-header {
   position: absolute;
   right: 0;
-  line-height: 50px;
-  height: 50px;
-  width: 200px;
+  line-height: $btn-header-hg;
+  height: $btn-header-hg;
+  width: $btn-header-wd;
 
   a {
     font-size: 0.7em;
@@ -45,6 +45,8 @@
 }
 
 .btn-hover-orange {
+  background-color: $mainorange;
+  
   &:hover {
     background-color: $btn-oran-hov;
     box-shadow: $btn-shadow-ho;

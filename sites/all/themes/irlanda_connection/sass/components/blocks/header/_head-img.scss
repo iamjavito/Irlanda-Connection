@@ -1,15 +1,22 @@
+.header-img-breaks {
+  height: $home-head-hg-sm;
+  @include breakpoint($desk) {
+    height: $home-head-hg-desk;
+
+  }
+	@include breakpoint($hm-bp-wd) {
+		height: $home-head-hg-wd;
+
+	}
+}
+
 .background-image-header{
 	@include grid-span($grids,1);
-  height: $home-head-hg-sm;
+	@extend .header-img-breaks;
   position: relative;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  @include breakpoint($desk) {
-    height: $home-head-hg-wd;
-
-  }
 
 }
 .bean-head-image, .view-blog-teaser-slides, .section-header-img, #zone-graphic-header{
@@ -95,10 +102,24 @@
 	//Button Colour for Courses Header
 	#block-bean-courses-header-image {
 		.field--name-field-button-link, {
-			background-color: $mainorange;
-
 			@extend .btn-hover-orange;
 
+			a {
+				font-size: $btn-head-courses-size;
+
+				@include breakpoint($mob) {
+					font-size: $btn-head-courses-size-mob;
+
+				}
+				@include breakpoint($desk) {
+					font-size: $btn-head-courses-size-desk;
+
+				}
+				@include breakpoint(1438px) {
+					font-size: $btn-txt-size;
+
+				}
+			}
 		}
 	}
 
@@ -116,53 +137,4 @@
 			}
 		}
 	}
-}
-#zone-graphic-header {
-  @include grid-span($grids,1);
-  height: $home-head-hg-sm;
-  position: relative;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  @include breakpoint($desk) {
-    height: $home-head-hg-wd;
-
-  }
-
-  h1 {
-    @include grid-span($grids, 1);
-    text-align: center;
-    color: $head-text-colour;
-    text-decoration: bold;
-    max-resolution: 3%;
-    line-height: 121%;
-    font-size: $h1-hm;
-    margin-top: 29%;
-
-    @include breakpoint($mob) {
-      font-size: $h1-sm;
-      margin-top: 18%;
-
-    }
-    @include breakpoint($tab) {
-      font-size: $h1-tab;
-      margin-top: 18%;
-
-    }
-    @include breakpoint(1100px) {
-      @include grid-span(8, 3);
-      font-size: $h1-wide;
-      margin-top: 5%;
-
-    }
-    @include breakpoint(1600px) {
-      @include grid-span(8, 3);
-      font-size: $h1-max;
-      margin-top: 5%;
-      line-height: 148px;
-
-    }
-
-  }
 }

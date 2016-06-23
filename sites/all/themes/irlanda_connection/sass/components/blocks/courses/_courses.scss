@@ -24,14 +24,14 @@
 			height: 100%;
 			background-color: $courseorange_opacity;
 
-			img{
-				object-fit: cover;
-   				width: 100%;
+			a {
+				display: block;
 
-			}
+				img{
+					object-fit: cover;
+					width: 100%;
 
-			div{
-
+				}
 			}
 		}
 		.course-details{

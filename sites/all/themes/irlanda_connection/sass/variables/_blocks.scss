@@ -6,9 +6,15 @@ $head-hg-desk: 183px;
     $head-hg-tab: 48px;
 $logo-wd-desk: 220px;
 
+//Header Buttons
+$btn-header-hg: 50px;
+$btn-header-wd: 200px;
+
 //home
   //First wrap
   $home-head-hg-wd: 600px;
+  //Desk
+  $home-head-hg-desk: 400px;
   //Tablet
   $home-head-hg-sm: 400px;
   //Mobile
@@ -32,7 +38,7 @@ $logo-wd-desk-sml: 200px;
     $dest_hg_tab: 300px;
 
 //Courses
-$course-box-hg: 300px;
+$course-box-hg: 304px;
 
 //Blog Teaser
 $teaser-width: 379.2px;

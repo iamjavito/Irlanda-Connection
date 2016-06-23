@@ -6,6 +6,7 @@ $h1: 100px;
   //H1
     $h1-max: 5.5em;
     $h1-wide: 4.9em;
+    $h1-desk: 4.2em;
     $h1-tab: 4em;
     $h1-sm: 3.5em;
     $h1-hm: 2.5em;
@@ -30,11 +31,11 @@ $nav-link: 20px;
 $btn-txt-size-wd: 1.2em;
 $btn-txt-size-desk: 1em;
 $btn-txt-size: 1em;
-//Home
-$btn-hm-txt-wd: 1.5vw;
-  //tablet
-  $btn-hm-txt: 4.5vw;
-  //mobile
+
+//Courses
+$btn-head-courses-size: 0.7em;
+$btn-head-courses-size-mob: 1.2rem;
+$btn-head-courses-size-desk: 1.3rem;
 
 //Cotizacion btn header-hg
 $btn-cot-height: 30px;
