@@ -6,7 +6,7 @@
 	background-color: $course-box-page;
 
 	.course-box{
-		@include grid-span(7,3.5);
+		@include grid-span(10, 2);
 		position: relative;
 		float: none;
 		background-color: $course-box-bg;
@@ -15,6 +15,16 @@
 		border: solid 1px $course-box-border;
 		height: $course-box-hg;
 
+		@include breakpoint(1100px) {
+			@include grid-span(9, 2.5);
+			float: none;
+
+		}
+		@include breakpoint($hm-bp-wd) {
+			@include grid-span(7, 3.5);
+			float: none;
+
+		}
 		.course-box-label{
 			padding-right: 3px;
 
@@ -42,11 +52,11 @@
 				.course-box-label{
 					font-weight: bold;
 					float: left;
-					font-size: $course-box-font;
+					font-size: $course-box-font-wd;
 
 				}
 				.course-box-content{
-					font-size: $course-box-font;
+					font-size: $course-box-font-wd;
 
 				}
 		}
@@ -67,10 +77,22 @@
 				width: 100%;
 				height: 100%;
 				text-decoration: none;
-				font-size: 1.5em;
+				font-size: $course-box-font-max;
 				line-height: $course-button-height;
 				color: $course-box-link;
 
+				@include breakpoint($tab) {
+					font-size: $course-box-tab;
+
+				}
+				@include breakpoint(1343px) {
+					font-size: $course-box-font-wd;
+
+				}
+				@include breakpoint(1640px) {
+					font-size: $course-box-font-max;
+
+				}
 			}
 
 		}
@@ -91,10 +113,22 @@
 				width: 100%;
 				height: 100%;
 				text-decoration: none;
-				font-size: 1.5em;
+				font-size: $course-box-font-max;
 				line-height: $course-button-height;
 				color: $course-box-link;
 
+				@include breakpoint($tab) {
+					font-size: $course-box-tab;
+
+				}
+				@include breakpoint(1343px) {
+					font-size: $course-box-font-wd;
+
+				}
+				@include breakpoint(1640px) {
+					font-size: $course-box-font-max;
+
+				}
 			}
 		}
 		.course-box-classes-week{
@@ -103,9 +137,18 @@
 			div{
 				font-weight: bold;
 				color: $course-box-classes;
-				font-size: $course-classes-txt;
-				padding: $course-classes-pad;
+				font-size: 33px;
+				padding: 124px 20px 20px 20px;
 
+				@include breakpoint(910px) {
+					font-size: 35px;
+
+				}
+				@include breakpoint(1110px) {
+					font-size: $course-classes-txt;
+					padding: $course-classes-pad;
+
+				}
 			}
 		}
 		.course-box-title{
@@ -116,10 +159,18 @@
 				font-family: helvetica;
 				font-weight: bold;
 
+				@include breakpoint($mob) {
+					font-size: 2rem;
+
+				}
+				@include breakpoint($hm-bp-wd) {
+					font-size: $course-title;
+
+				}
 			}
 		}
 		.course-box-short-desc{
-			font-size: $course-box-font;
+			font-size: $course-box-font-wd;
 			padding: $short-description-pad;
 
 		}
