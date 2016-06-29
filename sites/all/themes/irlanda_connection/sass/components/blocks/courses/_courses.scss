@@ -1,3 +1,21 @@
+@mixin courseboxbuttons {
+	font-size: 1em;
+
+	//Breakpoints
+	@include breakpoint(900px) {
+		font-size: 1.2em;
+
+	}
+	@include breakpoint(1343px) {
+		font-size: 1.3em;
+
+	}
+	@include breakpoint(1640px) {
+		font-size: 1.5em;
+
+	}
+}
+
 .course-boxes{
 	@include grid-span($grids,1);
 	font-family: helvetica;
@@ -13,8 +31,12 @@
 		margin-top: $course-box-mar;
 		margin-bottom: $course-box-mar;
 		border: solid 1px $course-box-border;
-		height: $course-box-hg;
+		height: 262px;
 
+		@include breakpoint(900px) {
+			height: 304px;
+
+		}
 		@include breakpoint(1100px) {
 			@include grid-span(9, 2.5);
 			float: none;
@@ -40,7 +62,13 @@
 				img{
 					object-fit: cover;
 					width: 100%;
+					height: 262px;
 
+					@include breakpoint(900px) {
+						width: 100%;
+						height: 300px;
+
+					}
 				}
 			}
 		}
@@ -52,11 +80,11 @@
 				.course-box-label{
 					font-weight: bold;
 					float: left;
-					font-size: $course-box-font-wd;
+					font-size: 1.3em;
 
 				}
 				.course-box-content{
-					font-size: $course-box-font-wd;
+					font-size: 1.3em;
 
 				}
 		}
@@ -77,24 +105,11 @@
 				width: 100%;
 				height: 100%;
 				text-decoration: none;
-				font-size: $course-box-font-max;
 				line-height: $course-button-height;
 				color: $course-box-link;
 
-				@include breakpoint($tab) {
-					font-size: $course-box-tab;
-
-				}
-				@include breakpoint(1343px) {
-					font-size: $course-box-font-wd;
-
-				}
-				@include breakpoint(1640px) {
-					font-size: $course-box-font-max;
-
-				}
+				@include courseboxbuttons;
 			}
-
 		}
 		.cotizacion-btn{
 			@include grid-span(3, 10);
@@ -113,22 +128,10 @@
 				width: 100%;
 				height: 100%;
 				text-decoration: none;
-				font-size: $course-box-font-max;
 				line-height: $course-button-height;
 				color: $course-box-link;
 
-				@include breakpoint($tab) {
-					font-size: $course-box-tab;
-
-				}
-				@include breakpoint(1343px) {
-					font-size: $course-box-font-wd;
-
-				}
-				@include breakpoint(1640px) {
-					font-size: $course-box-font-max;
-
-				}
+				@include courseboxbuttons;
 			}
 		}
 		.course-box-classes-week{
@@ -138,10 +141,10 @@
 				font-weight: bold;
 				color: $course-box-classes;
 				font-size: 33px;
-				padding: 124px 20px 20px 20px;
+				padding: 100px 20px 20px 20px;
 
-				@include breakpoint(910px) {
-					font-size: 35px;
+				@include breakpoint(900px) {
+					padding: 124px 20px 20px 20px;
 
 				}
 				@include breakpoint(1110px) {
@@ -152,25 +155,26 @@
 			}
 		}
 		.course-box-title{
+			font-size: 2rem;
+
+			@include breakpoint($mob) {
+				font-size: 2rem;
+
+			}
+			@include breakpoint($hm-bp-wd) {
+				font-size: $course-title;
+
+			}
 			a{
 				text-decoration: none;
 				color: $course-box-title;
-				font-size: $course-title;
 				font-family: helvetica;
 				font-weight: bold;
 
-				@include breakpoint($mob) {
-					font-size: 2rem;
-
-				}
-				@include breakpoint($hm-bp-wd) {
-					font-size: $course-title;
-
-				}
 			}
 		}
 		.course-box-short-desc{
-			font-size: $course-box-font-wd;
+			font-size: 1.3em;
 			padding: $short-description-pad;
 
 		}

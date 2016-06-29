@@ -367,7 +367,10 @@ h2 {
     margin-top: 20px;
     margin-bottom: 20px;
     border: solid 1px #E6E6E6;
-    height: 304px; }
+    height: 262px; }
+    @media (min-width: 900px) {
+      .course-boxes .course-box {
+        height: 304px; } }
     @media (min-width: 1100px) {
       .course-boxes .course-box {
         width: 74.57627%;
@@ -398,7 +401,12 @@ h2 {
         display: block; }
         .course-boxes .course-box .course-icon a img {
           object-fit: cover;
-          width: 100%; }
+          width: 100%;
+          height: 262px; }
+          @media (min-width: 900px) {
+            .course-boxes .course-box .course-icon a img {
+              width: 100%;
+              height: 300px; } }
     .course-boxes .course-box .course-details {
       width: 66.10169%;
       float: left;
@@ -433,10 +441,10 @@ h2 {
         width: 100%;
         height: 100%;
         text-decoration: none;
-        font-size: 1.5em;
         line-height: 56px;
-        color: #fff; }
-        @media (min-width: 45em) {
+        color: #fff;
+        font-size: 1em; }
+        @media (min-width: 900px) {
           .course-boxes .course-box .more-info-btn a {
             font-size: 1.2em; } }
         @media (min-width: 1343px) {
@@ -465,10 +473,10 @@ h2 {
         width: 100%;
         height: 100%;
         text-decoration: none;
-        font-size: 1.5em;
         line-height: 56px;
-        color: #fff; }
-        @media (min-width: 45em) {
+        color: #fff;
+        font-size: 1em; }
+        @media (min-width: 900px) {
           .course-boxes .course-box .cotizacion-btn a {
             font-size: 1.2em; } }
         @media (min-width: 1343px) {
@@ -482,24 +490,28 @@ h2 {
       .course-boxes .course-box .course-box-classes-week div {
         font-weight: bold;
         color: #fff;
-        font-size: 35px;
-        padding: 124px 20px 20px 20px; }
+        font-size: 33px;
+        padding: 100px 20px 20px 20px; }
+        @media (min-width: 900px) {
+          .course-boxes .course-box .course-box-classes-week div {
+            padding: 124px 20px 20px 20px; } }
         @media (min-width: 1110px) {
           .course-boxes .course-box .course-box-classes-week div {
             font-size: 51px;
             padding: 69px 20px 20px 20px; } }
-    .course-boxes .course-box .course-box-title a {
-      text-decoration: none;
-      color: #000;
-      font-size: 44px;
-      font-family: helvetica;
-      font-weight: bold; }
+    .course-boxes .course-box .course-box-title {
+      font-size: 2rem; }
       @media (min-width: 600px) {
-        .course-boxes .course-box .course-box-title a {
+        .course-boxes .course-box .course-box-title {
           font-size: 2rem; } }
       @media (min-width: 1438px) {
-        .course-boxes .course-box .course-box-title a {
+        .course-boxes .course-box .course-box-title {
           font-size: 44px; } }
+      .course-boxes .course-box .course-box-title a {
+        text-decoration: none;
+        color: #000;
+        font-family: helvetica;
+        font-weight: bold; }
     .course-boxes .course-box .course-box-short-desc {
       font-size: 1.3em;
       padding: 7px 0px 10px 20px; }
