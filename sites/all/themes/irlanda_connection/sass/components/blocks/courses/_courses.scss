@@ -20,16 +20,19 @@
 
 	.course-box{
 		@include grid-span($grids, 1);
+		float: none;
 		position: relative;
 		background-color: $course-box-bg;
-		margin-top: $course-box-mar;
-		margin-bottom: $course-box-mar;
 		border: solid 1px $course-box-border;
+		height: 228px;
+		margin-top: 5px;
+		margin-bottom: 5px;
 
 		@include breakpoint(550px) {
 			@include grid-span(10, 2);
 			float: none;
-			height: 228px;
+			margin-top: 20px;
+			margin-bottom: 20px;
 
 		}
 		@include breakpoint(800px) {
@@ -55,14 +58,10 @@
 
 		}
 		.course-icon{
-			@include grid-span($grids, 1);
+			@include grid-span(3.5, 1);
 			height: 100%;
 			background-color: $courseorange_opacity;
 
-			@include breakpoint(550px) {
-				@include grid-span(3.5, 1);
-
-			}
 			a {
 				display: block;
 				height: 228px;
@@ -85,20 +84,20 @@
 
 					}
 					@include breakpoint(900px) {
-						height: 300px;
+						height: 304px;
 
 					}
 				}
 			}
 		}
 		.course-details{
-			@include grid-span($grids, 1);
+			@include grid-span(8, 4.5);
 			float: none;
-			padding: $course-box-details-pad;
+			padding: 7.8px 0px 5px 13px;
 			font-size: .8em;
 
-			@include breakpoint(550px) {
-				@include grid-span(8, 4.5);
+			@include breakpoint(500px) {
+				padding: 5px 0px 5px 20px;
 
 			}
 			@include breakpoint(635px) {
@@ -116,7 +115,7 @@
 			}
 		}
 		.more-info-btn{
-			@include grid-span(6, 1);
+			@include grid-span(4.5, 4.3);
 			right: 0;
 			background-color: $mainorange;
 			color: $btn-txt;
@@ -125,10 +124,6 @@
 			padding: 0;
 			margin-top: 17px;
 
-			@include breakpoint(550px) {
-				@include grid-span(4.5, 4.3);
-
-			}
 			@include breakpoint(635px) {
 				@include grid-span(3, 10);
 				bottom: 45px;
@@ -159,7 +154,7 @@
 			}
 		}
 		.cotizacion-btn{
-			@include  grid-span(6, 7);
+			@include grid-span(4.5, 8.5);
 			right: 0;
 			bottom: 0;
 			background-color: $maingreen;
@@ -169,10 +164,6 @@
 			padding: 0;
 			margin-top: 17px;
 
-			@include breakpoint(550px) {
-				@include grid-span(4.5, 8.5);
-
-			}
 			@include breakpoint(635px) {
 				@include grid-span(3, 10);
 				position: absolute;
@@ -205,11 +196,14 @@
 			div{
 				font-weight: bold;
 				color: $course-box-classes;
-				font-size: 20px;
-				padding: 69px 10px 10px 10px;
+				font-size: 1.3em;
+				padding: 88px 10px 10px 10px;
 
-				@include breakpoint(550px) {
+				@include breakpoint(508px) {
 					font-size: 25px;
+
+				}
+				@include breakpoint(550px) {
 					padding: 69px 20px 20px 20px;
 
 				}
@@ -233,8 +227,12 @@
 			}
 		}
 		.course-box-title{
-			font-size: 1.5rem;
+			font-size: 1.2rem;
 
+			@include breakpoint(500px) {
+				font-size: 1.5rem;
+
+			}
 			@include breakpoint(635px) {
 				font-size: 1.8rem;
 
@@ -251,8 +249,8 @@
 
 			}
 		}
-		.course-box-short-desc{
-			padding: $short-description-pad;
+		.course-box-short-desc {
+			padding: 7px 0px 10px 20px;
 
 		}
 		.course-box-level{

@@ -46,7 +46,7 @@
 
 .btn-hover-orange {
   background-color: $mainorange;
-  
+
   &:hover {
     background-color: $btn-oran-hov;
     box-shadow: $btn-shadow-ho;
@@ -58,6 +58,7 @@
 .block--bean-contacto-header-button {
   top: 80px;
   background-color: $maingreen;
+  border-radius: 0;
 
   @extend .btn-header;
   @extend .btn-main;
@@ -69,6 +70,7 @@
 .block--bean-cotizacion-header {
   top: 30px;
   background-color: $mainorange;
+  border-radius: 0;
 
   @extend .btn-header;
   @extend .btn-main;
