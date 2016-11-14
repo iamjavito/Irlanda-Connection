@@ -2,7 +2,7 @@
 	@include grid-span($grids,1);
 	margin: 0;
 	padding: 0;
-	margin-top: 50px;
+	margin-top: $head-hg;
 
 	@include breakpoint($desk) {
 		margin-top: 0;
@@ -12,16 +12,16 @@
 	.views-row {
 		@include grid-span($grids, 1);
 		float: left;
-		height: 200px;
+		height: $dest-hg-mob;
 
 		@include breakpoint($desk) {
-			width: 33.33%;
-			height: 300px;
+			width: $dest-wt-wd;
+			height: $dest-hg-tab;
 
 		}
 		@include breakpoint($hm-bp-wd) {
-			width: 33.33%;
-			height: 503px;
+			width: $dest-wt-wd;
+			height: $dest-hg-wd;
 
 		}
 
@@ -29,19 +29,21 @@
 			a {
 				@include grid-span($grids, 1);
 				text-align: center;
-				height: 200px;
+				height: $dest-hg-mob;
 				position: absolute;
 				color: #fff;
-				line-height: 200px;
+				line-height: $dest-hg-mob;
 				text-decoration: none;
 
 				@include breakpoint($desk) {
-					height: 300px;
-					width: 33.33%;
+					height: $dest-hg-tab;
+					line-height: $dest-hg-tab;
+					width: $dest-wt-wd;
 
 				}
 				@include breakpoint($hm-bp-wd) {
-					height: 503px;
+					line-height: $dest-hg-wd;
+					height: $dest-hg-wd;
 
 				}
 			}
@@ -50,28 +52,28 @@
 		img {
 			@include grid-span($grids, 1);
 			object-fit: cover;
-			height: 200px;
+			height: $dest-hg-mob;
 
 			@include breakpoint($tab) {
-				height: 300px;
+				height: $dest-hg-tab;
 
 			}
 
 			@include breakpoint($hm-bp-wd) {
-				height: 503px;
+				height: $dest-hg-wd;
 
 			}
 		}
 		a{
 			@include grid-span($grids, 1);
-			line-height: 200px;
+			line-height: $dest-hg-mob;
 
 			@include breakpoint($tab) {
-				line-height: 300px;
+				line-height: $dest-hg-tab;
 
 			}
 			@include breakpoint($hm-bp-wd) {
-				line-height: 503px;
+				line-height: $dest-hg-wd;
 
 			}
 		}

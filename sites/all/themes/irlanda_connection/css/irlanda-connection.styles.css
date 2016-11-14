@@ -591,7 +591,7 @@ h2 {
   clear: none;
   margin: 0;
   padding: 0;
-  margin-top: 50px; }
+  margin-top: 48px; }
   @media (min-width: 60em) {
     .destinos-grid {
       margin-top: 0; } }
@@ -626,9 +626,11 @@ h2 {
       @media (min-width: 60em) {
         .destinos-grid .views-row h2 a {
           height: 300px;
+          line-height: 300px;
           width: 33.33%; } }
       @media (min-width: 1438px) {
         .destinos-grid .views-row h2 a {
+          line-height: 503px;
           height: 503px; } }
     .destinos-grid .views-row img {
       width: 100%;
