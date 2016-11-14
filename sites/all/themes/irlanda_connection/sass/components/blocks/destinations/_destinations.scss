@@ -2,72 +2,78 @@
 	@include grid-span($grids,1);
 	margin: 0;
 	padding: 0;
+	margin-top: 50px;
 
-	.views-row {
-		h2 {
-			a {
-				text-align: center;
-				height: $dest_hg_tab;
-				position: absolute;
-				color: #fff;
-				text-decoration: none;
-
-			}
-
-		}
-		img {
-			width: 100%;
-			object-fit: cover;
-
-		}
-		@include breakpoint($tab) {
-			@include grid-span($grids, 1);
-			height: $dest_hg_tab;
-
-			img {
-				height: $dest_hg_tab;
-
-			}
-			a {
-				@include grid-span($grids, 1);
-				line-height: $dest_hg_tab;
-
-			}
-
-		}
-		@include breakpoint($desk) {
-			float: left;
-			width: $dest_wt_wd;
-			height: $dest_hg_sml;
-
-			img {
-				height: $dest_hg_sml;
-
-			}
-			a {
-				width: $dest_wt_wd;
-				line-height: $dest_hg_sml;
-
-			}
-
-		}
-		@include breakpoint($hm-bp-wd) {
-			float: left;
-			width: $dest_wt_wd;
-			height: $dest_hg_wd;
-
-			img {
-				height: $dest_hg_wd;
-
-			}
-			a {
-				width: $dest_wt_wd;
-				line-height: $dest_hg_wd;
-
-			}
-
-		}
+	@include breakpoint($desk) {
+		margin-top: 0;
 
 	}
 
+	.views-row {
+		@include grid-span($grids, 1);
+		float: left;
+		height: 200px;
+
+		@include breakpoint($desk) {
+			width: 33.33%;
+			height: 300px;
+
+		}
+		@include breakpoint($hm-bp-wd) {
+			width: 33.33%;
+			height: 503px;
+
+		}
+
+		h2 {
+			a {
+				@include grid-span($grids, 1);
+				text-align: center;
+				height: 200px;
+				position: absolute;
+				color: #fff;
+				line-height: 200px;
+				text-decoration: none;
+
+				@include breakpoint($desk) {
+					height: 300px;
+					width: 33.33%;
+
+				}
+				@include breakpoint($hm-bp-wd) {
+					height: 503px;
+
+				}
+			}
+		}
+
+		img {
+			@include grid-span($grids, 1);
+			object-fit: cover;
+			height: 200px;
+
+			@include breakpoint($tab) {
+				height: 300px;
+
+			}
+
+			@include breakpoint($hm-bp-wd) {
+				height: 503px;
+
+			}
+		}
+		a{
+			@include grid-span($grids, 1);
+			line-height: 200px;
+
+			@include breakpoint($tab) {
+				line-height: 300px;
+
+			}
+			@include breakpoint($hm-bp-wd) {
+				line-height: 503px;
+
+			}
+		}
+	}
 }
