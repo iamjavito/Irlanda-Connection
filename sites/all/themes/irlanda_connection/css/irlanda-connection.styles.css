@@ -33,10 +33,10 @@ img, media {
     .btn-header, .block--bean-contacto-header-button, .block--bean-cotizacion-header {
       width: 300px; } }
 
-.btn-main, .block--bean-contacto-header-button, .block--bean-cotizacion-header, .bean-head-image .field--name-field-button-link, .bean-head-image #btn-home, .view-blog-teaser-slides .field--name-field-button-link, .view-blog-teaser-slides #btn-home, .section-header-img .field--name-field-button-link, .section-header-img #btn-home, #zone-graphic-header .field--name-field-button-link, #zone-graphic-header #btn-home {
+.btn-main, .block--bean-contacto-header-button, .block--bean-cotizacion-header, .node-type-cursos .region-main-content .block--bean-preguntanos-tus-dudas, .node-type-cursos .region-main-content .block--bean-solicita-ya-tu-cotizacin, .bean-head-image .field--name-field-button-link, .bean-head-image #btn-home, .view-blog-teaser-slides .field--name-field-button-link, .view-blog-teaser-slides #btn-home, .section-header-img .field--name-field-button-link, .section-header-img #btn-home, #zone-graphic-header .field--name-field-button-link, #zone-graphic-header #btn-home {
   transition: all 0.3s ease-out;
   border-radius: 2px; }
-  .btn-main a, .block--bean-contacto-header-button a, .block--bean-cotizacion-header a, .bean-head-image .field--name-field-button-link a, .bean-head-image #btn-home a, .view-blog-teaser-slides .field--name-field-button-link a, .view-blog-teaser-slides #btn-home a, .section-header-img .field--name-field-button-link a, .section-header-img #btn-home a, #zone-graphic-header .field--name-field-button-link a, #zone-graphic-header #btn-home a {
+  .btn-main a, .block--bean-contacto-header-button a, .block--bean-cotizacion-header a, .node-type-cursos .region-main-content .block--bean-preguntanos-tus-dudas a, .node-type-cursos .region-main-content .block--bean-solicita-ya-tu-cotizacin a, .bean-head-image .field--name-field-button-link a, .bean-head-image #btn-home a, .view-blog-teaser-slides .field--name-field-button-link a, .view-blog-teaser-slides #btn-home a, .section-header-img .field--name-field-button-link a, .section-header-img #btn-home a, #zone-graphic-header .field--name-field-button-link a, #zone-graphic-header #btn-home a {
     font-family: Brandon_Bold;
     display: block;
     text-align: center;
@@ -45,13 +45,15 @@ img, media {
     color: #fff;
     text-decoration: none; }
 
-.btn-hover-green:hover, .block--bean-contacto-header-button:hover, .bean-head-image .field--name-field-button-link:hover, .bean-head-image #btn-home:hover, .view-blog-teaser-slides .field--name-field-button-link:hover, .view-blog-teaser-slides #btn-home:hover, .section-header-img .field--name-field-button-link:hover, .section-header-img #btn-home:hover, #zone-graphic-header .field--name-field-button-link:hover, #zone-graphic-header #btn-home:hover {
-  background-color: #008e43;
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+.btn-hover-green, .block--bean-contacto-header-button, .node-type-cursos .region-main-content .block--bean-preguntanos-tus-dudas, .bean-head-image .field--name-field-button-link, .bean-head-image #btn-home, .view-blog-teaser-slides .field--name-field-button-link, .view-blog-teaser-slides #btn-home, .section-header-img .field--name-field-button-link, .section-header-img #btn-home, #zone-graphic-header .field--name-field-button-link, #zone-graphic-header #btn-home {
+  background-color: #018740; }
+  .btn-hover-green:hover, .block--bean-contacto-header-button:hover, .node-type-cursos .region-main-content .block--bean-preguntanos-tus-dudas:hover, .bean-head-image .field--name-field-button-link:hover, .bean-head-image #btn-home:hover, .view-blog-teaser-slides .field--name-field-button-link:hover, .view-blog-teaser-slides #btn-home:hover, .section-header-img .field--name-field-button-link:hover, .section-header-img #btn-home:hover, #zone-graphic-header .field--name-field-button-link:hover, #zone-graphic-header #btn-home:hover {
+    background-color: #008e43;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
 
-.btn-hover-orange, .block--bean-cotizacion-header, .bean-head-image #block-bean-courses-header-image .field--name-field-button-link, .view-blog-teaser-slides #block-bean-courses-header-image .field--name-field-button-link, .section-header-img #block-bean-courses-header-image .field--name-field-button-link, #zone-graphic-header #block-bean-courses-header-image .field--name-field-button-link {
+.btn-hover-orange, .block--bean-cotizacion-header, .node-type-cursos .region-main-content .block--bean-solicita-ya-tu-cotizacin, .bean-head-image #block-bean-courses-header-image .field--name-field-button-link, .view-blog-teaser-slides #block-bean-courses-header-image .field--name-field-button-link, .section-header-img #block-bean-courses-header-image .field--name-field-button-link, #zone-graphic-header #block-bean-courses-header-image .field--name-field-button-link {
   background-color: #f7941e; }
-  .btn-hover-orange:hover, .block--bean-cotizacion-header:hover, .bean-head-image #block-bean-courses-header-image .field--name-field-button-link:hover, .view-blog-teaser-slides #block-bean-courses-header-image .field--name-field-button-link:hover, .section-header-img #block-bean-courses-header-image .field--name-field-button-link:hover, #zone-graphic-header #block-bean-courses-header-image .field--name-field-button-link:hover {
+  .btn-hover-orange:hover, .block--bean-cotizacion-header:hover, .node-type-cursos .region-main-content .block--bean-solicita-ya-tu-cotizacin:hover, .bean-head-image #block-bean-courses-header-image .field--name-field-button-link:hover, .view-blog-teaser-slides #block-bean-courses-header-image .field--name-field-button-link:hover, .section-header-img #block-bean-courses-header-image .field--name-field-button-link:hover, #zone-graphic-header #block-bean-courses-header-image .field--name-field-button-link:hover {
     background-color: #ff9e2b;
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
 
@@ -110,6 +112,10 @@ h2 {
   font-size: 61px;
   color: #fff;
   text-decoration: none; }
+
+span, div, p {
+  font-size: 16px;
+  font-family: Brandon_Reg; }
 
 .node-type-blog-entry .block-main-block article {
   max-width: 980px;
@@ -285,6 +291,24 @@ h2 {
     border: solid 1px #f2f2f2;
     float: none; }
 
+.node-type-cursos .section-main {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none; }
+  .node-type-cursos .section-main .section-content {
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto; }
+.node-type-cursos .header-img-breaks, .node-type-cursos .background-image-header, .node-type-cursos #zone-graphic-header {
+  height: 400px; }
+  @media (min-width: 60em) {
+    .node-type-cursos .header-img-breaks, .node-type-cursos .background-image-header, .node-type-cursos #zone-graphic-header {
+      height: 350px; } }
+  @media (min-width: 1438px) {
+    .node-type-cursos .header-img-breaks, .node-type-cursos .background-image-header, .node-type-cursos #zone-graphic-header {
+      height: 350px; } }
 .node-type-cursos .block-course-pg-title {
   width: 100%;
   float: right;
@@ -298,8 +322,12 @@ h2 {
     width: 49%;
     float: left; }
     .node-type-cursos .block-course-pg-title .course-pg-title h1 {
+      width: 100%;
       font-size: 44px;
-      text-align: right; }
+      text-align: right;
+      margin: 0;
+      padding: 0;
+      line-height: 70px; }
   .node-type-cursos .block-course-pg-title .course-pg-hyphen {
     width: 2%;
     float: left;
@@ -312,40 +340,49 @@ h2 {
     .node-type-cursos .block-course-pg-title .course-pg-classweek h2 {
       font-size: 44px;
       text-align: left; }
-.node-type-cursos .block-main-block {
-  width: 57.62712%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 33.89831%;
-  clear: none;
-  color: #565A5C;
-  font-size: 1.3em;
-  padding: 80px 20px 80px 20px;
-  z-index: -1;
-  line-height: 2em; }
-  .node-type-cursos .block-main-block .field {
-    padding: 0px 5px 0px 5px; }
-.node-type-cursos #block-views-courses-view-block-1 {
+.node-type-cursos .l-region--sidebar-first {
   width: 23.72881%;
   float: left;
   margin-right: -100%;
   margin-left: 0;
   clear: none;
-  float: none;
-  padding: 120px 20px 120px 20px;
+  padding: 45px 1em 45px 1em;
   line-height: 4em;
-  z-index: 1;
-  border-right: solid 1px #f2f2f2; }
-  .node-type-cursos #block-views-courses-view-block-1 .view-content {
-    width: 66.10169%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 16.94915%;
-    clear: none;
-    float: none; }
-  .node-type-cursos #block-views-courses-view-block-1 .course-list-comp span a {
+  z-index: 1; }
+  .node-type-cursos .l-region--sidebar-first .course-list-comp span a {
     text-decoration: none;
-    color: #b1b1b1; }
+    color: #b1b1b1;
+    text-transform: uppercase; }
+.node-type-cursos .region-main-content {
+  width: 66.10169%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 25.42373%;
+  clear: none;
+  color: #565A5C;
+  font-size: 1.3em;
+  z-index: -1;
+  line-height: 2em;
+  padding: 45px;
+  border-left: solid 1px #f2f2f2; }
+  .node-type-cursos .region-main-content .field {
+    padding: 0px 5px 0px 5px; }
+    .node-type-cursos .region-main-content .field .field__label {
+      font-family: Brandon_Bold; }
+  .node-type-cursos .region-main-content .node__content {
+    padding: 0px 0px 45px 0px; }
+  .node-type-cursos .region-main-content .bean-button {
+    height: 80px; }
+    .node-type-cursos .region-main-content .bean-button a {
+      line-height: 80px; }
+  .node-type-cursos .region-main-content .block--bean-preguntanos-tus-dudas {
+    width: 50%;
+    float: left;
+    border-radius: 0px; }
+  .node-type-cursos .region-main-content .block--bean-solicita-ya-tu-cotizacin {
+    width: 50%;
+    float: right;
+    border-radius: 0px; }
 
 .course-boxes {
   width: 100%;
@@ -896,7 +933,7 @@ h2 {
       height: 400px; } }
   @media (min-width: 1438px) {
     .header-img-breaks, .background-image-header, #zone-graphic-header {
-      height: 600px; } }
+      height: 550px; } }
 
 .background-image-header {
   width: 100%;

@@ -1,4 +1,27 @@
 .node-type-cursos{
+	.section-main {
+	  @include grid-span($grids, 1);
+
+	  .section-content {
+	    max-width: 1350px;
+	    margin-left: auto;
+	    margin-right: auto;
+
+	  }
+	}
+
+	.header-img-breaks {
+	  height: $home-head-hg-sm;
+
+	  @include breakpoint($desk) {
+	    height: 350px;
+
+	  }
+		@include breakpoint($hm-bp-wd) {
+			height: 350px;
+
+		}
+	}
 	//Course Page Title Section
 	.block-course-pg-title{
 		@include grid-span(12,1);
@@ -11,8 +34,12 @@
 			float: left;
 
 			h1{
+				width: 100%;
 				font-size: $course-title;
 				text-align: right;
+				margin: 0;
+				padding: 0;
+				line-height: 70px;
 
 			}
 		}
@@ -38,44 +65,73 @@
 		}
 	}
 
-	//Block Main Descrition Section
-	.block-main-block{
-		@include grid-span(7,5);
-		color: $text;
-		font-size: 1.3em;
-		padding: $course-content-padd;
-		z-index: -1;
-		line-height: 2em;
-
-		.field{
-			padding: $course-field-padd;
-
-		}
-	}
-
-	//Block Courses List
-	#block-views-courses-view-block-1{
+	//Side bar with course List
+	.l-region--sidebar-first{
 		@include grid-span(3,1);
-		float: none;
-		padding: $course-list-padd;
+		padding: 45px 1em 45px 1em;
 		line-height: 4em;
 		z-index: 1;
-		border-right: solid 1px $main-border-colour;
 
-		.view-content{
-			@include grid-span(8,3);
-			float: none;
-
-		}
 		.course-list-comp{
 			span{
 				a{
 					text-decoration: none;
 					color: $light-text;
+					text-transform: uppercase;
 
 				}
 			}
 		}
 	}
 
+	//Block Main Descrition Section
+	.region-main-content{
+		@include grid-span(8,4);
+		color: $text;
+		font-size: 1.3em;
+		z-index: -1;
+		line-height: 2em;
+		padding: 45px;
+		border-left: solid 1px $main-border-colour;
+
+		.field{
+			padding: $course-field-padd;
+
+			.field__label {
+				font-family: Brandon_Bold;
+
+			}
+		}
+
+		.node__content {
+			padding: 0px 0px 45px 0px;
+
+		}
+		.bean-button {
+			height: 80px;
+
+			a {
+				line-height: 80px;
+
+			}
+		}
+		.block--bean-preguntanos-tus-dudas {
+			width: 50%;
+			float: left;
+			border-radius: 0px;
+
+		  @extend .btn-main;
+		  @extend .btn-hover-green;
+
+		}
+		.block--bean-solicita-ya-tu-cotizacin {
+			width: 50%;
+			float: right;
+			border-radius: 0px;
+
+		  @extend .btn-main;
+		  @extend .btn-hover-orange;
+
+		}
+	}
 }

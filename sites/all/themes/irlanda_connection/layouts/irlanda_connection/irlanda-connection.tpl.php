@@ -34,15 +34,17 @@
   </div>
   <div class="section-main">
     <div class="section-content" role="main">
-      <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php print render($title_suffix); ?>
-      <?php print render($tabs); ?>
-      <?php if ($action_links): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-      <?php print render($page['content']); ?>
-      <?php print $feed_icons; ?>
+      <?php print render($page['sidebar_first']); ?>
+      <div class="region-main-content" id="main-content">
+        <?php print render($page['content']); ?>
+        <?php print render($title_prefix); ?>
+        <?php print render($title_suffix); ?>
+        <?php print render($tabs); ?>
+        <?php if ($action_links): ?>
+          <ul class="action-links"><?php print render($action_links); ?></ul>
+        <?php endif; ?>
+        <?php print $feed_icons; ?>
+      </div>
     </div>
   </div>
 

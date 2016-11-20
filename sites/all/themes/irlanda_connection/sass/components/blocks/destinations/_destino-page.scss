@@ -6,7 +6,7 @@
 	.view-destino-page-view{
 		.field--type-image{
 			img{
-				@include grid-span(12,1);
+				@include grid-span(12, 1);
 				height: $header-hg;
 				background-size: cover;
 				background-repeat: no-repeat;
@@ -18,7 +18,7 @@
 	}
 	.dest-wrap-img{
 		.background-image-formatter{
-			@include grid-span(12,1);
+			@include grid-span(12, 1);
 			height: $header-hg;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -38,7 +38,7 @@
 
 		h2{
 			font-size: $dest-title;
-			
+
 		}
 
 	}

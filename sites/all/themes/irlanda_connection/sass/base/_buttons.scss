@@ -37,6 +37,8 @@
 }
 
 .btn-hover-green {
+  background-color: $maingreen; 
+
   &:hover {
     background-color: $btn-green-hov;
     box-shadow: $btn-shadow-ho;

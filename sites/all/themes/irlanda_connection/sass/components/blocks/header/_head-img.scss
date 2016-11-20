@@ -1,5 +1,6 @@
 .header-img-breaks {
   height: $home-head-hg-sm;
+
   @include breakpoint($desk) {
     height: $home-head-hg-desk;
 
