@@ -35,12 +35,16 @@
 
 			h1{
 				width: 100%;
-				font-size: $course-title;
+				font-size: 1em;
 				text-align: right;
 				margin: 0;
 				padding: 0;
 				line-height: 70px;
 
+				@include breakpoint($desk){
+					font-size:  $course-title;
+
+				}
 			}
 		}
 		.course-pg-hyphen{
@@ -49,7 +53,12 @@
 			text-align: center;
 
 			span{
-				font-size: $course-title;
+				font-size: 1em;
+
+				@include breakpoint($desk) {
+					font-size: $course-title;
+
+				}
 
 			}
 		}
@@ -58,26 +67,36 @@
 			float: right;
 
 			h2{
-				font-size: $course-title;
+				font-size: 1em;
 				text-align: left;
 
+				@include breakpoint($desk) {
+					font-size: $course-title;
+				}
 			}
 		}
 	}
 
 	//Side bar with course List
 	.l-region--sidebar-first{
-		@include grid-span(3,1);
-		padding: 45px 1em 45px 1em;
+		@include grid-span($grids, 1);
 		line-height: 4em;
 		z-index: 1;
 
+		@include breakpoint($desk) {
+			@include grid-span(3, 1);
+			padding: 45px 45px 45px 22px;
+
+		}
 		.course-list-comp{
+			padding: 0px 45px 0px 45px;
+
 			span{
 				a{
 					text-decoration: none;
 					color: $light-text;
 					text-transform: uppercase;
+					font-size: .6em;
 
 				}
 			}
@@ -86,14 +105,27 @@
 
 	//Block Main Descrition Section
 	.region-main-content{
-		@include grid-span(8,4);
+		@include grid-span($grids, 1);
 		color: $text;
-		font-size: 1.3em;
+		font-size: .8em;
 		z-index: -1;
 		line-height: 2em;
-		padding: 45px;
+		padding: 0px;
 		border-left: solid 1px $main-border-colour;
 
+		@include breakpoint(635px) {
+			font-size: 1em;
+
+		}
+		@include breakpoint(800px) {
+			font-size: 1.3em;
+
+		}
+		@include breakpoint($desk) {
+			@include grid-span(8,4);
+			padding: 45px;
+
+		}
 		.field{
 			padding: $course-field-padd;
 
@@ -104,7 +136,7 @@
 		}
 
 		.node__content {
-			padding: 0px 0px 45px 0px;
+			padding: 0px 45px 45px 45px;
 
 		}
 		.bean-button {
@@ -116,20 +148,18 @@
 			}
 		}
 		.block--bean-preguntanos-tus-dudas {
-			width: 50%;
 			float: left;
-			border-radius: 0px;
 
 		  @extend .btn-main;
+			@extend .btn-course-page;
 		  @extend .btn-hover-green;
 
 		}
 		.block--bean-solicita-ya-tu-cotizacin {
-			width: 50%;
 			float: right;
-			border-radius: 0px;
 
 		  @extend .btn-main;
+			@extend .btn-course-page;
 		  @extend .btn-hover-orange;
 
 		}

@@ -1,5 +1,11 @@
 span, div, p {
-  font-size: $base-font-size;
   font-family: Brandon_Reg;
 
+}
+//Front Page text blocks
+.bean-home-page-block {
+  div {
+    font-size: 1em;
+
+  }
 }

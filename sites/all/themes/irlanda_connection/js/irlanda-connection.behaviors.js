@@ -45,13 +45,13 @@
 
       //Navbar display on menu clicked
       $('.menu-icon, .close-icon').click(function(e){
-        if($('.section-navbar').is(":visible")){
-          $('.section-navbar').fadeOut();
+        if($('.block--system-navigation').is(":visible")){
+          $('.block--system-navigation').fadeOut();
           $('.menu-icon').fadeIn();
           $('.close-icon').fadeOut();
         }
         else {
-          $('.section-navbar').fadeIn();
+          $('.block--system-navigation').fadeIn();
           $('.menu-icon').fadeOut();
           $('.close-icon').fadeIn();
         }

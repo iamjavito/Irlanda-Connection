@@ -23,12 +23,11 @@ img, media {
   right: 0;
   line-height: 50px;
   height: 50px;
-  width: 200px; }
-  .btn-header a, .block--bean-contacto-header-button a, .block--bean-cotizacion-header a {
-    font-size: 0.7em; }
-    @media (min-width: 1816px) {
-      .btn-header a, .block--bean-contacto-header-button a, .block--bean-cotizacion-header a {
-        font-size: 1em; } }
+  width: 200px;
+  display: none; }
+  @media (min-width: 60em) {
+    .btn-header, .block--bean-contacto-header-button, .block--bean-cotizacion-header {
+      display: block; } }
   @media (min-width: 1816px) {
     .btn-header, .block--bean-contacto-header-button, .block--bean-cotizacion-header {
       width: 300px; } }
@@ -43,7 +42,22 @@ img, media {
     width: 100%;
     height: 100%;
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: .7em; }
+    @media (min-width: 1816px) {
+      .btn-main a, .block--bean-contacto-header-button a, .block--bean-cotizacion-header a, .node-type-cursos .region-main-content .block--bean-preguntanos-tus-dudas a, .node-type-cursos .region-main-content .block--bean-solicita-ya-tu-cotizacin a, .bean-head-image .field--name-field-button-link a, .bean-head-image #btn-home a, .view-blog-teaser-slides .field--name-field-button-link a, .view-blog-teaser-slides #btn-home a, .section-header-img .field--name-field-button-link a, .section-header-img #btn-home a, #zone-graphic-header .field--name-field-button-link a, #zone-graphic-header #btn-home a {
+        font-size: 1em; } }
+
+.btn-course-page, .node-type-cursos .region-main-content .block--bean-preguntanos-tus-dudas, .node-type-cursos .region-main-content .block--bean-solicita-ya-tu-cotizacin {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  border-radius: 0px; }
+  @media (min-width: 600px) {
+    .btn-course-page, .node-type-cursos .region-main-content .block--bean-preguntanos-tus-dudas, .node-type-cursos .region-main-content .block--bean-solicita-ya-tu-cotizacin {
+      width: 50%; } }
 
 .btn-hover-green, .block--bean-contacto-header-button, .node-type-cursos .region-main-content .block--bean-preguntanos-tus-dudas, .bean-head-image .field--name-field-button-link, .bean-head-image #btn-home, .view-blog-teaser-slides .field--name-field-button-link, .view-blog-teaser-slides #btn-home, .section-header-img .field--name-field-button-link, .section-header-img #btn-home, #zone-graphic-header .field--name-field-button-link, #zone-graphic-header #btn-home {
   background-color: #018740; }
@@ -114,8 +128,10 @@ h2 {
   text-decoration: none; }
 
 span, div, p {
-  font-size: 16px;
   font-family: Brandon_Reg; }
+
+.bean-home-page-block div {
+  font-size: 1em; }
 
 .node-type-blog-entry .block-main-block article {
   max-width: 980px;
@@ -323,66 +339,95 @@ span, div, p {
     float: left; }
     .node-type-cursos .block-course-pg-title .course-pg-title h1 {
       width: 100%;
-      font-size: 44px;
+      font-size: 1em;
       text-align: right;
       margin: 0;
       padding: 0;
       line-height: 70px; }
+      @media (min-width: 60em) {
+        .node-type-cursos .block-course-pg-title .course-pg-title h1 {
+          font-size: 44px; } }
   .node-type-cursos .block-course-pg-title .course-pg-hyphen {
     width: 2%;
     float: left;
     text-align: center; }
     .node-type-cursos .block-course-pg-title .course-pg-hyphen span {
-      font-size: 44px; }
+      font-size: 1em; }
+      @media (min-width: 60em) {
+        .node-type-cursos .block-course-pg-title .course-pg-hyphen span {
+          font-size: 44px; } }
   .node-type-cursos .block-course-pg-title .course-pg-classweek {
     width: 49%;
     float: right; }
     .node-type-cursos .block-course-pg-title .course-pg-classweek h2 {
-      font-size: 44px;
+      font-size: 1em;
       text-align: left; }
+      @media (min-width: 60em) {
+        .node-type-cursos .block-course-pg-title .course-pg-classweek h2 {
+          font-size: 44px; } }
 .node-type-cursos .l-region--sidebar-first {
-  width: 23.72881%;
-  float: left;
-  margin-right: -100%;
+  width: 100%;
+  float: right;
   margin-left: 0;
+  margin-right: 0;
   clear: none;
-  padding: 45px 1em 45px 1em;
   line-height: 4em;
   z-index: 1; }
-  .node-type-cursos .l-region--sidebar-first .course-list-comp span a {
-    text-decoration: none;
-    color: #b1b1b1;
-    text-transform: uppercase; }
+  @media (min-width: 60em) {
+    .node-type-cursos .l-region--sidebar-first {
+      width: 23.72881%;
+      float: left;
+      margin-right: -100%;
+      margin-left: 0;
+      clear: none;
+      padding: 45px 45px 45px 22px; } }
+  .node-type-cursos .l-region--sidebar-first .course-list-comp {
+    padding: 0px 45px 0px 45px; }
+    .node-type-cursos .l-region--sidebar-first .course-list-comp span a {
+      text-decoration: none;
+      color: #b1b1b1;
+      text-transform: uppercase;
+      font-size: .6em; }
 .node-type-cursos .region-main-content {
-  width: 66.10169%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 25.42373%;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
   clear: none;
   color: #565A5C;
-  font-size: 1.3em;
+  font-size: .8em;
   z-index: -1;
   line-height: 2em;
-  padding: 45px;
+  padding: 0px;
   border-left: solid 1px #f2f2f2; }
+  @media (min-width: 635px) {
+    .node-type-cursos .region-main-content {
+      font-size: 1em; } }
+  @media (min-width: 800px) {
+    .node-type-cursos .region-main-content {
+      font-size: 1.3em; } }
+  @media (min-width: 60em) {
+    .node-type-cursos .region-main-content {
+      width: 66.10169%;
+      float: left;
+      margin-right: -100%;
+      margin-left: 25.42373%;
+      clear: none;
+      padding: 45px; } }
   .node-type-cursos .region-main-content .field {
     padding: 0px 5px 0px 5px; }
     .node-type-cursos .region-main-content .field .field__label {
       font-family: Brandon_Bold; }
   .node-type-cursos .region-main-content .node__content {
-    padding: 0px 0px 45px 0px; }
+    padding: 0px 45px 45px 45px; }
   .node-type-cursos .region-main-content .bean-button {
     height: 80px; }
     .node-type-cursos .region-main-content .bean-button a {
       line-height: 80px; }
   .node-type-cursos .region-main-content .block--bean-preguntanos-tus-dudas {
-    width: 50%;
-    float: left;
-    border-radius: 0px; }
+    float: left; }
   .node-type-cursos .region-main-content .block--bean-solicita-ya-tu-cotizacin {
-    width: 50%;
-    float: right;
-    border-radius: 0px; }
+    float: right; }
 
 .course-boxes {
   width: 100%;
@@ -755,11 +800,12 @@ span, div, p {
   margin-right: 0;
   clear: none;
   background-color: #fff;
-  border-top: solid 9px #018740;
+  border-top: none;
   padding: 20px 0px 0px 0px; }
   @media (min-width: 60em) {
     .section-footer {
-      padding: 50px 0; } }
+      padding: 50px 0;
+      border-top: solid 9px #018740; } }
   .section-footer #block-menu-menu-footer {
     width: 100%;
     float: right;
@@ -1108,7 +1154,7 @@ span, div, p {
       @media (min-width: 320px) {
         .section-header .mob-trigger .site-logo {
           width: 180px;
-          margin: 10px auto; } }
+          margin: 9px auto; } }
 
 .section-navbar {
   overflow: hidden;
@@ -1116,8 +1162,7 @@ span, div, p {
   float: right;
   margin-left: 0;
   margin-right: 0;
-  clear: none;
-  display: none; }
+  clear: none; }
   @media (min-width: 60em) {
     .section-navbar {
       width: 74.57627%;
@@ -1128,6 +1173,11 @@ span, div, p {
       display: block;
       position: relative;
       height: 183px; } }
+  .section-navbar .block--system-navigation {
+    display: none; }
+    @media (min-width: 60em) {
+      .section-navbar .block--system-navigation {
+        display: block; } }
   .section-navbar #block-system-navigation ul {
     width: 100%;
     float: right;

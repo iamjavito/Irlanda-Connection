@@ -1,12 +1,12 @@
 .section-footer{
 	@include grid-span($grids,1);
 	background-color: $footerbg;
-	border-top: solid 9px $maingreen;
+	border-top: none;
 	padding: 20px 0px 0px 0px;
 
 	@include breakpoint($desk) {
 		padding: 50px 0;
-
+		border-top: solid 9px $maingreen;
 	}
 
 	// Nav Footer

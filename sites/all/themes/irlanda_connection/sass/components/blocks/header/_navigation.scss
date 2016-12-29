@@ -1,7 +1,6 @@
 .section-navbar {
   overflow: hidden;
   @include grid-span($grids, 1);
-  display: none;
 
   @include breakpoint($desk) {
     @include grid-span(9,4);
@@ -10,7 +9,18 @@
     height: $head-hg-desk;
 
   }
+
+  //hidden nav on mob unless click
+  .block--system-navigation {
+    display: none;
+
+    @include breakpoint($desk) {
+      display: block;
+
+    }
+  }
   #block-system-navigation {
+
     ul{
       @include grid-span($grids, 1);
       background-color: $branding-colour;

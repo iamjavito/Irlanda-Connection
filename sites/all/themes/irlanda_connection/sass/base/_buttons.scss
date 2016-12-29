@@ -4,15 +4,13 @@
   line-height: $btn-header-hg;
   height: $btn-header-hg;
   width: $btn-header-wd;
+  display: none;
 
-  a {
-    font-size: 0.7em;
+  @include breakpoint($desk) {
+    display: block;
 
-    @include breakpoint($hm-bp-max) {
-      font-size: 1em;
-
-    }
   }
+
   @include breakpoint($hm-bp-max) {
     width: 300px;
 
@@ -32,12 +30,26 @@
     height: 100%;
     color: $btn-txt;
     text-decoration: none;
+    font-size: .7em;
 
+    @include breakpoint($hm-bp-max) {
+      font-size: 1em;
+
+    }
   }
 }
 
+.btn-course-page {
+  @include grid-span($grids, 1);
+  border-radius: 0px;
+
+  @include breakpoint(600px) {
+    width: 50%;
+
+  }
+}
 .btn-hover-green {
-  background-color: $maingreen; 
+  background-color: $maingreen;
 
   &:hover {
     background-color: $btn-green-hov;
@@ -65,6 +77,7 @@
   @extend .btn-header;
   @extend .btn-main;
   @extend .btn-hover-green;
+
 
 }
 
