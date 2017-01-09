@@ -449,9 +449,12 @@ span, div, p {
     position: relative;
     background-color: #fff;
     border: solid 1px #E6E6E6;
-    height: 228px;
+    height: 188px;
     margin-top: 5px;
     margin-bottom: 5px; }
+    @media (min-width: 425px) {
+      .course-boxes .course-box {
+        height: 228px; } }
     @media (min-width: 550px) {
       .course-boxes .course-box {
         width: 83.05085%;
@@ -506,7 +509,10 @@ span, div, p {
         .course-boxes .course-box .course-icon a img {
           object-fit: cover;
           width: 100%;
-          height: 228px; }
+          height: 188px; }
+          @media (min-width: 425px) {
+            .course-boxes .course-box .course-icon a img {
+              height: 228px; } }
           @media (min-width: 800px) {
             .course-boxes .course-box .course-icon a img {
               height: 262px; } }
@@ -514,14 +520,17 @@ span, div, p {
             .course-boxes .course-box .course-icon a img {
               height: 304px; } }
     .course-boxes .course-box .course-details {
-      width: 66.10169%;
+      width: 61.86441%;
       float: left;
       margin-right: -100%;
       margin-left: 29.66102%;
       clear: none;
       float: none;
-      padding: 7.8px 0px 5px 13px;
+      padding: 1px 0px 1px 13px;
       font-size: .8em; }
+      @media (min-width: 425px) {
+        .course-boxes .course-box .course-details {
+          padding: 5px 0px 5px 13px; } }
       @media (min-width: 500px) {
         .course-boxes .course-box .course-details {
           padding: 5px 0px 5px 20px; } }
@@ -546,7 +555,10 @@ span, div, p {
       text-align: center;
       height: 45px;
       padding: 0;
-      margin-top: 17px; }
+      margin-top: 14px; }
+      @media (min-width: 500px) {
+        .course-boxes .course-box .more-info-btn {
+          margin-top: 5px; } }
       @media (min-width: 635px) {
         .course-boxes .course-box .more-info-btn {
           width: 23.72881%;
@@ -557,7 +569,7 @@ span, div, p {
           bottom: 45px;
           position: absolute;
           margin-top: -56px;
-          margin-top: 0; } }
+          margin-top: 18px; } }
       .course-boxes .course-box .more-info-btn a {
         display: block;
         width: 100%;
@@ -591,7 +603,10 @@ span, div, p {
       text-align: center;
       height: 45px;
       padding: 0;
-      margin-top: 17px; }
+      margin-top: 14px; }
+      @media (min-width: 500px) {
+        .course-boxes .course-box .cotizacion-btn {
+          margin-top: 5px; } }
       @media (min-width: 635px) {
         .course-boxes .course-box .cotizacion-btn {
           width: 23.72881%;
@@ -600,7 +615,8 @@ span, div, p {
           margin-right: 0;
           clear: none;
           position: absolute;
-          margin-top: 0px; } }
+          margin-top: 0px;
+          margin-top: 18px; } }
       .course-boxes .course-box .cotizacion-btn a {
         display: block;
         width: 100%;
@@ -647,13 +663,10 @@ span, div, p {
             font-size: 51px;
             padding: 69px 20px 20px 20px; } }
     .course-boxes .course-box .course-box-title {
-      font-size: 1.2rem; }
+      font-size: 1.1rem; }
       @media (min-width: 500px) {
         .course-boxes .course-box .course-box-title {
           font-size: 1.5rem; } }
-      @media (min-width: 635px) {
-        .course-boxes .course-box .course-box-title {
-          font-size: 1.8rem; } }
       @media (min-width: 1438px) {
         .course-boxes .course-box .course-box-title {
           font-size: 44px; } }
@@ -663,7 +676,7 @@ span, div, p {
         font-family: helvetica;
         font-weight: bold; }
     .course-boxes .course-box .course-box-short-desc {
-      padding: 7px 0px 10px 20px; }
+      min-height: 40px; }
 
 .destinos-grid {
   width: 100%;

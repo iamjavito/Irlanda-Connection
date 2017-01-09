@@ -24,10 +24,14 @@
 		position: relative;
 		background-color: $course-box-bg;
 		border: solid 1px $course-box-border;
-		height: 228px;
+		height: 188px;
 		margin-top: 5px;
 		margin-bottom: 5px;
 
+		@include breakpoint(425px) {
+			height: 228px;
+
+		}
 		@include breakpoint(550px) {
 			@include grid-span(10, 2);
 			float: none;
@@ -64,8 +68,12 @@
 
 			a {
 				display: block;
-				height: 228px;
+				height: 188px;
 
+				@include breakpoint(425px) {
+					height: 228px;
+
+				}
 				@include breakpoint(800px) {
 					height: 262px;
 
@@ -77,8 +85,12 @@
 				img{
 					object-fit: cover;
 					width: 100%;
-					height: 228px;
+					height: 188px;
 
+					@include breakpoint(425px) {
+						height: 228px;
+
+					}
 					@include breakpoint(800px) {
 						height: 262px;
 
@@ -91,11 +103,15 @@
 			}
 		}
 		.course-details{
-			@include grid-span(8, 4.5);
+			@include grid-span(7.5, 4.5);
 			float: none;
-			padding: 7.8px 0px 5px 13px;
+			padding: 1px 0px 1px 13px;
 			font-size: .8em;
 
+			@include breakpoint(425px) {
+				padding: 5px 0px 5px 13px;
+
+			}
 			@include breakpoint(500px) {
 				padding: 5px 0px 5px 20px;
 
@@ -122,14 +138,19 @@
 			text-align: center;
 			height: 45px;
 			padding: 0;
-			margin-top: 17px;
+			margin-top: 14px;
+
+			@include breakpoint(500px) {
+				margin-top: 5px;
+
+			}
 
 			@include breakpoint(635px) {
 				@include grid-span(3, 10);
 				bottom: 45px;
 				position: absolute;
 				margin-top: $course-more-margin;
-				margin-top: 0;
+				margin-top: 18px;
 
 			}
 			a{
@@ -162,12 +183,17 @@
 			text-align: center;
 			height: 45px;
 			padding: 0;
-			margin-top: 17px;
+			margin-top: 14px;
 
+			@include breakpoint(500px) {
+				margin-top: 5px;
+
+			}
 			@include breakpoint(635px) {
 				@include grid-span(3, 10);
 				position: absolute;
 				margin-top: $course-cotizacion-margin;
+				margin-top: 18px;
 
 			}
 			a{
@@ -227,14 +253,10 @@
 			}
 		}
 		.course-box-title{
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 
 			@include breakpoint(500px) {
 				font-size: 1.5rem;
-
-			}
-			@include breakpoint(635px) {
-				font-size: 1.8rem;
 
 			}
 			@include breakpoint($hm-bp-wd) {
@@ -250,7 +272,7 @@
 			}
 		}
 		.course-box-short-desc {
-			padding: 7px 0px 10px 20px;
+			min-height: 40px;
 
 		}
 		.course-box-level{
