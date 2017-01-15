@@ -318,7 +318,7 @@ span, div, p {
     margin-left: auto;
     margin-right: auto; }
 .node-type-cursos .header-img-breaks, .node-type-cursos .background-image-header, .node-type-cursos #zone-graphic-header {
-  height: 400px; }
+  height: 300px; }
   @media (min-width: 60em) {
     .node-type-cursos .header-img-breaks, .node-type-cursos .background-image-header, .node-type-cursos #zone-graphic-header {
       height: 350px; } }
@@ -339,11 +339,17 @@ span, div, p {
     float: left; }
     .node-type-cursos .block-course-pg-title .course-pg-title h1 {
       width: 100%;
-      font-size: 1em;
       text-align: right;
       margin: 0;
       padding: 0;
-      line-height: 70px; }
+      line-height: 70px;
+      font-size: .6em; }
+      @media (min-width: 450px) {
+        .node-type-cursos .block-course-pg-title .course-pg-title h1 {
+          font-size: .8em; } }
+      @media (min-width: 550px) {
+        .node-type-cursos .block-course-pg-title .course-pg-title h1 {
+          font-size: 1em; } }
       @media (min-width: 60em) {
         .node-type-cursos .block-course-pg-title .course-pg-title h1 {
           font-size: 44px; } }
@@ -352,7 +358,14 @@ span, div, p {
     float: left;
     text-align: center; }
     .node-type-cursos .block-course-pg-title .course-pg-hyphen span {
-      font-size: 1em; }
+      font-size: .6em;
+      font-size: .6em; }
+      @media (min-width: 450px) {
+        .node-type-cursos .block-course-pg-title .course-pg-hyphen span {
+          font-size: .8em; } }
+      @media (min-width: 550px) {
+        .node-type-cursos .block-course-pg-title .course-pg-hyphen span {
+          font-size: 1em; } }
       @media (min-width: 60em) {
         .node-type-cursos .block-course-pg-title .course-pg-hyphen span {
           font-size: 44px; } }
@@ -360,8 +373,15 @@ span, div, p {
     width: 49%;
     float: right; }
     .node-type-cursos .block-course-pg-title .course-pg-classweek h2 {
-      font-size: 1em;
-      text-align: left; }
+      text-align: left;
+      font-size: .6em;
+      font-size: .6em; }
+      @media (min-width: 450px) {
+        .node-type-cursos .block-course-pg-title .course-pg-classweek h2 {
+          font-size: .8em; } }
+      @media (min-width: 550px) {
+        .node-type-cursos .block-course-pg-title .course-pg-classweek h2 {
+          font-size: 1em; } }
       @media (min-width: 60em) {
         .node-type-cursos .block-course-pg-title .course-pg-classweek h2 {
           font-size: 44px; } }
@@ -371,8 +391,11 @@ span, div, p {
   margin-left: 0;
   margin-right: 0;
   clear: none;
+  width: 350px;
   line-height: 4em;
-  z-index: 1; }
+  z-index: 1;
+  display: none;
+  font-size: .2em; }
   @media (min-width: 60em) {
     .node-type-cursos .l-region--sidebar-first {
       width: 23.72881%;
@@ -380,14 +403,26 @@ span, div, p {
       margin-right: -100%;
       margin-left: 0;
       clear: none;
-      padding: 45px 45px 45px 22px; } }
+      padding: 45px 45px 45px 22px;
+      display: block; } }
   .node-type-cursos .l-region--sidebar-first .course-list-comp {
-    padding: 0px 45px 0px 45px; }
-    .node-type-cursos .l-region--sidebar-first .course-list-comp span a {
-      text-decoration: none;
-      color: #b1b1b1;
-      text-transform: uppercase;
-      font-size: .6em; }
+    padding: 0px 45px 0px 20px; }
+    @media (min-width: 1200px) {
+      .node-type-cursos .l-region--sidebar-first .course-list-comp {
+        padding: 0px 45px 0px 45px; } }
+    .node-type-cursos .l-region--sidebar-first .course-list-comp span {
+      line-height: 2em; }
+      .node-type-cursos .l-region--sidebar-first .course-list-comp span a {
+        text-decoration: none;
+        color: #b1b1b1;
+        text-transform: uppercase;
+        font-size: .9rem; }
+        @media (min-width: 900px) {
+          .node-type-cursos .l-region--sidebar-first .course-list-comp span a {
+            font-size: .8rem; } }
+        @media (min-width: 1300px) {
+          .node-type-cursos .l-region--sidebar-first .course-list-comp span a {
+            font-size: 1rem; } }
 .node-type-cursos .region-main-content {
   width: 100%;
   float: right;
@@ -419,7 +454,10 @@ span, div, p {
     .node-type-cursos .region-main-content .field .field__label {
       font-family: Brandon_Bold; }
   .node-type-cursos .region-main-content .node__content {
-    padding: 0px 45px 45px 45px; }
+    padding: 45px 45px 45px 45px; }
+    @media (min-width: 60em) {
+      .node-type-cursos .region-main-content .node__content {
+        padding: 0px 45px 45px 45px; } }
   .node-type-cursos .region-main-content .bean-button {
     height: 80px; }
     .node-type-cursos .region-main-content .bean-button a {
@@ -499,7 +537,10 @@ span, div, p {
       background-color: rgba(239, 118, 11, 0.5); }
       .course-boxes .course-box .course-icon a {
         display: block;
-        height: 228px; }
+        height: 188px; }
+        @media (min-width: 425px) {
+          .course-boxes .course-box .course-icon a {
+            height: 228px; } }
         @media (min-width: 800px) {
           .course-boxes .course-box .course-icon a {
             height: 262px; } }
@@ -528,6 +569,9 @@ span, div, p {
       float: none;
       padding: 1px 0px 1px 13px;
       font-size: .8em; }
+      @media (min-width: 320px) {
+        .course-boxes .course-box .course-details {
+          padding: 1.1px 0px 1px 13px; } }
       @media (min-width: 425px) {
         .course-boxes .course-box .course-details {
           padding: 5px 0px 5px 13px; } }
@@ -577,7 +621,7 @@ span, div, p {
         text-decoration: none;
         line-height: 45px;
         color: #fff;
-        font-size: 1.2em; }
+        font-size: 1.1em; }
         @media (min-width: 635px) {
           .course-boxes .course-box .more-info-btn a {
             font-size: .8em; } }
@@ -624,7 +668,7 @@ span, div, p {
         text-decoration: none;
         color: #fff;
         line-height: 45px;
-        font-size: 1.2em; }
+        font-size: 1.1em; }
         @media (min-width: 635px) {
           .course-boxes .course-box .cotizacion-btn a {
             font-size: .8em; } }
@@ -642,7 +686,7 @@ span, div, p {
         font-weight: bold;
         color: #fff;
         font-size: 1.3em;
-        padding: 88px 10px 10px 10px; }
+        padding: 49px 10px 10px 10px; }
         @media (min-width: 508px) {
           .course-boxes .course-box .course-box-classes-week div {
             font-size: 25px; } }
@@ -651,7 +695,7 @@ span, div, p {
             padding: 69px 20px 20px 20px; } }
         @media (min-width: 700px) {
           .course-boxes .course-box .course-box-classes-week div {
-            padding: 100px 20px 20px 20px; } }
+            padding: 88px 20px 20px 20px; } }
         @media (min-width: 867px) {
           .course-boxes .course-box .course-box-classes-week div {
             font-size: 33px; } }
@@ -663,7 +707,10 @@ span, div, p {
             font-size: 51px;
             padding: 69px 20px 20px 20px; } }
     .course-boxes .course-box .course-box-title {
-      font-size: 1.1rem; }
+      font-size: 1rem; }
+      @media (min-width: 375px) {
+        .course-boxes .course-box .course-box-title {
+          font-size: 1.1rem; } }
       @media (min-width: 500px) {
         .course-boxes .course-box .course-box-title {
           font-size: 1.5rem; } }
@@ -1270,7 +1317,7 @@ span, div, p {
     @media (min-width: 45em) {
       #zone-graphic-header h1 {
         font-size: 4em;
-        margin-top: 18%; } }
+        margin-top: 15%; } }
     @media (min-width: 60em) {
       #zone-graphic-header h1 {
         font-size: 4.2em;

@@ -3,15 +3,15 @@
 	  @include grid-span($grids, 1);
 
 	  .section-content {
-	    max-width: 1350px;
-	    margin-left: auto;
-	    margin-right: auto;
+			max-width: 1350px;
+			margin-left: auto;
+			margin-right: auto;
 
 	  }
 	}
 
 	.header-img-breaks {
-	  height: $home-head-hg-sm;
+	  height: 300px;
 
 	  @include breakpoint($desk) {
 	    height: 350px;
@@ -29,22 +29,35 @@
 		height: 70px;
 		line-height: 70px;
 
+		@mixin pg-title-size {
+			font-size: .6em;
+
+			@include breakpoint(450px) {
+				font-size: .8em;
+
+			}
+
+			@include breakpoint(550px) {
+				font-size: 1em;
+
+			}
+			@include breakpoint($desk){
+				font-size:  $course-title;
+
+			}
+		}
 		.course-pg-title{
 			width: 49%;
 			float: left;
 
 			h1{
 				width: 100%;
-				font-size: 1em;
 				text-align: right;
 				margin: 0;
 				padding: 0;
 				line-height: 70px;
 
-				@include breakpoint($desk){
-					font-size:  $course-title;
-
-				}
+				@include pg-title-size;
 			}
 		}
 		.course-pg-hyphen{
@@ -53,13 +66,9 @@
 			text-align: center;
 
 			span{
-				font-size: 1em;
+				font-size: .6em;
 
-				@include breakpoint($desk) {
-					font-size: $course-title;
-
-				}
-
+				@include pg-title-size;
 			}
 		}
 		.course-pg-classweek{
@@ -67,12 +76,10 @@
 			float: right;
 
 			h2{
-				font-size: 1em;
 				text-align: left;
+				font-size: .6em;
 
-				@include breakpoint($desk) {
-					font-size: $course-title;
-				}
+				@include pg-title-size;
 			}
 		}
 	}
@@ -80,24 +87,43 @@
 	//Side bar with course List
 	.l-region--sidebar-first{
 		@include grid-span($grids, 1);
+		width: 350px;
 		line-height: 4em;
 		z-index: 1;
+		display: none;
+		font-size: .2em;
 
 		@include breakpoint($desk) {
 			@include grid-span(3, 1);
 			padding: 45px 45px 45px 22px;
+			display: block;
 
 		}
-		.course-list-comp{
-			padding: 0px 45px 0px 45px;
 
+		.course-list-comp{
+			padding: 0px 45px 0px 20px;
+
+			@include breakpoint(1200px) {
+				padding: 0px 45px 0px 45px;
+
+			}
 			span{
+				line-height: 2em;
+
 				a{
 					text-decoration: none;
 					color: $light-text;
 					text-transform: uppercase;
-					font-size: .6em;
+					font-size: .9rem;
 
+					@include breakpoint(900px) {
+						font-size: .8rem;
+
+					}
+					@include breakpoint(1300px) {
+						font-size: 1rem;
+
+					}
 				}
 			}
 		}
@@ -136,8 +162,12 @@
 		}
 
 		.node__content {
-			padding: 0px 45px 45px 45px;
+			padding: 45px 45px 45px 45px;
 
+			@include breakpoint($desk) {
+				padding: 0px 45px 45px 45px;
+
+			}
 		}
 		.bean-button {
 			height: 80px;
