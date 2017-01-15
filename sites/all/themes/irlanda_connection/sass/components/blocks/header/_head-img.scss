@@ -36,27 +36,35 @@
 		text-decoration: bold;
 		max-resolution: 3%;
 		line-height: 121%;
-		font-size: $h1-hm;
-		margin-top: 29%;
+		font-size: 2em;
+		margin-top: 32%;
+    position: absolute;
 
+    @include breakpoint(334px) {
+      font-size: $h1-hm;
+      margin-top: 24%;
+
+    }
 		@include breakpoint($mob) {
-			font-size: $h1-sm;
+			font-size: 3em;
 			margin-top: 18%;
 
 		}
 		@include breakpoint($tab) {
 			font-size: $h1-tab;
-			margin-top: 18%;
+			margin-top: 8%;
 
 		}
 		@include breakpoint(1100px) {
 			@include grid-span(8, 3);
-			font-size: $h1-wide;
 			margin-top: 5%;
 
 		}
+    @include breakpoint(1438px) {
+			margin-top: 7%;
+
+    }
 		@include breakpoint(1600px) {
-			@include grid-span(8, 3);
 			font-size: $h1-max;
 			margin-top: 5%;
 			line-height: 148px;

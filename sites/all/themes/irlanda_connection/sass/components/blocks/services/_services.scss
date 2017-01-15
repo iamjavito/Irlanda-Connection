@@ -1,47 +1,69 @@
-.services-grid{
-	max-width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: $view-content-pad;
-	float: none;
+.section-main {
+	@include grid-span($grids, 1);
 
-	.service-box{
-		width: 360px;
-		float: left;
-    	margin: $service-box-mar;
+	.services-grid {
+		@include grid-span($grids, 1);
+		max-width: 300px;
+		margin: 30px auto 30px auto;
+		float: none;
 
-		.service-img{
-			@include grid-span(12,1);
-			min-height: 300px;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center center;
-			position: relative;
-    		overflow: hidden;
+		@include breakpoint(600px) {
+			max-width: 600px;
 
 		}
-		.service-title{
-			@include grid-span(12,1);
-			text-align: center;
-			margin: $service-title-mar;
+		@include breakpoint(800px) {
+			max-width: 800px;
 
-			h2{
-				font-size: 24px;
-				color: $link;
+		}
+		@include breakpoint(1200px) {
+			max-width: 1200px;
+
+		}
+		.service-box{
+			width: 100%;
+			float: left;
+			margin: 20px 0px 20px 0px;
+
+			@include breakpoint(800px) {
+				width: 360px;
+				margin: 20px;
 
 			}
-
-		}
-		.service-description{
-			@include grid-span(12,1);
-			text-align: center;
-
-			h3{
-				font-size: 20px;
-				color: $link;
+			.service-img{
+				@include grid-span(12,1);
+				min-height: 300px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+				position: relative;
+	  		overflow: hidden;
 
 			}
+			.service-title{
+				@include grid-span(12,1);
+				text-align: center;
+				margin: 10px 0px 0px 0px;
+
+				h2{
+					font-size: 24px;
+					color: $maingreen;
+					font-family: Brandon_Bold;
+					text-transform: uppercase;
+
+				}
+
+			}
+			.service-description{
+				@include grid-span(12,1);
+				text-align: center;
+
+				h3{
+					font-size: 20px;
+					color: $link;
+
+				}
+			}
 		}
+
 	}
-
 }

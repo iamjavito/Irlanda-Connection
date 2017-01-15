@@ -3,6 +3,7 @@
 	background-color: $footerbg;
 	border-top: none;
 	padding: 20px 0px 0px 0px;
+	border-top: solid 2px #f2f2f2;
 
 	@include breakpoint($desk) {
 		padding: 50px 0;

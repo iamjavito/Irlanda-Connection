@@ -1079,16 +1079,21 @@ span, div, p {
     text-decoration: bold;
     max-resolution: 3%;
     line-height: 121%;
-    font-size: 2.5em;
-    margin-top: 29%; }
+    font-size: 2em;
+    margin-top: 32%;
+    position: absolute; }
+    @media (min-width: 334px) {
+      .bean-head-image .field--name-field-header-text, .bean-head-image h1, .view-blog-teaser-slides .field--name-field-header-text, .view-blog-teaser-slides h1, .section-header-img .field--name-field-header-text, .section-header-img h1, #zone-graphic-header .field--name-field-header-text, #zone-graphic-header h1 {
+        font-size: 2.5em;
+        margin-top: 24%; } }
     @media (min-width: 600px) {
       .bean-head-image .field--name-field-header-text, .bean-head-image h1, .view-blog-teaser-slides .field--name-field-header-text, .view-blog-teaser-slides h1, .section-header-img .field--name-field-header-text, .section-header-img h1, #zone-graphic-header .field--name-field-header-text, #zone-graphic-header h1 {
-        font-size: 3.5em;
+        font-size: 3em;
         margin-top: 18%; } }
     @media (min-width: 45em) {
       .bean-head-image .field--name-field-header-text, .bean-head-image h1, .view-blog-teaser-slides .field--name-field-header-text, .view-blog-teaser-slides h1, .section-header-img .field--name-field-header-text, .section-header-img h1, #zone-graphic-header .field--name-field-header-text, #zone-graphic-header h1 {
         font-size: 4em;
-        margin-top: 18%; } }
+        margin-top: 8%; } }
     @media (min-width: 1100px) {
       .bean-head-image .field--name-field-header-text, .bean-head-image h1, .view-blog-teaser-slides .field--name-field-header-text, .view-blog-teaser-slides h1, .section-header-img .field--name-field-header-text, .section-header-img h1, #zone-graphic-header .field--name-field-header-text, #zone-graphic-header h1 {
         width: 66.10169%;
@@ -1096,15 +1101,12 @@ span, div, p {
         margin-right: -100%;
         margin-left: 16.94915%;
         clear: none;
-        font-size: 4.9em;
         margin-top: 5%; } }
+    @media (min-width: 1438px) {
+      .bean-head-image .field--name-field-header-text, .bean-head-image h1, .view-blog-teaser-slides .field--name-field-header-text, .view-blog-teaser-slides h1, .section-header-img .field--name-field-header-text, .section-header-img h1, #zone-graphic-header .field--name-field-header-text, #zone-graphic-header h1 {
+        margin-top: 7%; } }
     @media (min-width: 1600px) {
       .bean-head-image .field--name-field-header-text, .bean-head-image h1, .view-blog-teaser-slides .field--name-field-header-text, .view-blog-teaser-slides h1, .section-header-img .field--name-field-header-text, .section-header-img h1, #zone-graphic-header .field--name-field-header-text, #zone-graphic-header h1 {
-        width: 66.10169%;
-        float: left;
-        margin-right: -100%;
-        margin-left: 16.94915%;
-        clear: none;
         font-size: 5.5em;
         margin-top: 5%;
         line-height: 148px; } }
@@ -1280,7 +1282,7 @@ span, div, p {
         padding: 5px 0px 5px 0px;
         text-decoration: none;
         font-size: 20px;
-        font-family: Brandon_bold;
+        font-family: Brandon_Reg;
         border-bottom: solid 1px #f2f2f2; }
         @media (min-width: 60em) {
           .section-navbar #block-system-navigation ul li a {
@@ -1474,49 +1476,73 @@ span, div, p {
       #zone-graphic-destinos h2 {
         font-size: 61px; } }
 
-.services-grid {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 35px 0px 35px 40px;
-  float: none; }
-  .services-grid .service-box {
-    width: 360px;
-    float: left;
-    margin: 20px 20px 20px 20px; }
-    .services-grid .service-box .service-img {
+.section-main {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none; }
+  .section-main .services-grid {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    max-width: 300px;
+    margin: 30px auto 30px auto;
+    float: none; }
+    @media (min-width: 600px) {
+      .section-main .services-grid {
+        max-width: 600px; } }
+    @media (min-width: 800px) {
+      .section-main .services-grid {
+        max-width: 800px; } }
+    @media (min-width: 1200px) {
+      .section-main .services-grid {
+        max-width: 1200px; } }
+    .section-main .services-grid .service-box {
       width: 100%;
-      float: right;
-      margin-left: 0;
-      margin-right: 0;
-      clear: none;
-      min-height: 300px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      position: relative;
-      overflow: hidden; }
-    .services-grid .service-box .service-title {
-      width: 100%;
-      float: right;
-      margin-left: 0;
-      margin-right: 0;
-      clear: none;
-      text-align: center;
-      margin: 10px 0px 0px 0px; }
-      .services-grid .service-box .service-title h2 {
-        font-size: 24px;
-        color: #565A5C; }
-    .services-grid .service-box .service-description {
-      width: 100%;
-      float: right;
-      margin-left: 0;
-      margin-right: 0;
-      clear: none;
-      text-align: center; }
-      .services-grid .service-box .service-description h3 {
-        font-size: 20px;
-        color: #565A5C; }
+      float: left;
+      margin: 20px 0px 20px 0px; }
+      @media (min-width: 800px) {
+        .section-main .services-grid .service-box {
+          width: 360px;
+          margin: 20px; } }
+      .section-main .services-grid .service-box .service-img {
+        width: 100%;
+        float: right;
+        margin-left: 0;
+        margin-right: 0;
+        clear: none;
+        min-height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+        overflow: hidden; }
+      .section-main .services-grid .service-box .service-title {
+        width: 100%;
+        float: right;
+        margin-left: 0;
+        margin-right: 0;
+        clear: none;
+        text-align: center;
+        margin: 10px 0px 0px 0px; }
+        .section-main .services-grid .service-box .service-title h2 {
+          font-size: 24px;
+          color: #018740;
+          font-family: Brandon_Bold;
+          text-transform: uppercase; }
+      .section-main .services-grid .service-box .service-description {
+        width: 100%;
+        float: right;
+        margin-left: 0;
+        margin-right: 0;
+        clear: none;
+        text-align: center; }
+        .section-main .services-grid .service-box .service-description h3 {
+          font-size: 20px;
+          color: #565A5C; }
 
 @font-face {
   font-family: Brandon_Reg;
