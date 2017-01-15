@@ -24,6 +24,7 @@
 	@include grid-span(12,1);
 	float: none;
 	position: relative;
+  z-index: 0;
 
 	.flexslider{
 		border: 0;
@@ -70,6 +71,16 @@
 			line-height: 148px;
 
 		}
+
+    a {
+      text-decoration: none;
+      color: #fff;
+
+      &:hover {
+        cursor: pointer;
+
+      }
+    }
 	}
 
 	//Home and main button settings

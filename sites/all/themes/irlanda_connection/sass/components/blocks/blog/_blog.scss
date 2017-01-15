@@ -1,24 +1,33 @@
 .view-blog-view{
 	.view-content{
-		max-width: 1200px;
+		@include grid-span($grids, 1);
 		margin-left: auto;
 		margin-right: auto;
-		padding: $view-content-pad;
 		float: none;
 		height: 700px;
 
+		@include breakpoint(768px) {
+			max-width: 768px;
+
+		}
+		@include breakpoint(1152px) {
+			max-width: 1152px;
+
+		}
+		@include breakpoint(1536px) {
+			max-width: 1536px;
+
+		}
 		.view-blog-post{
-			width: 33.33%;
 			float: left;
 
-			.field--name-field-blog-image{
-				@include grid-span(8,3);
-				float: none;
+			@include breakpoint(768px) {
+				margin: 10px;
 
+			}
+			.field--name-field-blog-image{
 				a{
-				    border: none;
-				    width: $teaser-width;
-				    height: $teaser-img-hg;
+				  border: none;
 
 				}
 
@@ -26,14 +35,20 @@
 				    margin: 0px;
 				    padding: 0px;
 				    border: none;
-				    width: $teaser-width;
-				    height: $teaser-img-hg;
 
+				}
+				a, img {
+					width: 100%;
+					height: 227.5px;
+
+					@include breakpoint(768px) {
+						width: 364px;
+
+					}
 				}
 			}
 
 			.field--name-field-blog-description {
-				width: $teaser-width;
 				text-align: center;
 				color: $link;
 				padding-bottom: $view-post-pad;
@@ -43,35 +58,49 @@
 
 			h1{
 				text-align: center;
-				width: $teaser-width;
 				font-size: $blog-teaser-title;
 				padding: $post-tea-title;
 
 				a{
 					text-decoration: none;
 					color: $mainorange;
+					text-transform: uppercase;
+					margin: 0px 10px 0px 10px;
 
+					&:hover {
+						cursor: pointer;
+
+					}
 				}
 			}
 
+			h1, .field--name-field-blog-description {
+				width: 100%;
+
+				@include breakpoint(768px) {
+					width: 364px;
+
+				}
+			}
 		}
 	}
 	.pager-load-more{
-		@include grid-span(2,6.15);
+		@include grid-span($grids, 1);
 		height: $ver-mas-line;
-		float: none;
+		margin: 35px 0 35px 0;
 
 		.pager-next{
 			a{
-				@include grid-span(12,1);
+				width: 100%;
 				line-height: $ver-mas-line;
 				background-color: $mainorange;
 				text-decoration: none;
 				margin-bottom: $ver-mas-mar;
 				color: $btn-txt;
-				font-size: $btn-mas-size;
-				font-family: Brandong_Bold;
-			    box-shadow: 1px 2px 1px #888888;
+				font-size: 20px;
+				font-family: Brandon_Bold;
+				padding: 15px;
+			  box-shadow: 1px 2px 1px #888888;
 
 			}
 		}
