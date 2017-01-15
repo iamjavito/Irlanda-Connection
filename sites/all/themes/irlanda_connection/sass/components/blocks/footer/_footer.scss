@@ -141,10 +141,14 @@
 	//Social Media Area - Footer
 	#block-bean-social-media-footer {
 		@include grid-span($grids,1);
-		margin-top: $social-box-mar;
+		margin-top: 250px;
 
+		@include breakpoint($mob){
+			margin-top: 270px;
+
+		}
 		@include breakpoint($desk) {
-			margin-top: $social-box-mar-wd;
+			margin-top: 300px;
 
 		}
 
@@ -185,12 +189,16 @@
 	#block-bean-copyright-block-footer{
 		@include grid-span(6, 4);
 		text-align: center;
-		margin-top: $copy-box-mar;
+		margin-top: 320px;
 		margin-bottom: 20px;
 
+		@include breakpoint($mob) {
+			margin-top: 340px;
+
+		}
 		@include breakpoint($desk) {
 			@include grid-span(4, 5);
-			margin-top: $copy-box-mar-wd;
+			margin-top: 360px;
 
 		}
 

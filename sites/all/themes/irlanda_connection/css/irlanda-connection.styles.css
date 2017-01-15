@@ -335,7 +335,7 @@ span, div, p {
   height: 70px;
   line-height: 70px; }
   .node-type-cursos .block-course-pg-title .course-pg-title {
-    width: 49%;
+    width: 48%;
     float: left; }
     .node-type-cursos .block-course-pg-title .course-pg-title h1 {
       width: 100%;
@@ -343,6 +343,7 @@ span, div, p {
       margin: 0;
       padding: 0;
       line-height: 70px;
+      word-wrap: break-word;
       font-size: .6em; }
       @media (min-width: 450px) {
         .node-type-cursos .block-course-pg-title .course-pg-title h1 {
@@ -354,27 +355,26 @@ span, div, p {
         .node-type-cursos .block-course-pg-title .course-pg-title h1 {
           font-size: 44px; } }
   .node-type-cursos .block-course-pg-title .course-pg-hyphen {
-    width: 2%;
+    width: 4%;
     float: left;
     text-align: center; }
-    .node-type-cursos .block-course-pg-title .course-pg-hyphen span {
+    .node-type-cursos .block-course-pg-title .course-pg-hyphen div {
       font-size: .6em;
-      font-size: .6em; }
+      line-height: 70px; }
       @media (min-width: 450px) {
-        .node-type-cursos .block-course-pg-title .course-pg-hyphen span {
+        .node-type-cursos .block-course-pg-title .course-pg-hyphen div {
           font-size: .8em; } }
       @media (min-width: 550px) {
-        .node-type-cursos .block-course-pg-title .course-pg-hyphen span {
+        .node-type-cursos .block-course-pg-title .course-pg-hyphen div {
           font-size: 1em; } }
       @media (min-width: 60em) {
-        .node-type-cursos .block-course-pg-title .course-pg-hyphen span {
+        .node-type-cursos .block-course-pg-title .course-pg-hyphen div {
           font-size: 44px; } }
   .node-type-cursos .block-course-pg-title .course-pg-classweek {
-    width: 49%;
+    width: 48%;
     float: right; }
     .node-type-cursos .block-course-pg-title .course-pg-classweek h2 {
       text-align: left;
-      font-size: .6em;
       font-size: .6em; }
       @media (min-width: 450px) {
         .node-type-cursos .block-course-pg-title .course-pg-classweek h2 {
@@ -979,7 +979,10 @@ span, div, p {
     margin-left: 0;
     margin-right: 0;
     clear: none;
-    margin-top: 200px; }
+    margin-top: 250px; }
+    @media (min-width: 600px) {
+      .section-footer #block-bean-social-media-footer {
+        margin-top: 270px; } }
     @media (min-width: 60em) {
       .section-footer #block-bean-social-media-footer {
         margin-top: 300px; } }
@@ -1008,8 +1011,11 @@ span, div, p {
     margin-left: 25.42373%;
     clear: none;
     text-align: center;
-    margin-top: 260px;
+    margin-top: 320px;
     margin-bottom: 20px; }
+    @media (min-width: 600px) {
+      .section-footer #block-bean-copyright-block-footer {
+        margin-top: 340px; } }
     @media (min-width: 60em) {
       .section-footer #block-bean-copyright-block-footer {
         width: 32.20339%;

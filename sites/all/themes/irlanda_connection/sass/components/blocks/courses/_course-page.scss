@@ -29,6 +29,7 @@
 		height: 70px;
 		line-height: 70px;
 
+		//Course Title Font Size
 		@mixin pg-title-size {
 			font-size: .6em;
 
@@ -47,7 +48,7 @@
 			}
 		}
 		.course-pg-title{
-			width: 49%;
+			width: 48%;
 			float: left;
 
 			h1{
@@ -56,28 +57,28 @@
 				margin: 0;
 				padding: 0;
 				line-height: 70px;
+				word-wrap: break-word;
 
 				@include pg-title-size;
 			}
 		}
 		.course-pg-hyphen{
-			width: 2%;
+			width: 4%;
 			float: left;
 			text-align: center;
 
-			span{
-				font-size: .6em;
-
+			div{
 				@include pg-title-size;
+				line-height: 70px;
+
 			}
 		}
 		.course-pg-classweek{
-			width: 49%;
+			width: 48%;
 			float: right;
 
 			h2{
 				text-align: left;
-				font-size: .6em;
 
 				@include pg-title-size;
 			}
