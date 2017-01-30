@@ -4,7 +4,7 @@
 	background-position: top;
 	background-size: cover;
 
-	.section-form{
+	.section-content{
 		@include grid-span(7,4);
 		background-color: $white;
 		float: none;
@@ -48,7 +48,7 @@
 					font-size: $loca-address-txt;
 
 				}
- 	
+
 				.country-name{
 					font-size: $loca-address-txt;
 

@@ -215,6 +215,8 @@ span, div, p {
     @media (min-width: 768px) {
       .view-blog-view .view-content .view-blog-post {
         margin: 10px; } }
+    .view-blog-view .view-content .view-blog-post header {
+      height: 68px; }
     .view-blog-view .view-content .view-blog-post .field--name-field-blog-image a {
       border: none; }
     .view-blog-view .view-content .view-blog-post .field--name-field-blog-image img {
@@ -273,7 +275,7 @@ span, div, p {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover; }
-  .page-contacto .section-form, .page-cotizacion .section-form {
+  .page-contacto .section-content, .page-cotizacion .section-content {
     width: 57.62712%;
     float: left;
     margin-right: -100%;
@@ -284,7 +286,7 @@ span, div, p {
     padding: 35px 48px 25px 35px;
     margin: 40px auto 40px auto;
     border: solid 1px #f2f2f2; }
-    .page-contacto .section-form h2, .page-cotizacion .section-form h2 {
+    .page-contacto .section-content h2, .page-cotizacion .section-content h2 {
       font-family: Helvetica;
       font-size: 61px;
       color: #f7941e;
