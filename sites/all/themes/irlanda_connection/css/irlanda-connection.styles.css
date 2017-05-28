@@ -817,18 +817,26 @@ span, div, p {
         .destinos-grid .views-row a {
           line-height: 503px; } }
 
+.node-type-destino .section-main {
+  max-width: 1200px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+  clear: none;
+  position: relative; }
 .node-type-destino .tabs--primary {
   display: none; }
-.node-type-destino .view-destino-page-view .field--type-image img {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  height: 500px;
+.node-type-destino .view-destino-page-view img {
+  width: 600px;
+  height: 350px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; }
+.node-type-destino .view-destino-page-view .img-right {
+  float: right; }
+.node-type-destino .view-destino-page-view .img-left {
+  float: left; }
 .node-type-destino .dest-wrap-img .background-image-formatter {
   width: 100%;
   float: right;
@@ -839,28 +847,14 @@ span, div, p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; }
-.node-type-destino .dest-title {
-  width: 66.10169%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 16.94915%;
-  clear: none;
-  margin-top: 280px; }
-  .node-type-destino .dest-title h1 {
-    font-size: 100px; }
-  .node-type-destino .dest-title h2 {
-    font-size: 100px; }
+.node-type-destino .dest-title h1 {
+  font-size: 20px;
+  color: #565A5C; }
+.node-type-destino .dest-title h2 {
+  font-size: 20px; }
 .node-type-destino .dest-text {
-  width: 66.10169%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 16.94915%;
-  clear: none;
-  margin-top: 430px; }
-.node-type-destino .block--views-destino-page-view-block-2 .dest-title {
-  margin-top: 20px; }
-.node-type-destino .block--views-destino-page-view-block-2 .dest-text {
-  margin-top: 200px; }
+  color: #565A5C;
+  font-size: 18px; }
 .node-type-destino #block-bean-preguntanos-tus-dudas {
   margin: -144px 0px 0px 15%;
   float: left; }

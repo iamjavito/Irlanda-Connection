@@ -1,18 +1,33 @@
 .node-type-destino{
+	.section-main {
+		max-width: 1200px;
+		margin-top: 50px;
+		margin-left: auto;
+		margin-right: auto;
+		float: right;
+		clear: none;
+		position: relative;
+
+	}
 	.tabs--primary{
 		display: none;
 
 	}
 	.view-destino-page-view{
-		.field--type-image{
-			img{
-				@include grid-span(12, 1);
-				height: $header-hg;
-				background-size: cover;
-				background-repeat: no-repeat;
-				background-position: center center;
+		img{
+			width: 600px;
+			height: 350px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
 
-			}
+		}
+		.img-right {
+			float: right;
+
+		}
+		.img-left {
+			float: left;
 
 		}
 	}
@@ -28,11 +43,9 @@
 
 	}
 	.dest-title{
-		@include grid-span(8,3);
-		margin-top: $dest-title-mar;
-
 		h1{
 			font-size: $dest-title;
+			color: $text;
 
 		}
 
@@ -43,8 +56,8 @@
 
 	}
 	.dest-text{
-		@include grid-span(8,3);
-		margin-top: $dest-text-mar;
+		color: $text;
+		font-size: $dest-text;
 
 		p{
 
@@ -55,11 +68,9 @@
 	//Blocks for last wrap
 	.block--views-destino-page-view-block-2{
 		.dest-title{
-			margin-top: $dest-title-last-mar;
 
 		}
 		.dest-text{
-			margin-top: $dest-text-last-mar;
 
 		}
 

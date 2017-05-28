@@ -11,7 +11,7 @@
 	}
 }
 
-.background-image-header{
+.background-image-header {
 	@include grid-span($grids,1);
 	@extend .header-img-breaks;
   position: relative;
@@ -20,7 +20,7 @@
   background-size: cover;
 
 }
-.bean-head-image, .view-blog-teaser-slides, .section-header-img, #zone-graphic-header{
+.bean-head-image, .view-blog-teaser-slides, .section-header-img, #zone-graphic-header {
 	@include grid-span(12,1);
 	float: none;
 	position: relative;
@@ -30,7 +30,7 @@
 		border: 0;
 
 	}
-	.field--name-field-header-text, h1{
+	.field--name-field-header-text, h1 {
 		@include grid-span($grids, 1);
 		text-align: center;
 		color: $head-text-colour;
