@@ -49,8 +49,12 @@
 <head profile="<?php print $grddl_profile; ?>">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
+  <!-- build:css -->
   <?php print $styles; ?>
+  <!-- endbuild -->
+  <!-- build:js -->
   <?php print $scripts; ?>
+  <!-- endbuild -->
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
