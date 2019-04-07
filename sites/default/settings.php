@@ -217,10 +217,10 @@ $databases = array (
   array (
     'default' =>
     array (
-      'database' => 'IrlandaConnection',
-      'username' => 'ICAdmin',
-      'password' => 'Irl4nd4Conn3ct10n',
-      'host' => '192.168.99.100',
+      'database' => 'kmhazvkvpe',
+      'username' => 'kmhazvkvpe',
+      'password' => 'kmghkNYQF4',
+      'host' => 'localhost',
       'port' => '3306',
       'driver' => 'mysql',
       'prefix' => '',
