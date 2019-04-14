@@ -56,8 +56,12 @@
 <head>
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
+  <!-- build:css -->
   <?php print $styles; ?>
+  <!-- endbuild -->
+  <!-- build:js -->
   <?php print $scripts; ?>
+  <!-- endbuild -->
 </head>
 <body<?php print $attributes;?>>
   <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>

@@ -15,27 +15,18 @@ var htmlreplace = require('gulp-html-replace');
  */
 const scrapeOptions = {
 	urls: [
-		'http://phpstack-211431-640757.cloudwaysapps.com/',
+		'http://phpstack-211431-640757.cloudwaysapps.com',
 	],
 	directory: 'html',
 	subdirectories: [
-		{directory: 'img', extensions: ['.jpg', '.png', '.svg']},
 		{directory: 'js', extensions: ['.js']},
 		{directory: 'css', extensions: ['.css']},
 		{directory: 'json', extensions: ['.json']}
 	],
-	prettified : true,
+	prettified : false,
 	ignoreErrors: false,
 	maxDepth: 0,
 	recursive: true,
-	// 404 response Handler helps with CSS from Origins
-	httpResponseHandler: (response) => {
-		if (response.statusCode === 404) {
-			return Promise.reject(new Error('status is 404'));
-		} else {
-		return Promise.resolve(response.body);
-		}
-	}
 };
 
 /**
@@ -47,10 +38,10 @@ gulp.task('scrape', function(){
 
 		// Run Browser Sync after Website Scrape is completed
 		return gulp.series(
-		'replace',
-		'sass',
-		'javascript',
-		'browser-sync'
+      'replace',
+      'sass',
+      'javascript',
+      'browser-sync'
 		)();
 
 	}).catch((err) => {
@@ -73,8 +64,8 @@ gulp.task('del', function() {
 gulp.task('replace', function() {
   return gulp.src('html/**')
       .pipe(htmlreplace({
-          'css': 'css/main.css',
-          'js': 'js/bundle.js'
+          'css': 'css/irlanda-connection.styles.css',
+          'js': 'js/irlanda-connection.behaviors.js'
       }))
       .pipe(gulp.dest('html'));
 });
@@ -89,7 +80,7 @@ gulp.task('build-prod', function () {
  * SCSS Compiler
  */
 gulp.task('sass', function () {
-  return gulp.src('./sass/**/*.scss')
+  return gulp.src('./sass/*.scss')
       .pipe(sourcemaps.init())
       .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
       .pipe(sourcemaps.write('./maps'))
@@ -137,8 +128,8 @@ gulp.task('browser-sync', function() {
  * Watcher
  */
 gulp.task('watching', function () {
-  gulp.watch(['./sass/*.scss'], gulp.series('sass'));
-  gulp.watch(['./js/*.js'], gulp.series('javascript'));
+  gulp.watch(['./sass/**/*.scss'], gulp.series('sass'));
+  gulp.watch(['./js/irlanda-connection.behaviors.js'], gulp.series('javascript'));
 });
 
 /**

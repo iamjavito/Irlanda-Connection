@@ -1,14 +1,36 @@
 // Import variables, abstractions, base styles and components.
 // Uncomment the next lines and adjust them to your needs.
-
 // Variables
-@import "variables/**/*";
+@import "variables/_blocks.scss";
+@import "variables/_breakpoints.scss";
+@import "variables/_colours.scss";
+@import "variables/_grids.scss";
+@import "variables/_spacing.scss";
+@import "variables/_typography.scss";
 
 // Base
-@import "base/**/*";
+@import "base/_blocks.scss";
+@import "base/_buttons.scss";
+@import "base/_forms.scss";
+@import "base/_headers.scss";
+@import "base/_tags.scss";
 
 // Components
-@import "components/**/*";
+@import "components/blocks/blog/_blog-post.scss";
+@import "components/blocks/blog/_blog.scss";
+@import "components/blocks/contacto/_contacto.scss";
+@import "components/blocks/courses/_courses.scss";
+@import "components/blocks/courses/_course-page.scss";
+@import "components/blocks/destinations/_destinations.scss";
+@import "components/blocks/destinations/_destino-page.scss";
+@import "components/blocks/footer/_footer.scss";
+@import "components/blocks/forms/_forms.scss";
+@import "components/blocks/header/_head-img.scss";
+@import "components/blocks/header/_header.scss";
+@import "components/blocks/header/_navigation.scss";
+@import "components/blocks/header/_zone-graphic-header.scss";
+@import "components/blocks/home/_home-wrappers.scss";
+@import "components/blocks/services/_services.scss";
 
 // abstratctions
-@import "abstractions/*";
+@import "abstractions/_typography.scss";
