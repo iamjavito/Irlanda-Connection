@@ -1,4 +1,4 @@
-// Import variables, abstractions, base styles and components.
+// Import variables, abstractions, base styles and components
 // Uncomment the next lines and adjust them to your needs.
 // Variables
 @import "variables/_blocks.scss";
@@ -10,10 +10,10 @@
 
 // Base
 @import "base/_blocks.scss";
-@import "base/_buttons.scss";
 @import "base/_forms.scss";
 @import "base/_headers.scss";
 @import "base/_tags.scss";
+@import "base/_buttons.scss";
 
 // Components
 @import "components/blocks/blog/_blog-post.scss";
